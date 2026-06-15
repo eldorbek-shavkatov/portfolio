@@ -238,6 +238,10 @@
             background-clip: text;
             color: transparent;
         }
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.7;
+        }
 
         .contact-bar {
             display: flex;
@@ -330,6 +334,7 @@
             font-size: 14px;
             font-weight: 500;
             transition: 0.3s;
+            cursor: pointer;
         }
         .skill-tag:hover {
             background: var(--primary);
@@ -436,12 +441,12 @@
     </div>
 
     <div class="nav-tabs">
-        <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> <span>Bosh sahifa</span></button>
-        <button class="nav-btn" data-page="experience"><i class="fas fa-briefcase"></i> <span>Tajriba</span></button>
-        <button class="nav-btn" data-page="skills"><i class="fas fa-code"></i> <span>Ko'nikmalar</span></button>
-        <button class="nav-btn" data-page="projects"><i class="fas fa-rocket"></i> <span>Loyihalar</span></button>
-        <button class="nav-btn" data-page="certificates"><i class="fas fa-certificate"></i> <span>Sertifikatlar</span></button>
-        <button class="nav-btn" data-page="contact"><i class="fas fa-envelope"></i> <span>Kontakt</span></button>
+        <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> <span class="nav-text">Bosh sahifa</span></button>
+        <button class="nav-btn" data-page="experience"><i class="fas fa-briefcase"></i> <span class="nav-text">Tajriba</span></button>
+        <button class="nav-btn" data-page="skills"><i class="fas fa-code"></i> <span class="nav-text">Ko'nikmalar</span></button>
+        <button class="nav-btn" data-page="projects"><i class="fas fa-rocket"></i> <span class="nav-text">Loyihalar</span></button>
+        <button class="nav-btn" data-page="certificates"><i class="fas fa-certificate"></i> <span class="nav-text">Sertifikatlar</span></button>
+        <button class="nav-btn" data-page="contact"><i class="fas fa-envelope"></i> <span class="nav-text">Kontakt</span></button>
     </div>
 
     <!-- HOME PAGE -->
@@ -458,37 +463,37 @@
                 </div>
             </div>
             <div class="contact-bar">
-                <a href="mailto:eldorbekshavkatoff@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> eldorbekshavkatoff@gmail.com</a>
-                <a href="tel:+998333331228" class="contact-item"><i class="fas fa-phone"></i> +998 33 333 1228</a>
-                <span class="contact-item"><i class="fas fa-map-marker-alt"></i> Samarqand, O‘zbekiston</span>
+                <a href="mailto:eldorbekshavkatoff@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> <span class="contact-email">eldorbekshavkatoff@gmail.com</span></a>
+                <a href="tel:+998333331228" class="contact-item"><i class="fas fa-phone"></i> <span class="contact-phone">+998 33 333 1228</span></a>
+                <span class="contact-item"><i class="fas fa-map-marker-alt"></i> <span class="contact-location">Samarqand, O‘zbekiston</span></span>
                 <a href="https://t.me/eldorbek_shavkatov" class="contact-item"><i class="fab fa-telegram"></i> Telegram</a>
                 <a href="https://github.com/eldorbek-shavkatov" class="contact-item"><i class="fab fa-github"></i> GitHub</a>
             </div>
             <div class="content">
                 <div class="section">
-                    <div class="section-title"><i class="fas fa-user-astronaut"></i> Men haqimda</div>
+                    <div class="section-title"><i class="fas fa-user-astronaut"></i> <span class="about-title">Men haqimda</span></div>
                     <p class="about-text">Toshkent Axborot Texnologiyalari Universiteti (TUIT) Axborot xavfsizligi fakulteti bitiruvchisi. Data/Investment/Business Analytics va Project Management sohalarida kuchli bilim va amaliy ko'nikmalarga ega. 3+ yillik tajriba davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi bo'yicha malakalarni oshirgan.</p>
                 </div>
                 <div class="section">
-                    <div class="section-title"><i class="fas fa-graduation-cap"></i> Ta'lim</div>
+                    <div class="section-title"><i class="fas fa-graduation-cap"></i> <span class="edu-title">Ta'lim</span></div>
                     <div class="exp-card">
                         <div class="exp-date">2021 — 2025</div>
                         <div class="exp-title">Toshkent Axborot Texnologiyalari Universiteti (TUIT)</div>
                         <div class="exp-company">Axborot xavfsizligi fakulteti | Kiberxavfsizlik</div>
-                        <div>Bakalavr darajasi</div>
+                        <div class="edu-degree">Bakalavr darajasi</div>
                     </div>
                 </div>
                 <div class="section">
-                    <div class="section-title"><i class="fas fa-file-pdf"></i> Rezyume yuklab olish</div>
+                    <div class="section-title"><i class="fas fa-file-pdf"></i> <span class="cv-title">Rezyume yuklab olish</span></div>
                     <div class="cv-group">
-                        <a href="files/cv-uzbek.pdf" class="cv-btn" download><i class="fas fa-download"></i> O'zbekcha rezyume</a>
-                        <a href="files/cv-russian.pdf" class="cv-btn" download><i class="fas fa-download"></i> Русское резюме</a>
-                        <a href="files/cv-english.pdf" class="cv-btn" download><i class="fas fa-download"></i> English CV (Europass)</a>
+                        <a href="files/cv-uzbek.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-uz">O'zbekcha rezyume</span></a>
+                        <a href="files/cv-russian.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-ru">Русское резюме</span></a>
+                        <a href="files/cv-english.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-en">English CV (Europass)</span></a>
                     </div>
                 </div>
             </div>
             <div class="footer">
-                <p>© 2025 Eldorbek Shavkatov | Data Analytics Portfolio</p>
+                <p class="footer-text">© 2025 Eldorbek Shavkatov | Data Analytics Portfolio</p>
             </div>
         </div>
     </div>
@@ -496,66 +501,171 @@
     <!-- EXPERIENCE PAGE -->
     <div id="experience" class="page">
         <div class="glass-card">
-            <div class="header"><h1 class="hero-name" style="font-size:40px;">💼 Ish tajribasi</h1></div>
+            <div class="header"><h1 class="hero-name" style="font-size:40px;">💼 <span class="exp-page-title">Ish tajribasi</span></h1></div>
             <div class="content">
                 <div class="exp-grid">
-                    <div class="exp-card"><div class="exp-date">2025 — Hozir</div><div class="exp-title">Investitsion analitik</div><div class="exp-company">Davlat statistika qo'mitasi instituti</div><ul class="exp-list"><li>BMT loyihalarining moliyaviy va iqtisodiy tahlili</li><li>Power BI va Python yordamida vizualizatsiya</li><li>Moliyaviy modellar va prognozlar</li></ul></div>
-                    <div class="exp-card"><div class="exp-date">2025 Yanvar — Iyun</div><div class="exp-title">Investitsion analitik (stajyor)</div><div class="exp-company">"Kiberxavfsizlik markazi" DXK</div><ul class="exp-list"><li>Kiberxavfsizlik ma'lumotlarini tahlil qilish</li><li>SQL va Python yordamida tahlil</li><li>Analitik hisobotlar tayyorlash</li></ul></div>
-                    <div class="exp-card"><div class="exp-date">2022 Fevral — 2024 May</div><div class="exp-title">Menejer yordamchisi</div><div class="exp-company">"SEMURG INSURANCE" AJ</div><ul class="exp-list"><li>Sug'urta ma'lumotlarini to'plash va tozalash</li><li>Excel va SQL yordamida mijozlar tahlili</li><li>Dashboardlar va KPI monitoringi</li></ul></div>
+                    <div class="exp-card">
+                        <div class="exp-date">2025 — Hozir</div>
+                        <div class="exp-title">Investitsion analitik</div>
+                        <div class="exp-company">Davlat statistika qo'mitasi instituti</div>
+                        <ul class="exp-list">
+                            <li>BMT loyihalarining moliyaviy va iqtisodiy tahlili</li>
+                            <li>Power BI va Python yordamida vizualizatsiya</li>
+                            <li>Moliyaviy modellar va prognozlar</li>
+                        </ul>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-date">2025 Yanvar — Iyun</div>
+                        <div class="exp-title">Investitsion analitik (stajyor)</div>
+                        <div class="exp-company">"Kiberxavfsizlik markazi" DXK</div>
+                        <ul class="exp-list">
+                            <li>Kiberxavfsizlik ma'lumotlarini tahlil qilish</li>
+                            <li>SQL va Python yordamida tahlil</li>
+                            <li>Analitik hisobotlar tayyorlash</li>
+                        </ul>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-date">2022 Fevral — 2024 May</div>
+                        <div class="exp-title">Menejer yordamchisi</div>
+                        <div class="exp-company">"SEMURG INSURANCE" AJ</div>
+                        <ul class="exp-list">
+                            <li>Sug'urta ma'lumotlarini to'plash va tozalash</li>
+                            <li>Excel va SQL yordamida mijozlar tahlili</li>
+                            <li>Dashboardlar va KPI monitoringi</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="footer"><p>Data-driven qarorlar qabul qilish</p></div>
+            <div class="footer"><p class="exp-footer">Data-driven qarorlar qabul qilish</p></div>
         </div>
     </div>
 
     <!-- SKILLS PAGE -->
     <div id="skills" class="page">
         <div class="glass-card">
-            <div class="header"><h1 class="hero-name" style="font-size:40px;">⚙️ Ko'nikmalar</h1></div>
+            <div class="header"><h1 class="hero-name" style="font-size:40px;">⚙️ <span class="skills-page-title">Ko'nikmalar</span></h1></div>
             <div class="content">
-                <div class="section"><div class="section-title">Analitik vositalar</div><div class="skills-grid"><span class="skill-tag">Python (Pandas, NumPy)</span><span class="skill-tag">SQL</span><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Excel Advanced</span><span class="skill-tag">Google Analytics</span><span class="skill-tag">Trello</span><span class="skill-tag">Notion</span><span class="skill-tag">Jira</span><span class="skill-tag">1C:8.3</span><span class="skill-tag">didox.uz</span><span class="skill-tag">My.Soliq</span></div></div>
-                <div class="section"><div class="section-title">Vizualizatsiya</div><div class="skills-grid"><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">Plotly</span><span class="skill-tag">Power BI Dashboards</span><span class="skill-tag">Tableau Public</span></div></div>
-                <div class="section"><div class="section-title">Tillar</div><div class="lang-grid"><div class="lang-card"><div class="lang-name">🇺🇿 O'zbek</div><div class="lang-level">Ona tili</div></div><div class="lang-card"><div class="lang-name">🇬🇧 English</div><div class="lang-level">B2 (Upper-Intermediate)</div></div><div class="lang-card"><div class="lang-name">🇷🇺 Русский</div><div class="lang-level">B1-B2 (Intermediate)</div></div></div></div>
+                <div class="section">
+                    <div class="section-title"><span class="skills-analytics-title">Analitik vositalar</span></div>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python (Pandas, NumPy)</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Excel Advanced</span>
+                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Trello</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">1C:8.3</span>
+                        <span class="skill-tag">didox.uz</span>
+                        <span class="skill-tag">My.Soliq</span>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title"><span class="skills-viz-title">Vizualizatsiya</span></div>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Power BI Dashboards</span>
+                        <span class="skill-tag">Tableau Public</span>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title"><span class="skills-lang-title">Tillar</span></div>
+                    <div class="lang-grid">
+                        <div class="lang-card"><div class="lang-name">🇺🇿 O'zbek</div><div class="lang-level">Ona tili</div></div>
+                        <div class="lang-card"><div class="lang-name">🇬🇧 English</div><div class="lang-level">B2 (Upper-Intermediate)</div></div>
+                        <div class="lang-card"><div class="lang-name">🇷🇺 Русский</div><div class="lang-level">B1-B2 (Intermediate)</div></div>
+                    </div>
+                </div>
             </div>
-            <div class="footer"><p>Ma'lumotlar bilan ishlash bo'yicha mutaxassis</p></div>
+            <div class="footer"><p class="skills-footer">Ma'lumotlar bilan ishlash bo'yicha mutaxassis</p></div>
         </div>
     </div>
 
     <!-- PROJECTS PAGE -->
     <div id="projects" class="page">
         <div class="glass-card">
-            <div class="header"><h1 class="hero-name" style="font-size:40px;">🚀 Loyihalar</h1></div>
-            <div class="content"><div class="project-grid">
-                <div class="project-card"><div class="exp-date">2024</div><div class="exp-title">Investitsion tahlil platformasi</div><div class="exp-company">Power BI + Python</div><ul class="exp-list"><li>Real vaqt rejimida investitsion ma'lumotlarni vizualizatsiya</li><li>Avtomatik hisobot generatsiyasi</li><li>Moliyaviy ko'rsatkichlar dashboardi</li></ul></div>
-                <div class="project-card"><div class="exp-date">2024</div><div class="exp-title">Sug'urta ma'lumotlar tahlili</div><div class="exp-company">SQL + Excel + Power BI</div><ul class="exp-list"><li>5000+ sug'urta shartnomalari tahlili</li><li>Risk profiling va baholash</li><li>Interactive dashboard yaratish</li></ul></div>
-                <div class="project-card"><div class="exp-date">2023</div><div class="exp-title">Mijozlar segmentatsiyasi</div><div class="exp-company">Python (Pandas, Scikit-learn)</div><ul class="exp-list"><li>RFM tahlili orqali segmentlash</li><li>Churn prediction modeli</li><li>Marketing strategiyasi uchun tavsiyalar</li></ul></div>
-            </div></div>
-            <div class="footer"><p>10+ data analytics loyihasi</p></div>
+            <div class="header"><h1 class="hero-name" style="font-size:40px;">🚀 <span class="projects-page-title">Loyihalar</span></h1></div>
+            <div class="content">
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="exp-date">2024</div>
+                        <div class="exp-title">Investitsion tahlil platformasi</div>
+                        <div class="exp-company">Power BI + Python</div>
+                        <ul class="exp-list">
+                            <li>Real vaqt rejimida investitsion ma'lumotlarni vizualizatsiya</li>
+                            <li>Avtomatik hisobot generatsiyasi</li>
+                            <li>Moliyaviy ko'rsatkichlar dashboardi</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <div class="exp-date">2024</div>
+                        <div class="exp-title">Sug'urta ma'lumotlar tahlili</div>
+                        <div class="exp-company">SQL + Excel + Power BI</div>
+                        <ul class="exp-list">
+                            <li>5000+ sug'urta shartnomalari tahlili</li>
+                            <li>Risk profiling va baholash</li>
+                            <li>Interactive dashboard yaratish</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <div class="exp-date">2023</div>
+                        <div class="exp-title">Mijozlar segmentatsiyasi</div>
+                        <div class="exp-company">Python (Pandas, Scikit-learn)</div>
+                        <ul class="exp-list">
+                            <li>RFM tahlili orqali segmentlash</li>
+                            <li>Churn prediction modeli</li>
+                            <li>Marketing strategiyasi uchun tavsiyalar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"><p class="projects-footer">10+ data analytics loyihasi</p></div>
         </div>
     </div>
 
     <!-- CERTIFICATES PAGE -->
     <div id="certificates" class="page">
         <div class="glass-card">
-            <div class="header"><h1 class="hero-name" style="font-size:40px;">📜 Sertifikatlar</h1></div>
-            <div class="content"><div class="cert-grid">
-                <div class="cert-card"><div class="exp-date">2025</div><div class="exp-title">Data Analytics Essentials</div><div class="exp-company">Cisco Networking Academy</div><a href="certificates/DataAnalytics_Cisco1.pdf" class="cv-btn" style="display:inline-block; margin-top:15px; padding:8px 20px;" download><i class="fas fa-download"></i> Yuklab olish</a></div>
-                <div class="cert-card"><div class="exp-date">2025</div><div class="exp-title">Data Analytics Advanced</div><div class="exp-company">Cisco Networking Academy</div><a href="certificates/DataAnalytics_Cisco2.pdf" class="cv-btn" style="display:inline-block; margin-top:15px; padding:8px 20px;" download><i class="fas fa-download"></i> Yuklab olish</a></div>
-                <div class="cert-card"><div class="exp-date">2025</div><div class="exp-title">Data Analytics Navigator</div><div class="exp-company">Armenian Code Academy</div><a href="certificates/DataAnalytics_ShavkatovEldorbek.pdf" class="cv-btn" style="display:inline-block; margin-top:15px; padding:8px 20px;" download><i class="fas fa-download"></i> Yuklab olish</a></div>
-            </div></div>
-            <div class="footer"><p>5+ rasmiy sertifikat | Data Analytics</p></div>
+            <div class="header"><h1 class="hero-name" style="font-size:40px;">📜 <span class="cert-page-title">Sertifikatlar</span></h1></div>
+            <div class="content">
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="exp-date">2025</div>
+                        <div class="exp-title">Data Analytics Essentials</div>
+                        <div class="exp-company">Cisco Networking Academy</div>
+                        <a href="certificates/DataAnalytics_Cisco1.pdf" class="cv-btn" style="display:inline-block; margin-top:15px; padding:8px 20px;" download><i class="fas fa-download"></i> <span class="download-text">Yuklab olish</span></a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="exp-date">2025</div>
+                        <div class="exp-title">Data Analytics Advanced</div>
+                        <div class="exp-company">Cisco Networking Academy</div>
+                        <a href="certificates/DataAnalytics_Cisco2.pdf" class="cv-btn" style="display:inline-block; margin-top:15px; padding:8px 20px;" download><i class="fas fa-download"></i> <span class="download-text">Yuklab olish</span></a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="exp-date">2025</div>
+                        <div class="exp-title">Data Analytics Navigator</div>
+                        <div class="exp-company">Armenian Code Academy</div>
+                        <a href="certificates/DataAnalytics_ShavkatovEldorbek.pdf" class="cv-btn" style="display:inline-block; margin-top:15px; padding:8px 20px;" download><i class="fas fa-download"></i> <span class="download-text">Yuklab olish</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"><p class="cert-footer">5+ rasmiy sertifikat | Data Analytics</p></div>
         </div>
     </div>
 
     <!-- CONTACT PAGE -->
     <div id="contact" class="page">
         <div class="glass-card">
-            <div class="header"><h1 class="hero-name" style="font-size:40px;">📬 Bog'lanish</h1></div>
+            <div class="header"><h1 class="hero-name" style="font-size:40px;">📬 <span class="contact-page-title">Bog'lanish</span></h1></div>
             <div class="content">
                 <div class="contact-grid">
-                    <div class="contact-card"><i class="fas fa-envelope" style="font-size:28px; color:#7c3aed;"></i><div><strong>Email</strong><br>eldorbekshavkatoff@gmail.com</div></div>
-                    <div class="contact-card"><i class="fas fa-phone" style="font-size:28px; color:#7c3aed;"></i><div><strong>Telefon</strong><br>+998 33 333 1228</div></div>
-                    <div class="contact-card"><i class="fas fa-map-marker-alt" style="font-size:28px; color:#7c3aed;"></i><div><strong>Manzil</strong><br>Samarqand, O'zbekiston</div></div>
+                    <div class="contact-card"><i class="fas fa-envelope" style="font-size:28px; color:#7c3aed;"></i><div><strong class="contact-email-label">Email</strong><br>eldorbekshavkatoff@gmail.com</div></div>
+                    <div class="contact-card"><i class="fas fa-phone" style="font-size:28px; color:#7c3aed;"></i><div><strong class="contact-phone-label">Telefon</strong><br>+998 33 333 1228</div></div>
+                    <div class="contact-card"><i class="fas fa-map-marker-alt" style="font-size:28px; color:#7c3aed;"></i><div><strong class="contact-location-label">Manzil</strong><br>Samarqand, O'zbekiston</div></div>
                 </div>
                 <div class="social-row">
                     <a href="https://t.me/eldorbek_shavkatov" class="social-icon"><i class="fab fa-telegram"></i></a>
@@ -565,7 +675,7 @@
                     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="footer"><p>24/7 bog'lanish mumkin | Data Analytics bo'yicha hamkorlik</p></div>
+            <div class="footer"><p class="contact-footer">24/7 bog'lanish mumkin | Data Analytics bo'yicha hamkorlik</p></div>
         </div>
     </div>
 </div>
@@ -574,64 +684,61 @@
     // ============ TO'LIQ TARJIMALAR ============
     const translations = {
         uz: {
-            nav_home: "Bosh sahifa", nav_exp: "Tajriba", nav_skills: "Ko'nikmalar", nav_projects: "Loyihalar", nav_certs: "Sertifikatlar", nav_contact: "Kontakt",
+            nav: ["Bosh sahifa", "Tajriba", "Ko'nikmalar", "Loyihalar", "Sertifikatlar", "Kontakt"],
             hero_title: "Data Analytics | Investment Analyst | Business Analyst",
-            stat_exp: "Yil tajriba", stat_proj: "Loyihalar", stat_cert: "Sertifikatlar",
-            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "+998 33 333 1228", contact_location: "Samarqand, O‘zbekiston",
-            about_title: "Men haqimda", about_text: "Toshkent Axborot Texnologiyalari Universiteti (TUIT) Axborot xavfsizligi fakulteti bitiruvchisi. Data/Investment/Business Analytics va Project Management sohalarida kuchli bilim va amaliy ko'nikmalarga ega. 3+ yillik tajriba davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi bo'yicha malakalarni oshirgan.",
-            edu_title: "Ta'lim", edu_date: "2021 — 2025", edu_name: "Toshkent Axborot Texnologiyalari Universiteti (TUIT)", edu_field: "Axborot xavfsizligi fakulteti | Kiberxavfsizlik", edu_degree: "Bakalavr darajasi",
-            cv_title: "Rezyume yuklab olish", cv_uz: "O'zbekcha rezyume", cv_ru: "Русское резюме", cv_en: "English CV (Europass)",
-            exp_title: "Ish tajribasi", exp_footer: "Data-driven qarorlar qabul qilish",
-            exp1_date: "2025 — Hozir", exp1_title: "Investitsion analitik", exp1_company: "Davlat statistika qo'mitasi instituti",
-            exp2_date: "2025 Yanvar — Iyun", exp2_title: "Investitsion analitik (stajyor)", exp2_company: "Kiberxavfsizlik markazi DXK",
-            exp3_date: "2022 Fevral — 2024 May", exp3_title: "Menejer yordamchisi", exp3_company: "SEMURG INSURANCE AJ",
-            skills_title: "Ko'nikmalar", skills_analytics: "Analitik vositalar", skills_viz: "Vizualizatsiya", skills_lang: "Tillar",
-            lang_uz: "O'zbek tili", lang_uz_level: "Ona tili", lang_en: "Ingliz tili", lang_en_level: "B2 (Upper-Intermediate)", lang_ru: "Rus tili", lang_ru_level: "B1-B2 (Intermediate)",
-            skills_footer: "Ma'lumotlar bilan ishlash bo'yicha mutaxassis",
-            proj_title: "Loyihalar", proj_footer: "10+ data analytics loyihasi",
-            cert_title: "Sertifikatlar", download_btn: "Yuklab olish", cert_footer: "5+ rasmiy sertifikat | Data Analytics",
-            contact_title: "Bog'lanish", contact_info_title: "Aloqa ma'lumotlari", contact_email_label: "Email", contact_phone_label: "Telefon", contact_location_label: "Manzil", social_title: "Ijtimoiy tarmoqlar", contact_footer: "24/7 bog'lanish mumkin | Data Analytics bo'yicha hamkorlik",
-            footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
+            stat: ["Yil tajriba", "Loyihalar", "Sertifikatlar"],
+            contact: { email: "eldorbekshavkatoff@gmail.com", phone: "+998 33 333 1228", location: "Samarqand, O‘zbekiston" },
+            about: { title: "Men haqimda", text: "Toshkent Axborot Texnologiyalari Universiteti (TUIT) Axborot xavfsizligi fakulteti bitiruvchisi. Data/Investment/Business Analytics va Project Management sohalarida kuchli bilim va amaliy ko'nikmalarga ega. 3+ yillik tajriba davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi bo'yicha malakalarni oshirgan." },
+            edu: { title: "Ta'lim", date: "2021 — 2025", name: "Toshkent Axborot Texnologiyalari Universiteti (TUIT)", field: "Axborot xavfsizligi fakulteti | Kiberxavfsizlik", degree: "Bakalavr darajasi" },
+            cv: { title: "Rezyume yuklab olish", uz: "O'zbekcha rezyume", ru: "Русское резюме", en: "English CV (Europass)" },
+            exp: { title: "Ish tajribasi", footer: "Data-driven qarorlar qabul qilish",
+                   card1: { date: "2025 — Hozir", title: "Investitsion analitik", company: "Davlat statistika qo'mitasi instituti", items: ["BMT loyihalarining moliyaviy va iqtisodiy tahlili", "Power BI va Python yordamida vizualizatsiya", "Moliyaviy modellar va prognozlar"] },
+                   card2: { date: "2025 Yanvar — Iyun", title: "Investitsion analitik (stajyor)", company: "Kiberxavfsizlik markazi DXK", items: ["Kiberxavfsizlik ma'lumotlarini tahlil qilish", "SQL va Python yordamida tahlil", "Analitik hisobotlar tayyorlash"] },
+                   card3: { date: "2022 Fevral — 2024 May", title: "Menejer yordamchisi", company: "SEMURG INSURANCE AJ", items: ["Sug'urta ma'lumotlarini to'plash va tozalash", "Excel va SQL yordamida mijozlar tahlili", "Dashboardlar va KPI monitoringi"] } },
+            skills: { title: "Ko'nikmalar", analytics: "Analitik vositalar", viz: "Vizualizatsiya", lang: "Tillar", footer: "Ma'lumotlar bilan ishlash bo'yicha mutaxassis" },
+            langs: { uz: "O'zbek", uz_level: "Ona tili", en: "English", en_level: "B2 (Upper-Intermediate)", ru: "Русский", ru_level: "B1-B2 (Intermediate)" },
+            projects: { title: "Loyihalar", footer: "10+ data analytics loyihasi" },
+            cert: { title: "Sertifikatlar", download: "Yuklab olish", footer: "5+ rasmiy sertifikat | Data Analytics" },
+            contact_page: { title: "Bog'lanish", email_label: "Email", phone_label: "Telefon", location_label: "Manzil", footer: "24/7 bog'lanish mumkin | Data Analytics bo'yicha hamkorlik" },
+            footer: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
         },
         ru: {
-            nav_home: "Главная", nav_exp: "Опыт", nav_skills: "Навыки", nav_projects: "Проекты", nav_certs: "Сертификаты", nav_contact: "Контакты",
+            nav: ["Главная", "Опыт", "Навыки", "Проекты", "Сертификаты", "Контакты"],
             hero_title: "Аналитика данных | Инвестиционный аналитик | Бизнес-аналитик",
-            stat_exp: "Лет опыта", stat_proj: "Проекты", stat_cert: "Сертификаты",
-            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "+998 33 333 1228", contact_location: "Самарканд, Узбекистан",
-            about_title: "Обо мне", about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий (ТУИТ). Специалист с глубокими знаниями и практическими навыками в области Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами.",
-            edu_title: "Образование", edu_date: "2021 — 2025", edu_name: "Ташкентский университет информационных технологий (ТУИТ)", edu_field: "Факультет информационной безопасности | Кибербезопасность", edu_degree: "Степень бакалавра",
-            cv_title: "Скачать резюме", cv_uz: "Резюме на узбекском", cv_ru: "Резюме на русском", cv_en: "Резюме на английском (Europass)",
-            exp_title: "Опыт работы", exp_footer: "Принятие решений на основе данных",
-            exp1_date: "2025 — Настоящее время", exp1_title: "Инвестиционный аналитик", exp1_company: "Институт при Госкомстате",
-            exp2_date: "Январь 2025 — Июнь 2025", exp2_title: "Инвестиционный аналитик (стажёр)", exp2_company: "ГУП Центр кибербезопасности",
-            exp3_date: "Февраль 2022 — Май 2024", exp3_title: "Помощник менеджера", exp3_company: "АО SEMURG INSURANCE",
-            skills_title: "Навыки", skills_analytics: "Аналитические инструменты", skills_viz: "Визуализация", skills_lang: "Языки",
-            lang_uz: "Узбекский язык", lang_uz_level: "Родной", lang_en: "Английский язык", lang_en_level: "B2 (Выше среднего)", lang_ru: "Русский язык", lang_ru_level: "B1-B2 (Средний)",
-            skills_footer: "Специалист по работе с данными",
-            proj_title: "Проекты", proj_footer: "10+ проектов аналитики данных",
-            cert_title: "Сертификаты", download_btn: "Скачать", cert_footer: "5+ официальных сертификатов | Аналитика данных",
-            contact_title: "Контакты", contact_info_title: "Контактная информация", contact_email_label: "Email", contact_phone_label: "Телефон", contact_location_label: "Адрес", social_title: "Социальные сети", contact_footer: "Связь 24/7 | Сотрудничество по аналитике данных",
-            footer_text: "© 2025 Эльдорбек Шавкатов | Портфолио аналитики данных"
+            stat: ["Лет опыта", "Проекты", "Сертификаты"],
+            contact: { email: "eldorbekshavkatoff@gmail.com", phone: "+998 33 333 1228", location: "Самарканд, Узбекистан" },
+            about: { title: "Обо мне", text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий (ТУИТ). Специалист с глубокими знаниями и практическими навыками в области Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами." },
+            edu: { title: "Образование", date: "2021 — 2025", name: "Ташкентский университет информационных технологий (ТУИТ)", field: "Факультет информационной безопасности | Кибербезопасность", degree: "Степень бакалавра" },
+            cv: { title: "Скачать резюме", uz: "Резюме на узбекском", ru: "Резюме на русском", en: "Резюме на английском (Europass)" },
+            exp: { title: "Опыт работы", footer: "Принятие решений на основе данных",
+                   card1: { date: "2025 — Настоящее время", title: "Инвестиционный аналитик", company: "Институт при Госкомстате", items: ["Финансово-экономический анализ проектов ООН", "Визуализация данных с Power BI и Python", "Финансовые модели и прогнозы"] },
+                   card2: { date: "Январь 2025 — Июнь 2025", title: "Инвестиционный аналитик (стажёр)", company: "ГУП Центр кибербезопасности", items: ["Анализ данных кибербезопасности", "Анализ баз данных с SQL и Python", "Подготовка аналитических отчётов"] },
+                   card3: { date: "Февраль 2022 — Май 2024", title: "Помощник менеджера", company: "АО SEMURG INSURANCE", items: ["Сбор и очистка страховых данных", "Анализ клиентов с Excel и SQL", "Дашборды и мониторинг KPI"] } },
+            skills: { title: "Навыки", analytics: "Аналитические инструменты", viz: "Визуализация", lang: "Языки", footer: "Специалист по работе с данными" },
+            langs: { uz: "Узбекский", uz_level: "Родной", en: "Английский", en_level: "B2 (Выше среднего)", ru: "Русский", ru_level: "B1-B2 (Средний)" },
+            projects: { title: "Проекты", footer: "10+ проектов аналитики данных" },
+            cert: { title: "Сертификаты", download: "Скачать", footer: "5+ официальных сертификатов | Аналитика данных" },
+            contact_page: { title: "Контакты", email_label: "Email", phone_label: "Телефон", location_label: "Адрес", footer: "Связь 24/7 | Сотрудничество по аналитике данных" },
+            footer: "© 2025 Эльдорбек Шавкатов | Портфолио аналитики данных"
         },
         en: {
-            nav_home: "Home", nav_exp: "Experience", nav_skills: "Skills", nav_projects: "Projects", nav_certs: "Certificates", nav_contact: "Contact",
+            nav: ["Home", "Experience", "Skills", "Projects", "Certificates", "Contact"],
             hero_title: "Data Analytics | Investment Analyst | Business Analyst",
-            stat_exp: "Years exp.", stat_proj: "Projects", stat_cert: "Certificates",
-            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "+998 33 333 1228", contact_location: "Samarkand, Uzbekistan",
-            about_title: "About Me", about_text: "Graduate of the Faculty of Information Security at Tashkent University of Information Technologies (TUIT). Specialist with strong knowledge and practical skills in Data/Investment/Business Analytics and Project Management. Over 3+ years of experience, improved skills in financial and economic analysis, contract and project management.",
-            edu_title: "Education", edu_date: "2021 — 2025", edu_name: "Tashkent University of Information Technologies (TUIT)", edu_field: "Faculty of Information Security | Cybersecurity", edu_degree: "Bachelor's Degree",
-            cv_title: "Download CV", cv_uz: "Uzbek CV", cv_ru: "Russian CV", cv_en: "English CV (Europass)",
-            exp_title: "Work Experience", exp_footer: "Data-driven decision making",
-            exp1_date: "2025 — Present", exp1_title: "Investment Analyst", exp1_company: "Institute under the State Statistics Committee",
-            exp2_date: "Jan 2025 — Jun 2025", exp2_title: "Investment Analyst (Intern)", exp2_company: "Cybersecurity Center SUE",
-            exp3_date: "Feb 2022 — May 2024", exp3_title: "Assistant Manager", exp3_company: "SEMURG INSURANCE JSC",
-            skills_title: "Skills", skills_analytics: "Analytics Tools", skills_viz: "Visualization", skills_lang: "Languages",
-            lang_uz: "Uzbek", lang_uz_level: "Native", lang_en: "English", lang_en_level: "B2 (Upper-Intermediate)", lang_ru: "Russian", lang_ru_level: "B1-B2 (Intermediate)",
-            skills_footer: "Data specialist",
-            proj_title: "Projects", proj_footer: "10+ data analytics projects",
-            cert_title: "Certificates", download_btn: "Download", cert_footer: "5+ official certificates | Data Analytics",
-            contact_title: "Contact", contact_info_title: "Contact Information", contact_email_label: "Email", contact_phone_label: "Phone", contact_location_label: "Location", social_title: "Social Media", contact_footer: "24/7 available | Data Analytics collaboration",
-            footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
+            stat: ["Years exp.", "Projects", "Certificates"],
+            contact: { email: "eldorbekshavkatoff@gmail.com", phone: "+998 33 333 1228", location: "Samarkand, Uzbekistan" },
+            about: { title: "About Me", text: "Graduate of the Faculty of Information Security at Tashkent University of Information Technologies (TUIT). Specialist with strong knowledge and practical skills in Data/Investment/Business Analytics and Project Management. Over 3+ years of experience, improved skills in financial and economic analysis, contract and project management." },
+            edu: { title: "Education", date: "2021 — 2025", name: "Tashkent University of Information Technologies (TUIT)", field: "Faculty of Information Security | Cybersecurity", degree: "Bachelor's Degree" },
+            cv: { title: "Download CV", uz: "Uzbek CV", ru: "Russian CV", en: "English CV (Europass)" },
+            exp: { title: "Work Experience", footer: "Data-driven decision making",
+                   card1: { date: "2025 — Present", title: "Investment Analyst", company: "Institute under the State Statistics Committee", items: ["Financial and economic analysis of UN projects", "Data visualization with Power BI and Python", "Financial models and forecasts"] },
+                   card2: { date: "Jan 2025 — Jun 2025", title: "Investment Analyst (Intern)", company: "Cybersecurity Center SUE", items: ["Cybersecurity data analysis", "Database analysis with SQL and Python", "Preparation of analytical reports"] },
+                   card3: { date: "Feb 2022 — May 2024", title: "Assistant Manager", company: "SEMURG INSURANCE JSC", items: ["Insurance data collection and cleaning", "Customer analysis with Excel and SQL", "Dashboards and KPI monitoring"] } },
+            skills: { title: "Skills", analytics: "Analytics Tools", viz: "Visualization", lang: "Languages", footer: "Data specialist" },
+            langs: { uz: "Uzbek", uz_level: "Native", en: "English", en_level: "B2 (Upper-Intermediate)", ru: "Russian", ru_level: "B1-B2 (Intermediate)" },
+            projects: { title: "Projects", footer: "10+ data analytics projects" },
+            cert: { title: "Certificates", download: "Download", footer: "5+ official certificates | Data Analytics" },
+            contact_page: { title: "Contact", email_label: "Email", phone_label: "Phone", location_label: "Location", footer: "24/7 available | Data Analytics collaboration" },
+            footer: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
         }
     };
 
@@ -665,118 +772,109 @@
     document.body.classList.add(savedTheme);
     document.querySelector(`.theme-btn[data-theme="${savedTheme}"]`).classList.add('active');
 
-    // LANGUAGE SWITCHER - TO'LIQ TARJIMA
+    // ============ TIL ALMASHTIRISH ============
     function applyLanguage(lang) {
         const t = translations[lang];
         if (!t) return;
         
         // Navigatsiya
-        document.querySelectorAll('.nav-btn span').forEach((el, idx) => {
-            const keys = ['nav_home', 'nav_exp', 'nav_skills', 'nav_projects', 'nav_certs', 'nav_contact'];
-            if (t[keys[idx]]) el.innerHTML = t[keys[idx]];
+        document.querySelectorAll('.nav-text').forEach((el, i) => {
+            if (t.nav[i]) el.textContent = t.nav[i];
         });
         
-        // Header title
-        document.querySelector('.hero-title').innerHTML = t.hero_title;
-        document.querySelectorAll('.stat-label')[0].innerHTML = t.stat_exp;
-        document.querySelectorAll('.stat-label')[1].innerHTML = t.stat_proj;
-        document.querySelectorAll('.stat-label')[2].innerHTML = t.stat_cert;
+        // Hero title
+        document.querySelector('.hero-title').textContent = t.hero_title;
+        
+        // Stat labels
+        const statLabels = document.querySelectorAll('.stat-label');
+        t.stat.forEach((label, i) => { if (statLabels[i]) statLabels[i].textContent = label; });
         
         // Contact bar
-        const contactItems = document.querySelectorAll('.contact-bar .contact-item');
-        if(contactItems[0]) contactItems[0].innerHTML = '<i class="fas fa-envelope"></i> ' + t.contact_email;
-        if(contactItems[1]) contactItems[1].innerHTML = '<i class="fas fa-phone"></i> ' + t.contact_phone;
-        if(contactItems[2]) contactItems[2].innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + t.contact_location;
+        document.querySelector('.contact-email').textContent = t.contact.email;
+        document.querySelector('.contact-phone').textContent = t.contact.phone;
+        document.querySelector('.contact-location').textContent = t.contact.location;
         
         // About section
-        const aboutTitle = document.querySelector('.section:first-child .section-title');
-        if(aboutTitle) aboutTitle.innerHTML = '<i class="fas fa-user-astronaut"></i> ' + t.about_title;
-        document.querySelector('.about-text').innerHTML = t.about_text;
+        document.querySelector('.about-title').textContent = t.about.title;
+        document.querySelector('.about-text').textContent = t.about.text;
         
         // Education section
-        const eduTitle = document.querySelectorAll('.section')[1].querySelector('.section-title');
-        if(eduTitle) eduTitle.innerHTML = '<i class="fas fa-graduation-cap"></i> ' + t.edu_title;
-        const eduCard = document.querySelectorAll('.exp-card')[1];
-        if(eduCard) {
-            eduCard.querySelector('.exp-date').innerHTML = t.edu_date;
-            eduCard.querySelector('.exp-title').innerHTML = t.edu_name;
-            eduCard.querySelector('.exp-company').innerHTML = t.edu_field;
-            eduCard.querySelector('div:last-child').innerHTML = t.edu_degree;
+        document.querySelector('.edu-title').textContent = t.edu.title;
+        const eduCard = document.querySelector('#home .exp-card');
+        if (eduCard) {
+            eduCard.querySelector('.exp-date').textContent = t.edu.date;
+            eduCard.querySelector('.exp-title').textContent = t.edu.name;
+            eduCard.querySelector('.exp-company').textContent = t.edu.field;
+            eduCard.querySelector('.edu-degree').textContent = t.edu.degree;
         }
         
         // CV section
-        const cvTitle = document.querySelectorAll('.section')[2].querySelector('.section-title');
-        if(cvTitle) cvTitle.innerHTML = '<i class="fas fa-file-pdf"></i> ' + t.cv_title;
-        const cvBtns = document.querySelectorAll('.cv-btn');
-        if(cvBtns[0]) cvBtns[0].innerHTML = '<i class="fas fa-download"></i> ' + t.cv_uz;
-        if(cvBtns[1]) cvBtns[1].innerHTML = '<i class="fas fa-download"></i> ' + t.cv_ru;
-        if(cvBtns[2]) cvBtns[2].innerHTML = '<i class="fas fa-download"></i> ' + t.cv_en;
+        document.querySelector('.cv-title').textContent = t.cv.title;
+        document.querySelector('.cv-uz').textContent = t.cv.uz;
+        document.querySelector('.cv-ru').textContent = t.cv.ru;
+        document.querySelector('.cv-en').textContent = t.cv.en;
         
         // Experience page
-        const expHeader = document.querySelector('#experience .hero-name');
-        if(expHeader) expHeader.innerHTML = '💼 ' + t.exp_title;
-        const expFooter = document.querySelector('#experience .footer p');
-        if(expFooter) expFooter.innerHTML = t.exp_footer;
-        
-        // Experience cards
+        document.querySelector('.exp-page-title').textContent = t.exp.title;
+        document.querySelector('.exp-footer').textContent = t.exp.footer;
         const expCards = document.querySelectorAll('#experience .exp-card');
-        if(expCards[0]) {
-            expCards[0].querySelector('.exp-date').innerHTML = t.exp1_date;
-            expCards[0].querySelector('.exp-title').innerHTML = t.exp1_title;
-            expCards[0].querySelector('.exp-company').innerHTML = t.exp1_company;
+        if (expCards[0]) {
+            expCards[0].querySelector('.exp-date').textContent = t.exp.card1.date;
+            expCards[0].querySelector('.exp-title').textContent = t.exp.card1.title;
+            expCards[0].querySelector('.exp-company').textContent = t.exp.card1.company;
+            const items = expCards[0].querySelectorAll('.exp-list li');
+            t.exp.card1.items.forEach((item, i) => { if (items[i]) items[i].textContent = item; });
         }
-        if(expCards[1]) {
-            expCards[1].querySelector('.exp-date').innerHTML = t.exp2_date;
-            expCards[1].querySelector('.exp-title').innerHTML = t.exp2_title;
-            expCards[1].querySelector('.exp-company').innerHTML = t.exp2_company;
+        if (expCards[1]) {
+            expCards[1].querySelector('.exp-date').textContent = t.exp.card2.date;
+            expCards[1].querySelector('.exp-title').textContent = t.exp.card2.title;
+            expCards[1].querySelector('.exp-company').textContent = t.exp.card2.company;
+            const items = expCards[1].querySelectorAll('.exp-list li');
+            t.exp.card2.items.forEach((item, i) => { if (items[i]) items[i].textContent = item; });
         }
-        if(expCards[2]) {
-            expCards[2].querySelector('.exp-date').innerHTML = t.exp3_date;
-            expCards[2].querySelector('.exp-title').innerHTML = t.exp3_title;
-            expCards[2].querySelector('.exp-company').innerHTML = t.exp3_company;
+        if (expCards[2]) {
+            expCards[2].querySelector('.exp-date').textContent = t.exp.card3.date;
+            expCards[2].querySelector('.exp-title').textContent = t.exp.card3.title;
+            expCards[2].querySelector('.exp-company').textContent = t.exp.card3.company;
+            const items = expCards[2].querySelectorAll('.exp-list li');
+            t.exp.card3.items.forEach((item, i) => { if (items[i]) items[i].textContent = item; });
         }
         
         // Skills page
-        const skillsHeader = document.querySelector('#skills .hero-name');
-        if(skillsHeader) skillsHeader.innerHTML = '⚙️ ' + t.skills_title;
-        const skillsTitles = document.querySelectorAll('#skills .section .section-title');
-        if(skillsTitles[0]) skillsTitles[0].innerHTML = t.skills_analytics;
-        if(skillsTitles[1]) skillsTitles[1].innerHTML = t.skills_viz;
-        if(skillsTitles[2]) skillsTitles[2].innerHTML = t.skills_lang;
+        document.querySelector('.skills-page-title').textContent = t.skills.title;
+        document.querySelector('.skills-analytics-title').textContent = t.skills.analytics;
+        document.querySelector('.skills-viz-title').textContent = t.skills.viz;
+        document.querySelector('.skills-lang-title').textContent = t.skills.lang;
+        document.querySelector('.skills-footer').textContent = t.skills.footer;
+        
+        // Languages in skills page
         const langNames = document.querySelectorAll('#skills .lang-name');
-        if(langNames[0]) langNames[0].innerHTML = '🇺🇿 ' + t.lang_uz;
-        if(langNames[1]) langNames[1].innerHTML = '🇬🇧 ' + t.lang_en;
-        if(langNames[2]) langNames[2].innerHTML = '🇷🇺 ' + t.lang_ru;
         const langLevels = document.querySelectorAll('#skills .lang-level');
-        if(langLevels[0]) langLevels[0].innerHTML = t.lang_uz_level;
-        if(langLevels[1]) langLevels[1].innerHTML = t.lang_en_level;
-        if(langLevels[2]) langLevels[2].innerHTML = t.lang_ru_level;
-        const skillsFooter = document.querySelector('#skills .footer p');
-        if(skillsFooter) skillsFooter.innerHTML = t.skills_footer;
+        if (langNames[0]) langNames[0].innerHTML = '🇺🇿 ' + t.langs.uz;
+        if (langNames[1]) langNames[1].innerHTML = '🇬🇧 ' + t.langs.en;
+        if (langNames[2]) langNames[2].innerHTML = '🇷🇺 ' + t.langs.ru;
+        if (langLevels[0]) langLevels[0].textContent = t.langs.uz_level;
+        if (langLevels[1]) langLevels[1].textContent = t.langs.en_level;
+        if (langLevels[2]) langLevels[2].textContent = t.langs.ru_level;
         
         // Projects page
-        const projHeader = document.querySelector('#projects .hero-name');
-        if(projHeader) projHeader.innerHTML = '🚀 ' + t.proj_title;
-        const projFooter = document.querySelector('#projects .footer p');
-        if(projFooter) projFooter.innerHTML = t.proj_footer;
+        document.querySelector('.projects-page-title').textContent = t.projects.title;
+        document.querySelector('.projects-footer').textContent = t.projects.footer;
         
         // Certificates page
-        const certHeader = document.querySelector('#certificates .hero-name');
-        if(certHeader) certHeader.innerHTML = '📜 ' + t.cert_title;
-        const certFooter = document.querySelector('#certificates .footer p');
-        if(certFooter) certFooter.innerHTML = t.cert_footer;
-        const downloadBtns = document.querySelectorAll('#certificates .cv-btn span');
-        downloadBtns.forEach(btn => { if(btn) btn.innerHTML = t.download_btn; });
+        document.querySelector('.cert-page-title').textContent = t.cert.title;
+        document.querySelectorAll('.download-text').forEach(el => el.textContent = t.cert.download);
+        document.querySelector('.cert-footer').textContent = t.cert.footer;
         
         // Contact page
-        const contactHeader = document.querySelector('#contact .hero-name');
-        if(contactHeader) contactHeader.innerHTML = '📬 ' + t.contact_title;
-        const contactFooter = document.querySelector('#contact .footer p');
-        if(contactFooter) contactFooter.innerHTML = t.contact_footer;
+        document.querySelector('.contact-page-title').textContent = t.contact_page.title;
+        document.querySelector('.contact-email-label').textContent = t.contact_page.email_label;
+        document.querySelector('.contact-phone-label').textContent = t.contact_page.phone_label;
+        document.querySelector('.contact-location-label').textContent = t.contact_page.location_label;
+        document.querySelector('.contact-footer').textContent = t.contact_page.footer;
         
         // Main footer
-        const mainFooter = document.querySelector('.footer p');
-        if(mainFooter) mainFooter.innerHTML = t.footer_text;
+        document.querySelector('.footer-text').textContent = t.footer;
     }
 
     const langBtns = document.querySelectorAll('.lang-btn');
