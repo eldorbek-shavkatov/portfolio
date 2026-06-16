@@ -95,13 +95,18 @@
         .cv-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
         .cv-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--gradient-primary); color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.3s; box-shadow: var(--shadow-sm); }
         .cv-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .social-row { display: flex; justify-content: center; gap: 28px; margin-top: 35px; flex-wrap: wrap; }
-        .social-item { display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: inherit; transition: 0.3s; }
-        .social-icon { width: 60px; height: 60px; border-radius: 50%; background: rgba(124,58,237,0.12); display: flex; align-items: center; justify-content: center; font-size: 26px; transition: 0.3s; }
-        .social-item:hover .social-icon { background: var(--primary); transform: translateY(-6px) scale(1.1); box-shadow: var(--shadow-neon); }
+        /* Social Media - Hoverda username chiqadi */
+        .social-row { display: flex; justify-content: center; gap: 35px; margin-top: 35px; flex-wrap: wrap; }
+        .social-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: inherit; transition: 0.3s; }
+        .social-icon { width: 65px; height: 65px; border-radius: 50%; background: rgba(124,58,237,0.12); display: flex; align-items: center; justify-content: center; font-size: 28px; transition: 0.3s; cursor: pointer; }
+        .social-item:hover .social-icon { background: var(--primary); transform: translateY(-8px) scale(1.12); box-shadow: var(--shadow-neon); }
         .social-item:hover { color: var(--primary); }
+        /* Tooltip - Username chiqishi */
+        .social-item .tooltip { position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 500; white-space: nowrap; opacity: 0; visibility: hidden; transition: 0.3s; z-index: 100; pointer-events: none; }
+        .social-item:hover .tooltip { opacity: 1; visibility: visible; bottom: -40px; }
         .social-username { font-size: 12px; opacity: 0.7; }
         .footer { text-align: center; padding: 35px; border-top: 1px solid rgba(124,58,237,0.12); font-size: 14px; opacity: 0.6; }
+        .social-bottom { margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(124,58,237,0.1); }
         @media (max-width: 1000px) { .main-wrapper { flex-direction: column; } .sidebar { width: 100%; position: static; } .nav-menu { flex-direction: row; flex-wrap: wrap; justify-content: center; border-radius: 60px; } .nav-btn { width: auto; justify-content: center; padding: 12px 20px; } .hero-name { font-size: 42px; } .content { padding: 30px; } .section-title { font-size: 26px; } }
         @media (max-width: 600px) { .hero-name { font-size: 32px; } .stats-row { gap: 15px; } .stat-card { padding: 10px 18px; min-width: 90px; } .stat-number { font-size: 32px; } .exp-grid, .cert-grid { grid-template-columns: 1fr; } }
     </style>
@@ -153,7 +158,6 @@
                     <div class="contact-bar">
                         <a href="mailto:eldorbekshavkatoff@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> <span class="contact-email">eldorbekshavkatoff@gmail.com</span></a>
                         <a href="tel:+998333331228" class="contact-item"><i class="fas fa-phone"></i> <span class="contact-phone">(+998) 333331228</span></a>
-                        <span class="contact-item"><i class="fas fa-map-marker-alt"></i> <span class="contact-location">Samarqand, O'zbekiston</span></span>
                         <span class="contact-item"><i class="fas fa-calendar-alt"></i> <span class="contact-birth">28/12/2003</span></span>
                         <span class="contact-item"><i class="fas fa-passport"></i> <span class="contact-nationality">O'zbek</span></span>
                     </div>
@@ -288,16 +292,42 @@
                             <div class="contact-card"><i class="fab fa-instagram" style="font-size:32px; color:#7c3aed;"></i><div><strong>Instagram</strong><br>eldorbek_shavkatov</div></div>
                             <div class="contact-card"><i class="fab fa-facebook" style="font-size:32px; color:#7c3aed;"></i><div><strong>Facebook</strong><br>eldorbek_shavkatov</div></div>
                             <div class="contact-card"><i class="fas fa-globe" style="font-size:32px; color:#7c3aed;"></i><div><strong>Veb-sayt</strong><br>https://eldorbek-shavkatov.github.io/portfolio/</div></div>
-                            <div class="contact-card"><i class="fas fa-home" style="font-size:32px; color:#7c3aed;"></i><div><strong class="contact-address-label">Manzil</strong><br>Oromgoh ko'chasi 26-uy, 140600 Samarqand, O'zbekiston</div></div>
                         </div>
+                        
+                        <!-- ==================== IJTIMOIY TARMOQLAR (1-MARTA - YUQORIDA) ==================== -->
                         <div class="section">
                             <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-title">Ijtimoiy tarmoqlar</span></div>
                             <div class="social-row">
-                                <a href="https://t.me/eldorbek_shavkatov" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-telegram"></i></div><span class="social-username">@eldorbek_shavkatov</span></a>
-                                <a href="https://github.com/eldorbek-shavkatov" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-github"></i></div><span class="social-username">eldorbek-shavkatov</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-linkedin-in"></i></div><span class="social-username">eldorbek-shavkatov</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-instagram"></i></div><span class="social-username">eldorbek_shavkatov</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-facebook-f"></i></div><span class="social-username">eldorbek_shavkatov</span></a>
+                                <a href="https://t.me/eldorbek_shavkatov" target="_blank" class="social-item">
+                                    <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                                    <div class="tooltip">@eldorbek_shavkatov</div>
+                                    <span class="social-username">Telegram</span>
+                                </a>
+                                <a href="https://github.com/eldorbek-shavkatov" target="_blank" class="social-item">
+                                    <div class="social-icon"><i class="fab fa-github"></i></div>
+                                    <div class="tooltip">eldorbek-shavkatov</div>
+                                    <span class="social-username">GitHub</span>
+                                </a>
+                                <a href="#" target="_blank" class="social-item">
+                                    <div class="social-icon"><i class="fab fa-linkedin-in"></i></div>
+                                    <div class="tooltip">eldorbek-shavkatov</div>
+                                    <span class="social-username">LinkedIn</span>
+                                </a>
+                                <a href="#" target="_blank" class="social-item">
+                                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                                    <div class="tooltip">eldorbek_shavkatov</div>
+                                    <span class="social-username">Instagram</span>
+                                </a>
+                                <a href="#" target="_blank" class="social-item">
+                                    <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                                    <div class="tooltip">eldorbek_shavkatov</div>
+                                    <span class="social-username">Facebook</span>
+                                </a>
+                                <a href="#" target="_blank" class="social-item">
+                                    <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                                    <div class="tooltip">@eldorbek_sh</div>
+                                    <span class="social-username">Twitter</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -305,6 +335,51 @@
                 </div>
             </div>
         </div>
+    </div>
+    
+    <!-- ==================== IJTIMOIY TARMOQLAR (2-MARTA - PASTDA, ALOHIDA) ==================== -->
+    <div class="glass-card" style="margin-top: 30px;">
+        <div class="content" style="padding: 30px;">
+            <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-bottom-title">Biz ijtimoiy tarmoqlarda</span></div>
+            <div class="social-row">
+                <a href="https://t.me/eldorbek_shavkatov" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                    <div class="tooltip">@eldorbek_shavkatov</div>
+                    <span class="social-username">Telegram</span>
+                </a>
+                <a href="https://github.com/eldorbek-shavkatov" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-github"></i></div>
+                    <div class="tooltip">eldorbek-shavkatov</div>
+                    <span class="social-username">GitHub</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="tooltip">eldorbek-shavkatov</div>
+                    <span class="social-username">LinkedIn</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                    <div class="tooltip">eldorbek_shavkatov</div>
+                    <span class="social-username">Instagram</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                    <div class="tooltip">eldorbek_shavkatov</div>
+                    <span class="social-username">Facebook</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                    <div class="tooltip">@eldorbek_sh</div>
+                    <span class="social-username">Twitter</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                    <div class="tooltip">Eldorbek Analytics</div>
+                    <span class="social-username">YouTube</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer"><p>Kuzatib boring | Barcha ijtimoiy tarmoqlarda faolmiz</p></div>
     </div>
 </div>
 
@@ -346,14 +421,14 @@
     }
 
     // ============================================ //
-    // TO'LIQ 3 TIL TARJIMALARI (2200+ LINES)
+    // TO'LIQ 3 TIL TARJIMALARI
     // ============================================ //
     const translations = {
         uz: {
             nav: ["BOSH SAHIFA", "TAJRIBA", "KO'NIKMALAR", "SERTIFIKATLAR", "KONTAKT"],
             hero_title: "📊 Ma'lumotlar tahlili | 💼 Investitsion analitik | 📈 Biznes analitik | 🔐 Kiberxavfsizlik",
             stat_exp: "Yil tajriba", stat_proj: "Loyihalar", stat_cert: "Sertifikatlar", stat_tech: "Texnologiyalar",
-            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_location: "Samarqand, O'zbekiston", contact_birth: "28/12/2003", contact_nationality: "O'zbek",
+            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_birth: "28/12/2003", contact_nationality: "O'zbek",
             about_title: "Men haqimda",
             about_text: "Toshkent Axborot Texnologiyalari Universitetining Axborot xavfsizligi fakultetini tamomlagan. Data/Investment/Business Analytics va Project Management sohalarida kuchli bilim va amaliy ko'nikmalarga ega mutaxassis. 3 yildan ortiq ish tajribasi davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi bo'yicha malakalarini oshirgan. Analitik materiallar tayyorlash, hujjatlar bilan ishlash, moliyaviy modellar yaratish va investorlar uchun taqdimotlar tayyorlash bo'yicha yaxshi ko'nikmalarga ega.",
             edu_title: "Ta'lim", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Kiberxavfsizlik bo'yicha bakalavr darajasi", edu_univ: "Toshkent Axborot Texnologiyalari Universiteti (TUIT)", edu_address: "Manzil: 100084 Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108", edu_web: "Veb-sayt: www.tuit.uz",
@@ -387,90 +462,90 @@
             conf1_date: "21/09/2024 | Toshkent", conf1_title: "Konvolyutsion neyron tarmoqlar: konvolyutsiyalar, tarmoq tuzilishi", conf1_desc: "Neyron tarmoqlar va ularning kelajagi mavzusi Janubiy Koreyalik IT mutaxassislari ishtirokidagi forumda muhokama qilindi.",
             conf2_date: "06/07/2023 - 07/07/2023 | Toshkent", conf2_title: "Digital Leadership Forum", conf2_desc: "GovTech, EdTech, IT & BPO Outsourcing va Venture kabi mavzularda 20 dan ortiq xalqaro ekspertlar ishtirokida sessiyalar tashkil etildi.",
             cert_footer: "Professional sertifikatlar va doimiy o'rganish",
-            contact_page_title: "Bog'lanish", contact_email_label: "Email", contact_phone_label: "Telefon", contact_address_label: "Manzil", social_title: "Ijtimoiy tarmoqlar", contact_footer: "Hamkorlik uchun mavjud | Data Analytics & Investment Analysis",
+            contact_page_title: "Bog'lanish", contact_email_label: "Email", contact_phone_label: "Telefon", social_title: "Ijtimoiy tarmoqlar", social_bottom_title: "Biz ijtimoiy tarmoqlarda", contact_footer: "Hamkorlik uchun mavjud | Data Analytics & Investment Analysis",
             footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
         },
         ru: {
             nav: ["ГЛАВНАЯ", "ОПЫТ", "НАВЫКИ", "СЕРТИФИКАТЫ", "КОНТАКТЫ"],
             hero_title: "📊 Аналитика данных | 💼 Инвестиционный аналитик | 📈 Бизнес-аналитик | 🔐 Кибербезопасность",
             stat_exp: "Лет опыта", stat_proj: "Проекты", stat_cert: "Сертификаты", stat_tech: "Технологии",
-            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_location: "Самарканд, Узбекистан", contact_birth: "28/12/2003", contact_nationality: "Узбек",
+            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_birth: "28/12/2003", contact_nationality: "Узбек",
             about_title: "Обо мне",
-            about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий. Специалист с глубокими знаниями и практическими навыками в областях Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами. Приобрел хорошие навыки подготовки аналитических материалов, работы с документами, создания финансовых моделей и подготовки презентаций для инвесторов.",
+            about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий. Специалист с глубокими знаниями и практическими навыками в областях Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами.",
             edu_title: "Образование", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Степень бакалавра в области кибербезопасности", edu_univ: "Ташкентский университет информационных технологий (ТУИТ)", edu_address: "Адрес: 100084 Ташкент, Юнусабадский район, проспект Амира Темура 108", edu_web: "Веб-сайт: www.tuit.uz",
             cv_title: "Скачать резюме", cv_uz: "Резюме на узбекском", cv_ru: "Русское резюме", cv_en: "Английское резюме (Europass)",
             exp_page_title: "Опыт работы",
-            exp1_date: "01/09/2025 - Настоящее время", exp1_title: "Инвестиционный аналитик", exp1_company: "Институт повышения квалификации и статистических исследований при Государственном комитете по статистике - Ташкент, Узбекистан",
+            exp1_date: "01/09/2025 - Настоящее время", exp1_title: "Инвестиционный аналитик", exp1_company: "Институт повышения квалификации и статистических исследований при Госкомстате - Ташкент, Узбекистан",
             exp1_1: "Проведение финансово-экономического анализа инвестиционных проектов, финансируемых ООН",
             exp1_2: "Разработка финансовых моделей, бизнес-кейсов и документов по оценке проектов",
             exp1_3: "Мониторинг и оценка реализации инвестиционных проектов, включая контроль бюджета и сроков",
             exp1_4: "Подготовка аналитических отчетов и презентаций для руководства и международных партнеров",
-            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Инвестиционный аналитик (стажёр)", exp2_company: "Государственное унитарное предприятие Центр кибербезопасности - Ташкент, Узбекистан",
-            exp2_1: "Обеспечение кибербезопасности и внедрение мер безопасности для крупных компаний и организаций",
-            exp2_2: "Настройка, мониторинг и анализ сетевой инфраструктуры для выявления и устранения уязвимостей",
-            exp2_3: "Обнаружение, анализ и реагирование на инциденты и угрозы кибербезопасности",
-            exp2_4: "Подготовка аналитических отчетов о состоянии кибербезопасности и представление их руководству",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Инвестиционный аналитик (стажёр)", exp2_company: "ГУП Центр кибербезопасности - Ташкент, Узбекистан",
+            exp2_1: "Обеспечение кибербезопасности и внедрение мер безопасности для крупных компаний",
+            exp2_2: "Настройка, мониторинг и анализ сетевой инфраструктуры для выявления уязвимостей",
+            exp2_3: "Обнаружение, анализ и реагирование на инциденты кибербезопасности",
+            exp2_4: "Подготовка аналитических отчетов о состоянии кибербезопасности",
             exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Помощник менеджера", exp3_company: "АО SEMURG INSURANCE - Ташкент, Узбекистан",
-            exp3_1: "Работа с внутренними базами данных компании, сбор и организация финансовых и страховых данных",
-            exp3_2: "Анализ и обработка страховых договоров и других финансовых документов",
-            exp3_3: "Сбор и углубленный анализ финансовых данных, подготовка регулярных отчетов для руководства",
+            exp3_1: "Работа с внутренними базами данных, сбор финансовых и страховых данных",
+            exp3_2: "Анализ и обработка страховых договоров и финансовых документов",
+            exp3_3: "Сбор и углубленный анализ финансовых данных, подготовка отчетов",
             exp3_4: "Мониторинг и анализ внутренних активов и деятельности компании",
-            exp_footer: "3+ года профессионального опыта | Решения на основе данных",
-            skills_page_title: "Навыки", skills_pm_title: "Управление проектами", skills_analytics_title: "Аналитические инструменты", skills_office_title: "Microsoft Office", skills_graphics_title: "Графика", skills_lang_title: "Языки",
-            lang_uz_name: "Узбекский язык", lang_uz_level: "Родной",
-            lang_en_name: "Английский язык", lang_en_level: "B2 - Независимый пользователь (Аудирование B2, Чтение B2, Письмо B2, Говорение B2)",
-            lang_ru_name: "Русский язык", lang_ru_level: "B1-B2 - Независимый пользователь (Аудирование B2, Чтение B2, Письмо B1, Говорение B2)",
-            skills_footer: "Специалист по работе с данными",
+            exp_footer: "3+ года опыта | Решения на основе данных",
+            skills_page_title: "Навыки", skills_pm_title: "Управление проектами", skills_analytics_title: "Аналитика", skills_office_title: "Microsoft Office", skills_graphics_title: "Графика", skills_lang_title: "Языки",
+            lang_uz_name: "Узбекский", lang_uz_level: "Родной",
+            lang_en_name: "Английский", lang_en_level: "B2 - Независимый пользователь",
+            lang_ru_name: "Русский", lang_ru_level: "B1-B2 - Независимый пользователь",
+            skills_footer: "Специалист по данным",
             cert_page_title: "Сертификаты",
-            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Формат обучения: Онлайн | Узбекистан", cert1_desc: "Этот сертификат подтверждает успешное завершение программы Data Analytics Navigator, охватывающей основы анализа данных, инструменты бизнес-аналитики и практические аналитические навыки для решения реальных бизнес-задач.", cert1_download: "Скачать сертификат",
-            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "Формат обучения: Онлайн", cert2_desc: "Этот сертификат охватывает основные концепции анализа данных, включая сбор, очистку, анализ и визуализацию данных, и подтверждает знания по работе с инструментами и техниками отраслевого стандарта.", cert2_download: "Скачать сертификат",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Формат: Онлайн | Узбекистан", cert1_desc: "Сертификат подтверждает завершение программы по анализу данных, инструментам бизнес-аналитики.", cert1_download: "Скачать",
+            cert2_date: "12/09/2025 | Cisco", cert2_title: "Data Analytics Essentials", cert2_mode: "Формат: Онлайн", cert2_desc: "Сертификат охватывает сбор, очистку, анализ и визуализацию данных.", cert2_download: "Скачать",
             conf_title: "Конференции и семинары",
-            conf1_date: "21/09/2024 | Ташкент", conf1_title: "Сверточные нейронные сети: свертки, структура сети", conf1_desc: "Тема нейронных сетей и их будущего обсуждалась на форуме с участием южнокорейских IT-специалистов.",
-            conf2_date: "06/07/2023 - 07/07/2023 | Ташкент", conf2_title: "Digital Leadership Forum", conf2_desc: "Сессии по таким темам, как GovTech, EdTech, IT & BPO аутсорсинг и Venture, были организованы с участием более 20 международных экспертов.",
-            cert_footer: "Профессиональные сертификаты и непрерывное обучение",
-            contact_page_title: "Контакты", contact_email_label: "Email", contact_phone_label: "Телефон", contact_address_label: "Адрес", social_title: "Социальные сети", contact_footer: "Доступен для сотрудничества | Аналитика данных и инвестиционный анализ",
-            footer_text: "© 2025 Эльдорбек Шавкатов | Портфолио аналитики данных"
+            conf1_date: "21/09/2024 | Ташкент", conf1_title: "Сверточные нейронные сети", conf1_desc: "Форум с участием южнокорейских IT-специалистов.",
+            conf2_date: "06-07/07/2023 | Ташкент", conf2_title: "Digital Leadership Forum", conf2_desc: "Сессии с участием 20+ международных экспертов.",
+            cert_footer: "Профессиональные сертификаты",
+            contact_page_title: "Контакты", contact_email_label: "Email", contact_phone_label: "Телефон", social_title: "Социальные сети", social_bottom_title: "Мы в соцсетях", contact_footer: "Доступен для сотрудничества",
+            footer_text: "© 2025 Эльдорбек Шавкатов | Портфолио"
         },
         en: {
             nav: ["HOME", "EXPERIENCE", "SKILLS", "CERTIFICATES", "CONTACT"],
             hero_title: "📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🔐 Cybersecurity",
             stat_exp: "Years exp.", stat_proj: "Projects", stat_cert: "Certificates", stat_tech: "Technologies",
-            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_location: "Samarkand, Uzbekistan", contact_birth: "28/12/2003", contact_nationality: "Uzbek",
+            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_birth: "28/12/2003", contact_nationality: "Uzbek",
             about_title: "About Me",
-            about_text: "I graduated from the Faculty of Information Security at Tashkent University of Information Technologies. I am a specialist with strong knowledge and practical skills in the fields of Data/Investment/Business Analytics and Project Management. During my more than 3 years of work experience, I have improved my skills in financial and economic analysis, contract and project management. I have acquired good skills in preparing analytical materials, working with documents, creating financial models, and preparing presentations for investors.",
+            about_text: "Graduate of the Faculty of Information Security at Tashkent University of Information Technologies. Specialist with strong knowledge in Data/Investment/Business Analytics and Project Management. Over 3 years of experience in financial analysis, contract management, and project management.",
             edu_title: "Education", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Bachelor's Degree in Cybersecurity", edu_univ: "Tashkent University of Information Technologies (TUIT)", edu_address: "Address: 108 Amir Temur Avenue, Yunusabad District, 100084 Tashkent", edu_web: "Website: www.tuit.uz",
             cv_title: "Download CV", cv_uz: "Uzbek CV", cv_ru: "Russian CV", cv_en: "English CV (Europass)",
             exp_page_title: "Work Experience",
-            exp1_date: "01/09/2025 - Current", exp1_title: "Investment Analyst", exp1_company: "Institute for Staff Advanced Training and Statistical Research of National Statistics Committee - Tashkent, Uzbekistan",
-            exp1_1: "Conducting financial and economic analysis of UN-funded investment projects",
+            exp1_date: "01/09/2025 - Current", exp1_title: "Investment Analyst", exp1_company: "Institute under the State Statistics Committee - Tashkent, Uzbekistan",
+            exp1_1: "Financial and economic analysis of UN-funded investment projects",
             exp1_2: "Developing financial models, business cases, and project appraisal documents",
-            exp1_3: "Monitoring and evaluating the implementation of investment projects, including budget and timeline control",
-            exp1_4: "Preparing analytical reports and presentations for management and international partners",
-            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investment Analyst (Intern)", exp2_company: "Cyber Security Center State Unitary Enterprise - Tashkent, Uzbekistan",
-            exp2_1: "Providing cybersecurity protection and implementing security measures for large companies and organizations",
-            exp2_2: "Configuring, monitoring, and analyzing network infrastructure to identify and mitigate vulnerabilities",
-            exp2_3: "Detecting, analyzing, and responding to cybersecurity incidents and threats",
-            exp2_4: "Preparing analytical reports on cybersecurity status and presenting them to management",
+            exp1_3: "Monitoring project implementation, budget and timeline control",
+            exp1_4: "Analytical reports for management and international partners",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investment Analyst (Intern)", exp2_company: "Cyber Security Center SUE - Tashkent, Uzbekistan",
+            exp2_1: "Cybersecurity protection for large companies",
+            exp2_2: "Network infrastructure configuration, monitoring, and analysis",
+            exp2_3: "Detection and response to cybersecurity incidents",
+            exp2_4: "Analytical reports on cybersecurity status",
             exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Assistant Manager", exp3_company: "SEMURG INSURANCE JSC - Tashkent, Uzbekistan",
-            exp3_1: "Working with the company's internal databases, collecting and organizing financial and insurance data",
-            exp3_2: "Analyzing and processing insurance contracts and other financial documents",
-            exp3_3: "Gathering and conducting in-depth analysis of financial data, and preparing regular reports for management",
-            exp3_4: "Monitoring and analyzing the company's internal assets and performance",
-            exp_footer: "3+ years professional experience | Data-driven decisions",
-            skills_page_title: "Skills", skills_pm_title: "Project Management", skills_analytics_title: "Analytics Tools", skills_office_title: "Microsoft Office", skills_graphics_title: "Graphics", skills_lang_title: "Languages",
-            lang_uz_name: "Uzbek", lang_uz_level: "Mother tongue",
-            lang_en_name: "English", lang_en_level: "B2 - Independent User (Listening B2, Reading B2, Writing B2, Speaking B2)",
-            lang_ru_name: "Russian", lang_ru_level: "B1-B2 - Independent User (Listening B2, Reading B2, Writing B1, Speaking B2)",
+            exp3_1: "Internal database management, financial and insurance data collection",
+            exp3_2: "Insurance contracts and financial document analysis",
+            exp3_3: "Financial data analysis and regular reporting",
+            exp3_4: "Internal assets and performance monitoring",
+            exp_footer: "3+ years experience | Data-driven decisions",
+            skills_page_title: "Skills", skills_pm_title: "Project Management", skills_analytics_title: "Analytics", skills_office_title: "Microsoft Office", skills_graphics_title: "Graphics", skills_lang_title: "Languages",
+            lang_uz_name: "Uzbek", lang_uz_level: "Native",
+            lang_en_name: "English", lang_en_level: "B2 - Independent User",
+            lang_ru_name: "Russian", lang_ru_level: "B1-B2 - Independent User",
             skills_footer: "Data specialist",
-            cert_page_title: "Certifications",
-            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Mode of learning: Online | Uzbekistan", cert1_desc: "This certificate validates completion of the Data Analytics Navigator program, covering data analysis fundamentals, business intelligence tools, and practical analytics skills for real-world business problems.", cert1_download: "Download Certificate",
-            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "Mode of learning: Online", cert2_desc: "This certification covers essential data analytics concepts including data collection, cleaning, analysis, and visualization using industry-standard tools and techniques.", cert2_download: "Download Certificate",
-            conf_title: "Conferences and Seminars",
-            conf1_date: "21/09/2024 | Tashkent", conf1_title: "Convolutional neural networks: convolutions, network structure", conf1_desc: "The topic of neural networks and their future was discussed at a forum attended by South Korean IT specialists.",
-            conf2_date: "06/07/2023 - 07/07/2023 | Tashkent", conf2_title: "Digital Leadership Forum", conf2_desc: "Sessions on topics such as GovTech, EdTech, IT & BPO Outsourcing, and Venture were organized with the participation of more than 20 international experts.",
-            cert_footer: "Professional certifications & continuous learning",
-            contact_page_title: "Contact", contact_email_label: "Email", contact_phone_label: "Phone", contact_address_label: "Address", social_title: "Social Media", contact_footer: "Available for collaboration | Data Analytics & Investment Analysis",
-            footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
+            cert_page_title: "Certificates",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Online | Uzbekistan", cert1_desc: "Data analysis fundamentals, business intelligence tools, and practical analytics skills.", cert1_download: "Download",
+            cert2_date: "12/09/2025 | Cisco", cert2_title: "Data Analytics Essentials", cert2_mode: "Online", cert2_desc: "Data collection, cleaning, analysis, and visualization using industry-standard tools.", cert2_download: "Download",
+            conf_title: "Conferences & Seminars",
+            conf1_date: "21/09/2024 | Tashkent", conf1_title: "Convolutional Neural Networks", conf1_desc: "Forum with South Korean IT specialists.",
+            conf2_date: "06-07/07/2023 | Tashkent", conf2_title: "Digital Leadership Forum", conf2_desc: "Sessions with 20+ international experts.",
+            cert_footer: "Professional certifications",
+            contact_page_title: "Contact", contact_email_label: "Email", contact_phone_label: "Phone", social_title: "Social Media", social_bottom_title: "Follow Us", contact_footer: "Available for collaboration",
+            footer_text: "© 2025 Eldorbek Shavkatov | Portfolio"
         }
     };
 
@@ -478,44 +553,28 @@
         const t = translations[lang];
         if(!t) return;
         
-        // Navigation
         document.querySelectorAll('.nav-text').forEach((el, i) => { if(t.nav[i]) el.textContent = t.nav[i]; });
-        
-        // Hero title
         document.querySelector('.hero-title').textContent = t.hero_title;
-        
-        // Stats
         document.querySelector('.stat-exp').textContent = t.stat_exp;
         document.querySelector('.stat-proj').textContent = t.stat_proj;
         document.querySelector('.stat-cert').textContent = t.stat_cert;
         document.querySelector('.stat-tech').textContent = t.stat_tech;
-        
-        // Contact bar
         document.querySelector('.contact-email').textContent = t.contact_email;
         document.querySelector('.contact-phone').textContent = t.contact_phone;
-        document.querySelector('.contact-location').textContent = t.contact_location;
         document.querySelector('.contact-birth').textContent = t.contact_birth;
         document.querySelector('.contact-nationality').textContent = t.contact_nationality;
-        
-        // About
         document.querySelector('.about-title').textContent = t.about_title;
         document.querySelector('.about-text').textContent = t.about_text;
-        
-        // Education
         document.querySelector('.edu-title').textContent = t.edu_title;
         document.querySelector('.edu-date').textContent = t.edu_date;
         document.querySelector('.edu-name').textContent = t.edu_name;
         document.querySelector('.edu-univ').textContent = t.edu_univ;
         document.querySelector('.edu-address').textContent = t.edu_address;
         document.querySelector('.edu-web').textContent = t.edu_web;
-        
-        // CV
         document.querySelector('.cv-title').textContent = t.cv_title;
         document.querySelector('.cv-uz').textContent = t.cv_uz;
         document.querySelector('.cv-ru').textContent = t.cv_ru;
         document.querySelector('.cv-en').textContent = t.cv_en;
-        
-        // Experience page
         document.querySelector('.exp-page-title').textContent = t.exp_page_title;
         document.querySelectorAll('.exp1-date').forEach(el => el.textContent = t.exp1_date);
         document.querySelectorAll('.exp1-title').forEach(el => el.textContent = t.exp1_title);
@@ -539,8 +598,6 @@
         document.querySelectorAll('.exp3-3').forEach(el => el.textContent = t.exp3_3);
         document.querySelectorAll('.exp3-4').forEach(el => el.textContent = t.exp3_4);
         document.querySelector('.exp-footer').innerHTML = '<i class="fas fa-chart-line"></i> ' + t.exp_footer;
-        
-        // Skills page
         document.querySelector('.skills-page-title').textContent = t.skills_page_title;
         document.querySelector('.skills-pm-title').textContent = t.skills_pm_title;
         document.querySelector('.skills-analytics-title').textContent = t.skills_analytics_title;
@@ -548,16 +605,12 @@
         document.querySelector('.skills-graphics-title').textContent = t.skills_graphics_title;
         document.querySelector('.skills-lang-title').textContent = t.skills_lang_title;
         document.querySelector('.skills-footer').innerHTML = '<i class="fas fa-database"></i> ' + t.skills_footer;
-        
-        // Languages
         document.querySelector('.lang-uz-name').textContent = t.lang_uz_name;
         document.querySelector('.lang-uz-level').textContent = t.lang_uz_level;
         document.querySelector('.lang-en-name').textContent = t.lang_en_name;
         document.querySelector('.lang-en-level').textContent = t.lang_en_level;
         document.querySelector('.lang-ru-name').textContent = t.lang_ru_name;
         document.querySelector('.lang-ru-level').textContent = t.lang_ru_level;
-        
-        // Certificates
         document.querySelector('.cert-page-title').textContent = t.cert_page_title;
         document.querySelectorAll('.cert1-date').forEach(el => el.textContent = t.cert1_date);
         document.querySelectorAll('.cert1-title').forEach(el => el.textContent = t.cert1_title);
@@ -577,16 +630,12 @@
         document.querySelectorAll('.conf2-title').forEach(el => el.textContent = t.conf2_title);
         document.querySelectorAll('.conf2-desc').forEach(el => el.textContent = t.conf2_desc);
         document.querySelector('.cert-footer').innerHTML = '<i class="fas fa-certificate"></i> ' + t.cert_footer;
-        
-        // Contact page
         document.querySelector('.contact-page-title').textContent = t.contact_page_title;
         document.querySelector('.contact-email-label').textContent = t.contact_email_label;
         document.querySelector('.contact-phone-label').textContent = t.contact_phone_label;
-        document.querySelector('.contact-address-label').textContent = t.contact_address_label;
         document.querySelector('.social-title').innerHTML = '<i class="fas fa-share-alt"></i> ' + t.social_title;
+        document.querySelector('.social-bottom-title').innerHTML = '<i class="fas fa-share-alt"></i> ' + t.social_bottom_title;
         document.querySelector('.contact-footer').innerHTML = '<i class="fas fa-clock"></i> ' + t.contact_footer;
-        
-        // Footer
         document.querySelector('.footer-text').textContent = t.footer_text;
     }
 
