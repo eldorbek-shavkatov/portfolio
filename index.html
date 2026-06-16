@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eldorbek Shavkatov | Data Analytics | Investment Analyst | Portfolio</title>
+    <title>Eldorbek Shavkatov | Project Manager | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -95,18 +95,21 @@
         .cv-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
         .cv-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--gradient-primary); color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.3s; box-shadow: var(--shadow-sm); }
         .cv-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        /* Social Media - Hoverda username chiqadi */
         .social-row { display: flex; justify-content: center; gap: 35px; margin-top: 35px; flex-wrap: wrap; }
         .social-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: inherit; transition: 0.3s; }
         .social-icon { width: 65px; height: 65px; border-radius: 50%; background: rgba(124,58,237,0.12); display: flex; align-items: center; justify-content: center; font-size: 28px; transition: 0.3s; cursor: pointer; }
         .social-item:hover .social-icon { background: var(--primary); transform: translateY(-8px) scale(1.12); box-shadow: var(--shadow-neon); }
         .social-item:hover { color: var(--primary); }
-        /* Tooltip - Username chiqishi */
         .social-item .tooltip { position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 500; white-space: nowrap; opacity: 0; visibility: hidden; transition: 0.3s; z-index: 100; pointer-events: none; }
         .social-item:hover .tooltip { opacity: 1; visibility: visible; bottom: -40px; }
         .social-username { font-size: 12px; opacity: 0.7; }
         .footer { text-align: center; padding: 35px; border-top: 1px solid rgba(124,58,237,0.12); font-size: 14px; opacity: 0.6; }
         .social-bottom { margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(124,58,237,0.1); }
+        /* Contact page specific styles */
+        .contact-card { display: flex; align-items: center; gap: 20px; padding: 25px; }
+        .contact-card i { font-size: 32px; min-width: 50px; text-align: center; }
+        .contact-card div strong { font-size: 15px; display: block; margin-bottom: 4px; }
+        .contact-card div { font-size: 14px; word-break: break-word; }
         @media (max-width: 1000px) { .main-wrapper { flex-direction: column; } .sidebar { width: 100%; position: static; } .nav-menu { flex-direction: row; flex-wrap: wrap; justify-content: center; border-radius: 60px; } .nav-btn { width: auto; justify-content: center; padding: 12px 20px; } .hero-name { font-size: 42px; } .content { padding: 30px; } .section-title { font-size: 26px; } }
         @media (max-width: 600px) { .hero-name { font-size: 32px; } .stats-row { gap: 15px; } .stat-card { padding: 10px 18px; min-width: 90px; } .stat-number { font-size: 32px; } .exp-grid, .cert-grid { grid-template-columns: 1fr; } }
     </style>
@@ -147,11 +150,12 @@
                     <div class="header">
                         <img src="avatar.jpg" alt="Eldorbek Shavkatov" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Eldorbek+Shavkatov&background=7c3aed&color=fff&size=160'">
                         <h1 class="hero-name">Eldorbek Shavkatov</h1>
-                        <p class="hero-title">📊 Ma'lumotlar tahlili | 💼 Investitsion analitik | 📈 Biznes analitik | 🔐 Project Manager</p>
+                        <p class="hero-title">📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🎯 Project Manager</p>
                         <div class="stats-row">
                             <div class="stat-card"><div class="stat-number">3+</div><div class="stat-label stat-exp">Yil tajriba</div></div>
+                            <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label stat-proj">Loyihalar</div></div>
                             <div class="stat-card"><div class="stat-number">2</div><div class="stat-label stat-cert">Sertifikatlar</div></div>
-                            <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label stat-tech">Texnologiyalar</div></div>
+                            <div class="stat-card"><div class="stat-number">15+</div><div class="stat-label stat-tech">Texnologiyalar</div></div>
                         </div>
                     </div>
                     <div class="contact-bar">
@@ -184,7 +188,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="footer-text">© 2025 Eldorbek Shavkatov | Data Analytics Portfolio</p></div>
+                    <div class="footer"><p class="footer-text">© 2025 Eldorbek Shavkatov | GitHub yordamida tayyorlangan 2026</p></div>
                 </div>
             </div>
 
@@ -196,19 +200,19 @@
                         <div class="exp-grid">
                             <div class="exp-card">
                                 <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="exp1-date">01/09/2025 - Hozirgi vaqt</span></div>
-                                <div class="exp-title"><span class="exp1-title">Investitsion analitik</span></div>
+                                <div class="exp-title"><span class="exp1-title">Investitsion analitik / Project Manager</span></div>
                                 <div class="exp-company"><span class="exp1-company">Davlat statistika qo'mitasi huzuridagi Kadrlar malakasini oshirish va statistik tadqiqotlar instituti - Toshkent, O'zbekiston</span></div>
                                 <ul class="exp-list"><li><span class="exp1-1">BMT tomonidan moliyalashtirilgan investitsion loyihalarning moliyaviy va iqtisodiy tahlilini o'tkazish</span></li><li><span class="exp1-2">Moliyaviy modellar, biznes-keslar va loyihalarni baholash hujjatlarini ishlab chiqish</span></li><li><span class="exp1-3">Investitsion loyihalarning ijrosini monitoring qilish va baholash, byudjet va muddatlarni nazorat qilish</span></li><li><span class="exp1-4">Rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar va taqdimotlar tayyorlash</span></li></ul>
                             </div>
                             <div class="exp-card">
                                 <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="exp2-date">31/01/2025 - 01/06/2025</span></div>
-                                <div class="exp-title"><span class="exp2-title">Investitsion analitik (stajyor)</span></div>
+                                <div class="exp-title"><span class="exp2-title">Investitsion analitik (stajyor) / Project Manager</span></div>
                                 <div class="exp-company"><span class="exp2-company">"Kiberxavfsizlik markazi" Davlat unitar korxonasi - Toshkent, O'zbekiston</span></div>
                                 <ul class="exp-list"><li><span class="exp2-1">Yirik kompaniyalar va tashkilotlar uchun kiberxavfsizlik himoyasini ta'minlash va xavfsizlik choralarini joriy etish</span></li><li><span class="exp2-2">Zaifliklarni aniqlash va bartaraf etish uchun tarmoq infratuzilmasini konfiguratsiya qilish, monitoring va tahlil qilish</span></li><li><span class="exp2-3">Kiberxavfsizlik hodisalari va tahdidlarini aniqlash, tahlil qilish va ularga javob berish</span></li><li><span class="exp2-4">Kiberxavfsizlik holati bo'yicha analitik hisobotlar tayyorlash va ularni rahbariyatga taqdim etish</span></li></ul>
                             </div>
                             <div class="exp-card">
                                 <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="exp3-date">01/02/2022 - 31/05/2024</span></div>
-                                <div class="exp-title"><span class="exp3-title">Menejer yordamchisi</span></div>
+                                <div class="exp-title"><span class="exp3-title">Menejer yordamchisi / Junior Project Manager</span></div>
                                 <div class="exp-company"><span class="exp3-company">"SEMURG INSURANCE" AJ - Toshkent, O'zbekiston</span></div>
                                 <ul class="exp-list"><li><span class="exp3-1">Kompaniyaning ichki ma'lumotlar bazalari bilan ishlash, moliyaviy va sug'urta ma'lumotlarini to'plash va tartibga solish</span></li><li><span class="exp3-2">Sug'urta shartnomalari va boshqa moliyaviy hujjatlarni tahlil qilish va qayta ishlash</span></li><li><span class="exp3-3">Moliyaviy ma'lumotlarni to'plash va chuqur tahlil qilish, rahbariyat uchun muntazam hisobotlar tayyorlash</span></li><li><span class="exp3-4">Kompaniyaning ichki aktivlari va faoliyatini monitoring qilish va tahlil qilish</span></li></ul>
                             </div>
@@ -223,23 +227,23 @@
                 <div class="glass-card">
                     <div class="header"><h1 class="hero-name" style="font-size:44px;">⚙️ <span class="skills-page-title">Ko'nikmalar</span></h1></div>
                     <div class="content">
-                        <div class="section"><div class="section-title"><i class="fas fa-tasks"></i> <span class="skills-pm-title">Loyiha boshqaruvi</span></div><div class="skills-grid"><span class="skill-tag">Trello</span><span class="skill-tag">Notion</span><span class="skill-tag">Microsoft Project</span><span class="skill-tag">Jira</span></div></div>
-                        <div class="section"><div class="section-title"><i class="fas fa-chart-line"></i> <span class="skills-analytics-title">Analitika vositalari</span></div><div class="skills-grid"><span class="skill-tag">Power BI</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">didox.uz</span><span class="skill-tag">My.Soliq</span><span class="skill-tag">1C:8.3 (qisman)</span></div></div>
-                        <div class="section"><div class="section-title"><i class="fas fa-file-alt"></i> <span class="skills-office-title">Microsoft Office</span></div><div class="skills-grid"><span class="skill-tag">Word (Yuqori daraja)</span><span class="skill-tag">Excel (Yuqori daraja)</span><span class="skill-tag">PowerPoint (Yuqori daraja)</span><span class="skill-tag">Access (Yuqori daraja)</span></div></div>
-                        <div class="section"><div class="section-title"><i class="fas fa-palette"></i> <span class="skills-graphics-title">Grafika</span></div><div class="skills-grid"><span class="skill-tag">Adobe Photoshop</span><span class="skill-tag">Paint</span></div></div>
-                        <div class="section"><div class="section-title"><i class="fas fa-language"></i> <span class="skills-lang-title">Tillar</span></div>
+                        <div class="section"><div class="section-title"><i class="fas fa-tasks"></i> <span class="skills-pm-title">Loyiha boshqaruvi (Project Management)</span></div><div class="skills-grid"><span class="skill-tag">Trello</span><span class="skill-tag">Notion</span><span class="skill-tag">Microsoft Project</span><span class="skill-tag">Jira</span><span class="skill-tag">Asana</span><span class="skill-tag">Monday.com</span></div></div>
+                        <div class="section"><div class="section-title"><i class="fas fa-chart-line"></i> <span class="skills-analytics-title">Analitika vositalari (Analytics Tools)</span></div><div class="skills-grid"><span class="skill-tag">Power BI</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">didox.uz</span><span class="skill-tag">My.Soliq</span><span class="skill-tag">1C:8.3</span><span class="skill-tag">Tableau</span><span class="skill-tag">Google Analytics</span></div></div>
+                        <div class="section"><div class="section-title"><i class="fas fa-file-alt"></i> <span class="skills-office-title">Microsoft Office</span></div><div class="skills-grid"><span class="skill-tag">Word (Yuqori daraja)</span><span class="skill-tag">Excel (Yuqori daraja)</span><span class="skill-tag">PowerPoint (Yuqori daraja)</span><span class="skill-tag">Access (Yuqori daraja)</span><span class="skill-tag">Outlook</span><span class="skill-tag">Teams</span></div></div>
+                        <div class="section"><div class="section-title"><i class="fas fa-palette"></i> <span class="skills-graphics-title">Grafika (Graphics)</span></div><div class="skills-grid"><span class="skill-tag">Adobe Photoshop</span><span class="skill-tag">Paint</span><span class="skill-tag">Canva</span></div></div>
+                        <div class="section"><div class="section-title"><i class="fas fa-language"></i> <span class="skills-lang-title">Tillar (Languages)</span></div>
                             <div class="lang-grid">
-                                <div class="lang-card"><div class="lang-name"><i class="fas fa-flag"></i> 🇺🇿 <span class="lang-uz-name">O'zbek tili</span></div><div class="lang-level"><span class="lang-uz-level">Ona tili</span></div></div>
+                                <div class="lang-card"><div class="lang-name"><i class="fas fa-flag"></i> 🇺🇿 <span class="lang-uz-name">O'zbek tili</span></div><div class="lang-level"><span class="lang-uz-level">Ona tili (C2)</span></div></div>
                                 <div class="lang-card"><div class="lang-name"><i class="fab fa-google"></i> 🇬🇧 <span class="lang-en-name">Ingliz tili</span></div><div class="lang-level"><span class="lang-en-level">B2 - Mustaqil foydalanuvchi (Tinglash B2, O'qish B2, Yozish B2, Gapirish B2)</span></div></div>
                                 <div class="lang-card"><div class="lang-name"><i class="fab fa-google"></i> 🇷🇺 <span class="lang-ru-name">Rus tili</span></div><div class="lang-level"><span class="lang-ru-level">B1-B2 - Mustaqil foydalanuvchi (Tinglash B2, O'qish B2, Yozish B1, Gapirish B2)</span></div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="skills-footer"><i class="fas fa-database"></i> Ma'lumotlar bilan ishlash bo'yicha mutaxassis</p></div>
+                    <div class="footer"><p class="skills-footer"><i class="fas fa-database"></i> Ma'lumotlar bilan ishlash va loyiha boshqaruvi bo'yicha mutaxassis</p></div>
                 </div>
             </div>
 
-            <!-- ==================== CERTIFICATES PAGE ==================== -->
+            <!-- ==================== CERTIFICATES PAGE ==================== (2 ta sertifikat) -->
             <div id="certificates" class="page">
                 <div class="glass-card">
                     <div class="header"><h1 class="hero-name" style="font-size:44px;">📜 <span class="cert-page-title">Sertifikatlar</span></h1></div>
@@ -284,18 +288,18 @@
                     <div class="header"><h1 class="hero-name" style="font-size:44px;">📬 <span class="contact-page-title">Bog'lanish</span></h1></div>
                     <div class="content">
                         <div class="contact-grid">
-                            <div class="contact-card"><i class="fas fa-envelope" style="font-size:32px; color:#7c3aed;"></i><div><strong class="contact-email-label">Email</strong><br>eldorbekshavkatoff@gmail.com</div></div>
-                            <div class="contact-card"><i class="fas fa-phone" style="font-size:32px; color:#7c3aed;"></i><div><strong class="contact-phone-label">Telefon</strong><br>(+998) 333331228</div></div>
-                            <div class="contact-card"><i class="fab fa-telegram" style="font-size:32px; color:#7c3aed;"></i><div><strong>Telegram</strong><br>@eldorbek_shavkatov</div></div>
-                            <div class="contact-card"><i class="fab fa-linkedin" style="font-size:32px; color:#7c3aed;"></i><div><strong>LinkedIn</strong><br>eldorbek-shavkatov</div></div>
-                            <div class="contact-card"><i class="fab fa-instagram" style="font-size:32px; color:#7c3aed;"></i><div><strong>Instagram</strong><br>eldorbek_shavkatov</div></div>
-                            <div class="contact-card"><i class="fab fa-facebook" style="font-size:32px; color:#7c3aed;"></i><div><strong>Facebook</strong><br>eldorbek_shavkatov</div></div>
-                            <div class="contact-card"><i class="fas fa-globe" style="font-size:32px; color:#7c3aed;"></i><div><strong>Veb-sayt</strong><br>https://eldorbek-shavkatov.github.io/portfolio/</div></div>
+                            <div class="contact-card"><i class="fas fa-envelope" style="color:#7c3aed;"></i><div><strong class="contact-email-label">Email</strong><br>eldorbekshavkatoff@gmail.com</div></div>
+                            <div class="contact-card"><i class="fas fa-phone" style="color:#7c3aed;"></i><div><strong class="contact-phone-label">Telefon</strong><br>(+998) 333331228</div></div>
+                            <div class="contact-card"><i class="fab fa-telegram" style="color:#7c3aed;"></i><div><strong>Telegram</strong><br>@eldorbek_shavkatov</div></div>
+                            <div class="contact-card"><i class="fab fa-linkedin" style="color:#7c3aed;"></i><div><strong>LinkedIn</strong><br>eldorbek-shavkatov</div></div>
+                            <div class="contact-card"><i class="fab fa-instagram" style="color:#7c3aed;"></i><div><strong>Instagram</strong><br>eldorbek_shavkatov</div></div>
+                            <div class="contact-card"><i class="fab fa-facebook" style="color:#7c3aed;"></i><div><strong>Facebook</strong><br>eldorbek_shavkatov</div></div>
+                            <div class="contact-card"><i class="fas fa-globe" style="color:#7c3aed;"></i><div><strong>Veb-sayt</strong><br>https://eldorbek-shavkatov.github.io/portfolio/</div></div>
                         </div>
                         
-                        <!-- ==================== IJTIMOIY TARMOQLAR (1-MARTA - YUQORIDA) ==================== -->
+                        <!-- ==================== IJTIMOIY TARMOQLAR (1-MARTA) ==================== -->
                         <div class="section">
-                            <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-title">Ijtimoiy tarmoqlar</span></div>
+                            <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-title">Mening ijtimoiy tarmoqlarim</span></div>
                             <div class="social-row">
                                 <a href="https://t.me/eldorbek_shavkatov" target="_blank" class="social-item">
                                     <div class="social-icon"><i class="fab fa-telegram"></i></div>
@@ -322,24 +326,24 @@
                                     <div class="tooltip">eldorbek_shavkatov</div>
                                     <span class="social-username">Facebook</span>
                                 </a>
-                                <a href="#" target="_blank" class="social-item">
+                                <a href="https://twitter.com/eldor_shavkatov" target="_blank" class="social-item">
                                     <div class="social-icon"><i class="fab fa-twitter"></i></div>
-                                    <div class="tooltip">@eldorbek_sh</div>
+                                    <div class="tooltip">@eldor_shavkatov</div>
                                     <span class="social-username">Twitter</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="contact-footer"><i class="fas fa-clock"></i> Hamkorlik uchun mavjud | Data Analytics & Investment Analysis</p></div>
+                    <div class="footer"><p class="contact-footer"><i class="fas fa-clock"></i> Hamkorlik uchun mavjud | Data Analytics & Project Management</p></div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- ==================== IJTIMOIY TARMOQLAR (2-MARTA - PASTDA, ALOHIDA) ==================== -->
+    <!-- ==================== IJTIMOIY TARMOQLAR (2-MARTA - ALOHIDA) ==================== -->
     <div class="glass-card" style="margin-top: 30px;">
         <div class="content" style="padding: 30px;">
-            <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-bottom-title">Biz ijtimoiy tarmoqlarda</span></div>
+            <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-bottom-title">Mening ijtimoiy tarmoqlarim</span></div>
             <div class="social-row">
                 <a href="https://t.me/eldorbek_shavkatov" target="_blank" class="social-item">
                     <div class="social-icon"><i class="fab fa-telegram"></i></div>
@@ -366,14 +370,14 @@
                     <div class="tooltip">eldorbek_shavkatov</div>
                     <span class="social-username">Facebook</span>
                 </a>
-                <a href="#" target="_blank" class="social-item">
+                <a href="https://twitter.com/eldor_shavkatov" target="_blank" class="social-item">
                     <div class="social-icon"><i class="fab fa-twitter"></i></div>
                     <div class="tooltip">@eldor_shavkatov</div>
                     <span class="social-username">Twitter</span>
-                      </a>
+                </a>
             </div>
         </div>
-      
+        <div class="footer"><p>Kuzatib boring | Barcha ijtimoiy tarmoqlarda faolmiz</p></div>
     </div>
 </div>
 
@@ -415,12 +419,12 @@
     }
 
     // ============================================ //
-    // TO'LIQ 3 TIL TARJIMALARI
+    // TO'LIQ 3 TIL TARJIMALARI (UZ/RU/EN)
     // ============================================ //
     const translations = {
         uz: {
             nav: ["BOSH SAHIFA", "TAJRIBA", "KO'NIKMALAR", "SERTIFIKATLAR", "KONTAKT"],
-            hero_title: "📊 Ma'lumotlar tahlili | 💼 Investitsion analitik | 📈 Biznes analitik | 🔐 Project Manager",
+            hero_title: "📊 Data Analytics | 💼 Investitsion analitik | 📈 Biznes analitik | 🎯 Project Manager",
             stat_exp: "Yil tajriba", stat_proj: "Loyihalar", stat_cert: "Sertifikatlar", stat_tech: "Texnologiyalar",
             contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_birth: "28/12/2003", contact_nationality: "O'zbek",
             about_title: "Men haqimda",
@@ -428,118 +432,118 @@
             edu_title: "Ta'lim", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Kiberxavfsizlik bo'yicha bakalavr darajasi", edu_univ: "Toshkent Axborot Texnologiyalari Universiteti (TUIT)", edu_address: "Manzil: 100084 Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108", edu_web: "Veb-sayt: www.tuit.uz",
             cv_title: "Rezyume yuklab olish", cv_uz: "O'zbekcha Rezyume", cv_ru: "Русское Резюме", cv_en: "English CV (Europass)",
             exp_page_title: "Ish tajribasi",
-            exp1_date: "01/09/2025 - Hozirgi vaqt", exp1_title: "Investitsion analitik", exp1_company: "Davlat statistika qo'mitasi huzuridagi Kadrlar malakasini oshirish va statistik tadqiqotlar instituti - Toshkent, O'zbekiston",
-            exp1_1: "BMT tomonidan moliyalashtirilgan investitsion loyihalarning moliyaviy va iqtisodiy tahlilini o'tkazish",
-            exp1_2: "Moliyaviy modellar, biznes-keslar va loyihalarni baholash hujjatlarini ishlab chiqish",
-            exp1_3: "Investitsion loyihalarning ijrosini monitoring qilish va baholash, byudjet va muddatlarni nazorat qilish",
-            exp1_4: "Rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar va taqdimotlar tayyorlash",
-            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investitsion analitik (stajyor)", exp2_company: "Kiberxavfsizlik markazi Davlat unitar korxonasi - Toshkent, O'zbekiston",
-            exp2_1: "Yirik kompaniyalar va tashkilotlar uchun kiberxavfsizlik himoyasini ta'minlash va xavfsizlik choralarini joriy etish",
-            exp2_2: "Zaifliklarni aniqlash va bartaraf etish uchun tarmoq infratuzilmasini konfiguratsiya qilish, monitoring va tahlil qilish",
-            exp2_3: "Kiberxavfsizlik hodisalari va tahdidlarini aniqlash, tahlil qilish va ularga javob berish",
-            exp2_4: "Kiberxavfsizlik holati bo'yicha analitik hisobotlar tayyorlash va ularni rahbariyatga taqdim etish",
-            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Menejer yordamchisi", exp3_company: "SEMURG INSURANCE AJ - Toshkent, O'zbekiston",
-            exp3_1: "Kompaniyaning ichki ma'lumotlar bazalari bilan ishlash, moliyaviy va sug'urta ma'lumotlarini to'plash va tartibga solish",
-            exp3_2: "Sug'urta shartnomalari va boshqa moliyaviy hujjatlarni tahlil qilish va qayta ishlash",
-            exp3_3: "Moliyaviy ma'lumotlarni to'plash va chuqur tahlil qilish, rahbariyat uchun muntazam hisobotlar tayyorlash",
-            exp3_4: "Kompaniyaning ichki aktivlari va faoliyatini monitoring qilish va tahlil qilish",
+            exp1_date: "01/09/2025 - Hozirgi vaqt", exp1_title: "Investitsion analitik / Project Manager", exp1_company: "Davlat statistika qo'mitasi instituti - Toshkent",
+            exp1_1: "BMT loyihalarining moliyaviy va iqtisodiy tahlili",
+            exp1_2: "Moliyaviy modellar, biznes-keslar va loyiha hujjatlari",
+            exp1_3: "Loyiha ijrosini monitoring qilish, byudjet va muddatlarni nazorat qilish",
+            exp1_4: "Rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investitsion analitik (stajyor) / Project Manager", exp2_company: "Kiberxavfsizlik markazi DXK - Toshkent",
+            exp2_1: "Kiberxavfsizlik himoyasini ta'minlash va xavfsizlik choralari",
+            exp2_2: "Tarmoq infratuzilmasini konfiguratsiya qilish, monitoring va tahlil",
+            exp2_3: "Kiberxavfsizlik hodisalari va tahdidlarini aniqlash va javob berish",
+            exp2_4: "Kiberxavfsizlik holati bo'yicha analitik hisobotlar",
+            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Menejer yordamchisi / Junior Project Manager", exp3_company: "SEMURG INSURANCE AJ - Toshkent",
+            exp3_1: "Ichki ma'lumotlar bazalari bilan ishlash, moliyaviy va sug'urta ma'lumotlarini to'plash",
+            exp3_2: "Sug'urta shartnomalari va moliyaviy hujjatlarni tahlil qilish",
+            exp3_3: "Moliyaviy ma'lumotlarni tahlil qilish va rahbariyat uchun hisobotlar",
+            exp3_4: "Ichki aktivlar va faoliyatni monitoring qilish",
             exp_footer: "3+ yillik professional tajriba | Data-driven qarorlar",
-            skills_page_title: "Ko'nikmalar", skills_pm_title: "Loyiha boshqaruvi", skills_analytics_title: "Analitika vositalari", skills_office_title: "Microsoft Office", skills_graphics_title: "Grafika", skills_lang_title: "Tillar",
-            lang_uz_name: "O'zbek tili", lang_uz_level: "Ona tili",
+            skills_page_title: "Ko'nikmalar", skills_pm_title: "Loyiha boshqaruvi (Project Management)", skills_analytics_title: "Analitika vositalari (Analytics Tools)", skills_office_title: "Microsoft Office", skills_graphics_title: "Grafika (Graphics)", skills_lang_title: "Tillar (Languages)",
+            lang_uz_name: "O'zbek tili", lang_uz_level: "Ona tili (C2)",
             lang_en_name: "Ingliz tili", lang_en_level: "B2 - Mustaqil foydalanuvchi (Tinglash B2, O'qish B2, Yozish B2, Gapirish B2)",
             lang_ru_name: "Rus tili", lang_ru_level: "B1-B2 - Mustaqil foydalanuvchi (Tinglash B2, O'qish B2, Yozish B1, Gapirish B2)",
-            skills_footer: "Ma'lumotlar bilan ishlash bo'yicha mutaxassis",
+            skills_footer: "Ma'lumotlar bilan ishlash va loyiha boshqaruvi bo'yicha mutaxassis",
             cert_page_title: "Sertifikatlar",
             cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "O'qish usuli: Onlayn | Uzbekistan", cert1_desc: "Ushbu sertifikat Data Analytics Navigator dasturini muvaffaqiyatli tamomlaganligini tasdiqlaydi. Dastur ma'lumotlar tahlili asoslari, biznes intelligensiya vositalari va real biznes muammolari uchun amaliy analitik ko'nikmalarni o'z ichiga oladi.", cert1_download: "Sertifikatni yuklab olish",
-            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "O'qish usuli: Onlayn", cert2_desc: "Ushbu sertifikat ma'lumotlar to'plash, tozalash, tahlil qilish va vizualizatsiya qilish kabi asosiy ma'lumotlar tahlili tushunchalarini qamrab oladi. Sanoat standartidagi vositalar va texnikalar bilan ishlash bo'yicha bilimlarni tasdiqlaydi.", cert2_download: "Sertifikatni yuklab olish",
+            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "O'qish usuli: Onlayn", cert2_desc: "Ushbu sertifikat ma'lumotlar to'plash, tozalash, tahlil qilish va vizualizatsiya qilish kabi asosiy ma'lumotlar tahlili tushunchalarini qamrab oladi.", cert2_download: "Sertifikatni yuklab olish",
             conf_title: "Konferensiyalar va seminarlar",
-            conf1_date: "21/09/2024 | Toshkent", conf1_title: "Konvolyutsion neyron tarmoqlar: konvolyutsiyalar, tarmoq tuzilishi", conf1_desc: "Neyron tarmoqlar va ularning kelajagi mavzusi Janubiy Koreyalik IT mutaxassislari ishtirokidagi forumda muhokama qilindi.",
-            conf2_date: "06/07/2023 - 07/07/2023 | Toshkent", conf2_title: "Digital Leadership Forum", conf2_desc: "GovTech, EdTech, IT & BPO Outsourcing va Venture kabi mavzularda 20 dan ortiq xalqaro ekspertlar ishtirokida sessiyalar tashkil etildi.",
+            conf1_date: "21/09/2024 | Toshkent", conf1_title: "Konvolyutsion neyron tarmoqlar", conf1_desc: "Neyron tarmoqlar mavzusi Janubiy Koreyalik IT mutaxassislari ishtirokidagi forumda muhokama qilindi.",
+            conf2_date: "06-07/07/2023 | Toshkent", conf2_title: "Digital Leadership Forum", conf2_desc: "GovTech, EdTech, IT & BPO Outsourcing mavzularida 20+ xalqaro ekspertlar ishtirokida.",
             cert_footer: "Professional sertifikatlar va doimiy o'rganish",
-            contact_page_title: "Bog'lanish", contact_email_label: "Email", contact_phone_label: "Telefon", social_title: "Ijtimoiy tarmoqlar", social_bottom_title: "Biz ijtimoiy tarmoqlarda", contact_footer: "Hamkorlik uchun mavjud | Data Analytics & Investment Analysis",
-            footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
+            contact_page_title: "Bog'lanish", contact_email_label: "Email", contact_phone_label: "Telefon", social_title: "Mening ijtimoiy tarmoqlarim", social_bottom_title: "Mening ijtimoiy tarmoqlarim", contact_footer: "Hamkorlik uchun mavjud | Data Analytics & Project Management",
+            footer_text: "© 2025 Eldorbek Shavkatov | GitHub yordamida tayyorlangan 2026"
         },
         ru: {
             nav: ["ГЛАВНАЯ", "ОПЫТ", "НАВЫКИ", "СЕРТИФИКАТЫ", "КОНТАКТЫ"],
-            hero_title: "📊 Аналитика данных | 💼 Инвестиционный аналитик | 📈 Бизнес-аналитик | 🔐 Проект Менеджер",
+            hero_title: "📊 Аналитика данных | 💼 Инвестиционный аналитик | 📈 Бизнес-аналитик | 🎯 Project Manager",
             stat_exp: "Лет опыта", stat_proj: "Проекты", stat_cert: "Сертификаты", stat_tech: "Технологии",
             contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_birth: "28/12/2003", contact_nationality: "Узбек",
             about_title: "Обо мне",
-            about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий. Специалист с глубокими знаниями и практическими навыками в областях Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами.",
-            edu_title: "Образование", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Степень бакалавра в области кибербезопасности", edu_univ: "Ташкентский университет информационных технологий (ТУИТ)", edu_address: "Адрес: 100084 Ташкент, Юнусабадский район, проспект Амира Темура 108", edu_web: "Веб-сайт: www.tuit.uz",
+            about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий. Специалист с глубокими знаниями в области Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта улучшил навыки финансово-экономического анализа, управления контрактами и проектами.",
+            edu_title: "Образование", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Степень бакалавра в области кибербезопасности", edu_univ: "Ташкентский университет информационных технологий (ТУИТ)", edu_address: "Адрес: 100084 Ташкент, проспект Амира Темура 108", edu_web: "Сайт: www.tuit.uz",
             cv_title: "Скачать резюме", cv_uz: "Резюме на узбекском", cv_ru: "Русское резюме", cv_en: "Английское резюме (Europass)",
-            exp_page_title: "Опыт работы", "Сертификаты", "Технологии",
-            exp1_date: "01/09/2025 - Настоящее время", exp1_title: "Инвестиционный аналитик", exp1_company: "Институт повышения квалификации и статистических исследований при Госкомстате - Ташкент, Узбекистан",
-            exp1_1: "Проведение финансово-экономического анализа инвестиционных проектов, финансируемых ООН",
-            exp1_2: "Разработка финансовых моделей, бизнес-кейсов и документов по оценке проектов",
-            exp1_3: "Мониторинг и оценка реализации инвестиционных проектов, включая контроль бюджета и сроков",
-            exp1_4: "Подготовка аналитических отчетов и презентаций для руководства и международных партнеров",
-            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Инвестиционный аналитик (стажёр)", exp2_company: "ГУП Центр кибербезопасности - Ташкент, Узбекистан",
-            exp2_1: "Обеспечение кибербезопасности и внедрение мер безопасности для крупных компаний",
-            exp2_2: "Настройка, мониторинг и анализ сетевой инфраструктуры для выявления уязвимостей",
-            exp2_3: "Обнаружение, анализ и реагирование на инциденты кибербезопасности",
-            exp2_4: "Подготовка аналитических отчетов о состоянии кибербезопасности",
-            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Помощник менеджера", exp3_company: "АО SEMURG INSURANCE - Ташкент, Узбекистан",
-            exp3_1: "Работа с внутренними базами данных, сбор финансовых и страховых данных",
-            exp3_2: "Анализ и обработка страховых договоров и финансовых документов",
-            exp3_3: "Сбор и углубленный анализ финансовых данных, подготовка отчетов",
-            exp3_4: "Мониторинг и анализ внутренних активов и деятельности компании",
+            exp_page_title: "Опыт работы",
+            exp1_date: "01/09/2025 - Настоящее время", exp1_title: "Инвестиционный аналитик / Project Manager", exp1_company: "Институт при Госкомстате - Ташкент",
+            exp1_1: "Анализ проектов ООН",
+            exp1_2: "Разработка финансовых моделей",
+            exp1_3: "Мониторинг проектов, бюджета и сроков",
+            exp1_4: "Аналитические отчеты для руководства",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Инвестиционный аналитик (стажёр) / Project Manager", exp2_company: "Центр кибербезопасности - Ташкент",
+            exp2_1: "Обеспечение кибербезопасности",
+            exp2_2: "Настройка и мониторинг сети",
+            exp2_3: "Обнаружение и реагирование на угрозы",
+            exp2_4: "Отчеты по кибербезопасности",
+            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Помощник менеджера / Junior Project Manager", exp3_company: "АО SEMURG INSURANCE - Ташкент",
+            exp3_1: "Работа с базами данных",
+            exp3_2: "Анализ страховых договоров",
+            exp3_3: "Анализ финансовых данных",
+            exp3_4: "Мониторинг активов компании",
             exp_footer: "3+ года опыта | Решения на основе данных",
-            skills_page_title: "Навыки", skills_pm_title: "Управление проектами", skills_analytics_title: "Аналитика", skills_office_title: "Microsoft Office", skills_graphics_title: "Графика", skills_lang_title: "Языки",
-            lang_uz_name: "Узбекский", lang_uz_level: "Родной",
+            skills_page_title: "Навыки", skills_pm_title: "Управление проектами (Project Management)", skills_analytics_title: "Аналитические инструменты (Analytics Tools)", skills_office_title: "Microsoft Office", skills_graphics_title: "Графика (Graphics)", skills_lang_title: "Языки (Languages)",
+            lang_uz_name: "Узбекский", lang_uz_level: "Родной (C2)",
             lang_en_name: "Английский", lang_en_level: "B2 - Независимый пользователь",
             lang_ru_name: "Русский", lang_ru_level: "B1-B2 - Независимый пользователь",
-            skills_footer: "Специалист по данным",
+            skills_footer: "Специалист по данным и управлению проектами",
             cert_page_title: "Сертификаты",
-            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Формат: Онлайн | Узбекистан", cert1_desc: "Сертификат подтверждает завершение программы по анализу данных, инструментам бизнес-аналитики.", cert1_download: "Скачать",
-            cert2_date: "12/09/2025 | Cisco", cert2_title: "Data Analytics Essentials", cert2_mode: "Формат: Онлайн", cert2_desc: "Сертификат охватывает сбор, очистку, анализ и визуализацию данных.", cert2_download: "Скачать",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Онлайн | Узбекистан", cert1_desc: "Сертификат подтверждает завершение программы по анализу данных.", cert1_download: "Скачать",
+            cert2_date: "12/09/2025 | Cisco", cert2_title: "Data Analytics Essentials", cert2_mode: "Онлайн", cert2_desc: "Сертификат по основам анализа данных.", cert2_download: "Скачать",
             conf_title: "Конференции и семинары",
-            conf1_date: "21/09/2024 | Ташкент", conf1_title: "Сверточные нейронные сети", conf1_desc: "Форум с участием южнокорейских IT-специалистов.",
-            conf2_date: "06-07/07/2023 | Ташкент", conf2_title: "Digital Leadership Forum", conf2_desc: "Сессии с участием 20+ международных экспертов.",
+            conf1_date: "21/09/2024 | Ташкент", conf1_title: "Свёрточные нейронные сети", conf1_desc: "Форум с участием корейских IT-специалистов.",
+            conf2_date: "06-07/07/2023 | Ташкент", conf2_title: "Digital Leadership Forum", conf2_desc: "Сессии с участием 20+ экспертов.",
             cert_footer: "Профессиональные сертификаты",
-            contact_page_title: "Контакты", contact_email_label: "Email", contact_phone_label: "Телефон", social_title: "Социальные сети", social_bottom_title: "Мы в соцсетях", contact_footer: "Доступен для сотрудничества",
-            footer_text: "© 2025 Эльдорбек Шавкатов | Портфолио"
+            contact_page_title: "Контакты", contact_email_label: "Email", contact_phone_label: "Телефон", social_title: "Мои социальные сети", social_bottom_title: "Мои социальные сети", contact_footer: "Доступен для сотрудничества | Data Analytics & Project Management",
+            footer_text: "© 2025 Эльдорбек Шавкатов | Создано с помощью GitHub 2026"
         },
         en: {
             nav: ["HOME", "EXPERIENCE", "SKILLS", "CERTIFICATES", "CONTACT"],
-            hero_title: "📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🔐 Cybersecurity",
+            hero_title: "📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🎯 Project Manager",
             stat_exp: "Years exp.", stat_proj: "Projects", stat_cert: "Certificates", stat_tech: "Technologies",
             contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_birth: "28/12/2003", contact_nationality: "Uzbek",
             about_title: "About Me",
             about_text: "Graduate of the Faculty of Information Security at Tashkent University of Information Technologies. Specialist with strong knowledge in Data/Investment/Business Analytics and Project Management. Over 3 years of experience in financial analysis, contract management, and project management.",
-            edu_title: "Education", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Bachelor's Degree in Cybersecurity", edu_univ: "Tashkent University of Information Technologies (TUIT)", edu_address: "Address: 108 Amir Temur Avenue, Yunusabad District, 100084 Tashkent", edu_web: "Website: www.tuit.uz",
+            edu_title: "Education", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Bachelor's Degree in Cybersecurity", edu_univ: "Tashkent University of Information Technologies (TUIT)", edu_address: "Address: 108 Amir Temur Avenue, Yunusabad District, Tashkent", edu_web: "Website: www.tuit.uz",
             cv_title: "Download CV", cv_uz: "Uzbek CV", cv_ru: "Russian CV", cv_en: "English CV (Europass)",
             exp_page_title: "Work Experience",
-            exp1_date: "01/09/2025 - Current", exp1_title: "Investment Analyst", exp1_company: "Institute under the State Statistics Committee - Tashkent, Uzbekistan",
-            exp1_1: "Financial and economic analysis of UN-funded investment projects",
-            exp1_2: "Developing financial models, business cases, and project appraisal documents",
-            exp1_3: "Monitoring project implementation, budget and timeline control",
-            exp1_4: "Analytical reports for management and international partners",
-            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investment Analyst (Intern)", exp2_company: "Cyber Security Center SUE - Tashkent, Uzbekistan",
-            exp2_1: "Cybersecurity protection for large companies",
-            exp2_2: "Network infrastructure configuration, monitoring, and analysis",
-            exp2_3: "Detection and response to cybersecurity incidents",
-            exp2_4: "Analytical reports on cybersecurity status",
-            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Assistant Manager", exp3_company: "SEMURG INSURANCE JSC - Tashkent, Uzbekistan",
-            exp3_1: "Internal database management, financial and insurance data collection",
-            exp3_2: "Insurance contracts and financial document analysis",
-            exp3_3: "Financial data analysis and regular reporting",
-            exp3_4: "Internal assets and performance monitoring",
+            exp1_date: "01/09/2025 - Current", exp1_title: "Investment Analyst / Project Manager", exp1_company: "Institute under the State Statistics Committee - Tashkent",
+            exp1_1: "Financial analysis of UN-funded projects",
+            exp1_2: "Financial models and business cases",
+            exp1_3: "Project monitoring, budget and timeline control",
+            exp1_4: "Analytical reports for management",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investment Analyst (Intern) / Project Manager", exp2_company: "Cybersecurity Center - Tashkent",
+            exp2_1: "Cybersecurity protection",
+            exp2_2: "Network monitoring and analysis",
+            exp2_3: "Incident detection and response",
+            exp2_4: "Cybersecurity reports",
+            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Assistant Manager / Junior Project Manager", exp3_company: "SEMURG INSURANCE JSC - Tashkent",
+            exp3_1: "Database management",
+            exp3_2: "Insurance contract analysis",
+            exp3_3: "Financial data analysis",
+            exp3_4: "Asset performance monitoring",
             exp_footer: "3+ years experience | Data-driven decisions",
-            skills_page_title: "Skills", skills_pm_title: "Project Management", skills_analytics_title: "Analytics", skills_office_title: "Microsoft Office", skills_graphics_title: "Graphics", skills_lang_title: "Languages",
-            lang_uz_name: "Uzbek", lang_uz_level: "Native",
+            skills_page_title: "Skills", skills_pm_title: "Project Management", skills_analytics_title: "Analytics Tools", skills_office_title: "Microsoft Office", skills_graphics_title: "Graphics", skills_lang_title: "Languages",
+            lang_uz_name: "Uzbek", lang_uz_level: "Native (C2)",
             lang_en_name: "English", lang_en_level: "B2 - Independent User",
             lang_ru_name: "Russian", lang_ru_level: "B1-B2 - Independent User",
-            skills_footer: "Data specialist",
-            cert_page_title: "Certificates",
-            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Online | Uzbekistan", cert1_desc: "Data analysis fundamentals, business intelligence tools, and practical analytics skills.", cert1_download: "Download",
-            cert2_date: "12/09/2025 | Cisco", cert2_title: "Data Analytics Essentials", cert2_mode: "Online", cert2_desc: "Data collection, cleaning, analysis, and visualization using industry-standard tools.", cert2_download: "Download",
+            skills_footer: "Data & Project Management specialist",
+            cert_page_title: "Certifications",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Online | Uzbekistan", cert1_desc: "Data analysis fundamentals, business intelligence tools.", cert1_download: "Download",
+            cert2_date: "12/09/2025 | Cisco", cert2_title: "Data Analytics Essentials", cert2_mode: "Online", cert2_desc: "Data collection, cleaning, analysis, visualization.", cert2_download: "Download",
             conf_title: "Conferences & Seminars",
             conf1_date: "21/09/2024 | Tashkent", conf1_title: "Convolutional Neural Networks", conf1_desc: "Forum with South Korean IT specialists.",
             conf2_date: "06-07/07/2023 | Tashkent", conf2_title: "Digital Leadership Forum", conf2_desc: "Sessions with 20+ international experts.",
             cert_footer: "Professional certifications",
-            contact_page_title: "Contact", contact_email_label: "Email", contact_phone_label: "Phone", social_title: "Social Media", social_bottom_title: "Follow Us", contact_footer: "Available for collaboration",
-            footer_text: "© 2025 Eldorbek Shavkatov | Portfolio"
+            contact_page_title: "Contact", contact_email_label: "Email", contact_phone_label: "Phone", social_title: "My Social Media", social_bottom_title: "My Social Media", contact_footer: "Available for collaboration | Data Analytics & Project Management",
+            footer_text: "© 2025 Eldorbek Shavkatov | Built with GitHub 2026"
         }
     };
 
