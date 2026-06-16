@@ -2,13 +2,13 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eldorbek Shavkatov | Data Analytics | Investment Analyst | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ============================================ */
-        /* RESET & ROOT VARIABLES - 2000+ LINES PREMIUM */
+        /* RESET & VARIABLES - 2200+ LINES 3 LANGUAGES */
         /* ============================================ */
         * {
             margin: 0;
@@ -21,36 +21,26 @@
             --primary-dark: #5b21b6;
             --primary-light: #a78bfa;
             --secondary: #06b6d4;
-            --secondary-dark: #0891b2;
             --accent: #f59e0b;
-            --accent-dark: #d97706;
-            --neon-green: #00ff88;
-            --neon-pink: #ff00ff;
             --neon-cyan: #00f3ff;
             --neon-purple: #bf00ff;
             --dark-bg: #0a0a0a;
-            --dark-card: rgba(255,255,255,0.03);
+            --dark-surface: rgba(255,255,255,0.03);
             --dark-border: rgba(255,255,255,0.08);
             --dark-text: #ffffff;
             --dark-muted: rgba(255,255,255,0.6);
-            --dark-muted-light: rgba(255,255,255,0.4);
             --light-bg: #f8fafc;
-            --light-card: rgba(0,0,0,0.02);
+            --light-surface: rgba(0,0,0,0.02);
             --light-border: rgba(0,0,0,0.08);
             --light-text: #0f172a;
             --light-muted: #475569;
-            --light-muted-light: #94a3b8;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
             --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.15);
-            --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
-            --shadow-neon: 0 0 15px rgba(124,58,237,0.5);
-            --shadow-neon-cyan: 0 0 15px rgba(0,243,255,0.4);
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --gradient-neon: linear-gradient(135deg, #00f3ff, #bf00ff, #ff00ff);
+            --shadow-neon: 0 0 15px rgba(124,58,237,0.4);
         }
 
         html {
@@ -64,9 +54,7 @@
             overflow-x: hidden;
         }
 
-        /* ============================================ */
-        /* DARK & LIGHT MODE */
-        /* ============================================ */
+        /* Dark Mode */
         body.dark {
             background: var(--dark-bg);
             color: var(--dark-text);
@@ -74,9 +62,8 @@
         body.dark .glass-card,
         body.dark .exp-card,
         body.dark .cert-card,
-        body.dark .project-card,
         body.dark .contact-card {
-            background: var(--dark-card);
+            background: var(--dark-surface);
             border-color: var(--dark-border);
         }
         body.dark .nav-btn,
@@ -86,15 +73,12 @@
         }
         body.dark .skill-tag {
             background: rgba(124,58,237,0.12);
-            border-color: rgba(124,58,237,0.2);
-        }
-        body.dark .stat-card {
-            background: rgba(255,255,255,0.03);
         }
         body.dark .lang-card {
             background: rgba(124,58,237,0.08);
         }
 
+        /* Light Mode */
         body.light {
             background: var(--light-bg);
             color: var(--light-text);
@@ -102,9 +86,8 @@
         body.light .glass-card,
         body.light .exp-card,
         body.light .cert-card,
-        body.light .project-card,
         body.light .contact-card {
-            background: var(--light-card);
+            background: var(--light-surface);
             border-color: var(--light-border);
         }
         body.light .nav-btn,
@@ -112,25 +95,16 @@
         body.light .theme-btn {
             color: var(--light-muted);
         }
-        body.light .skill-tag {
-            background: rgba(124,58,237,0.06);
-            border-color: rgba(124,58,237,0.12);
-        }
         body.light .hero-name {
             background: linear-gradient(135deg, #1a1a2e, #7c3aed, #00f5d4);
             -webkit-background-clip: text;
             background-clip: text;
         }
-        body.light .stat-card {
-            background: rgba(0,0,0,0.02);
-        }
-        body.light .lang-card {
-            background: rgba(124,58,237,0.05);
+        body.light .skill-tag {
+            background: rgba(124,58,237,0.06);
         }
 
-        /* ============================================ */
-        /* ANIMATED BACKGROUND */
-        /* ============================================ */
+        /* Animated Background */
         .animated-bg {
             position: fixed;
             top: 0;
@@ -143,19 +117,18 @@
         .gradient-sphere {
             position: absolute;
             border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.35;
-            animation: floatSphere 24s ease-in-out infinite;
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: floatSphere 20s ease-in-out infinite;
         }
-        .sphere1 { width: 550px; height: 550px; background: var(--gradient-primary); top: -180px; left: -180px; animation-delay: 0s; }
-        .sphere2 { width: 650px; height: 650px; background: var(--gradient-secondary); bottom: -220px; right: -180px; animation-delay: -6s; }
-        .sphere3 { width: 450px; height: 450px; background: var(--gradient-accent); top: 45%; left: 45%; transform: translate(-50%, -50%); animation-delay: -12s; opacity: 0.25; }
-        .sphere4 { width: 380px; height: 380px; background: radial-gradient(circle, #10b981, #06b6d4); bottom: 15%; left: 8%; animation-delay: -18s; }
-        .sphere5 { width: 300px; height: 300px; background: radial-gradient(circle, #f59e0b, #ef4444); top: 70%; right: 5%; animation-delay: -24s; opacity: 0.2; }
+        .sphere1 { width: 500px; height: 500px; background: var(--gradient-primary); top: -150px; left: -150px; }
+        .sphere2 { width: 600px; height: 600px; background: var(--gradient-secondary); bottom: -200px; right: -150px; animation-delay: -5s; }
+        .sphere3 { width: 400px; height: 400px; background: radial-gradient(circle, #06b6d4, #3b82f6); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: -10s; opacity: 0.2; }
+        .sphere4 { width: 350px; height: 350px; background: radial-gradient(circle, #f59e0b, #ef4444); bottom: 10%; left: 5%; animation-delay: -15s; }
         @keyframes floatSphere {
             0%,100% { transform: translate(0,0) scale(1); }
-            33% { transform: translate(70px,-50px) scale(1.12); }
-            66% { transform: translate(-50px,60px) scale(0.92); }
+            33% { transform: translate(50px,-40px) scale(1.1); }
+            66% { transform: translate(-40px,50px) scale(0.9); }
         }
 
         .grid-overlay {
@@ -166,59 +139,40 @@
             height: 100%;
             background-image: linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
-            background-size: 55px 55px;
+            background-size: 50px 50px;
             z-index: -1;
             pointer-events: none;
         }
 
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 220px;
-            opacity: 0.025;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* ============================================ */
-        /* CONTAINER & LAYOUT */
-        /* ============================================ */
         .container {
-            max-width: 1500px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 35px 30px;
+            padding: 30px 25px;
             position: relative;
             z-index: 10;
         }
 
-        /* ============================================ */
-        /* TOP BAR - LANGUAGE & THEME */
-        /* ============================================ */
+        /* Top Bar */
         .top-bar {
             display: flex;
             justify-content: flex-end;
-            gap: 25px;
-            margin-bottom: 45px;
+            gap: 20px;
+            margin-bottom: 35px;
             flex-wrap: wrap;
         }
         .lang-switcher, .theme-switcher {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             background: rgba(124,58,237,0.08);
-            backdrop-filter: blur(18px);
-            padding: 8px 22px;
-            border-radius: 70px;
+            backdrop-filter: blur(15px);
+            padding: 8px 18px;
+            border-radius: 60px;
             border: 1px solid rgba(124,58,237,0.2);
         }
         .lang-btn, .theme-btn {
             background: transparent;
             border: none;
-            padding: 8px 22px;
+            padding: 8px 20px;
             border-radius: 50px;
             font-size: 14px;
             font-weight: 600;
@@ -226,173 +180,151 @@
             transition: 0.3s;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-family: inherit;
+            gap: 8px;
         }
         .lang-btn.active, .theme-btn.active {
             background: var(--gradient-primary);
             color: white;
             box-shadow: var(--shadow-neon);
         }
-        .lang-btn:hover, .theme-btn:hover {
-            transform: translateY(-2px);
-        }
 
-        /* ============================================ */
-        /* SIDEBAR - CHAP TOMON MENYU */
-        /* ============================================ */
+        /* Main Layout */
         .main-wrapper {
             display: flex;
-            gap: 45px;
+            gap: 35px;
         }
         .sidebar {
-            width: 320px;
+            width: 300px;
             flex-shrink: 0;
             position: sticky;
-            top: 35px;
+            top: 30px;
             height: fit-content;
         }
         .nav-menu {
             background: rgba(124,58,237,0.07);
-            backdrop-filter: blur(18px);
-            border-radius: 38px;
+            backdrop-filter: blur(15px);
+            border-radius: 32px;
             border: 1px solid rgba(124,58,237,0.2);
-            padding: 28px 22px;
+            padding: 25px 20px;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 10px;
         }
         .nav-btn {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 16px;
             width: 100%;
             background: transparent;
             border: 1px solid transparent;
-            padding: 18px 26px;
-            border-radius: 70px;
-            font-size: 17px;
+            padding: 15px 22px;
+            border-radius: 60px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
             text-align: left;
-            font-family: inherit;
         }
         .nav-btn i {
-            width: 30px;
-            font-size: 22px;
+            width: 26px;
+            font-size: 18px;
         }
         .nav-btn.active {
             background: var(--gradient-primary);
             color: white;
-            border-color: transparent;
             box-shadow: var(--shadow-neon);
         }
         .nav-btn:hover:not(.active) {
-            background: rgba(124,58,237,0.18);
-            transform: translateX(10px);
+            background: rgba(124,58,237,0.15);
+            transform: translateX(8px);
         }
 
-        /* ============================================ */
-        /* MAIN CONTENT */
-        /* ============================================ */
         .main-content {
             flex: 1;
             min-width: 0;
         }
         .page {
             display: none;
-            animation: fadeInPage 0.55s cubic-bezier(0.23,1,0.32,1);
+            animation: fadeIn 0.5s ease;
         }
         .page.active-page {
             display: block;
         }
-        @keyframes fadeInPage {
-            from { opacity: 0; transform: translateY(35px); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ============================================ */
-        /* GLASS CARD */
-        /* ============================================ */
+        /* Glass Card */
         .glass-card {
-            backdrop-filter: blur(14px);
-            border-radius: 48px;
+            backdrop-filter: blur(12px);
+            border-radius: 36px;
             border: 1px solid rgba(124,58,237,0.2);
             overflow: hidden;
-            margin-bottom: 40px;
-            transition: transform 0.35s ease;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
         }
         .glass-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
         }
 
-        /* ============================================ */
-        /* HEADER SECTION */
-        /* ============================================ */
+        /* Header */
         .header {
             text-align: center;
-            padding: 70px 50px;
+            padding: 55px 40px;
             background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(0,245,212,0.06));
         }
         .avatar {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--primary);
-            margin-bottom: 28px;
-            transition: 0.35s;
-            box-shadow: var(--shadow-xl);
+            margin-bottom: 25px;
+            transition: 0.3s;
+            box-shadow: var(--shadow-lg);
         }
         .avatar:hover {
-            transform: scale(1.06);
+            transform: scale(1.05);
             border-color: var(--secondary);
             box-shadow: var(--shadow-neon);
         }
         .hero-name {
-            font-size: 62px;
+            font-size: 52px;
             font-weight: 800;
             background: linear-gradient(135deg, #fff, #7c3aed, #00f5d4);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 18px;
-            letter-spacing: -1px;
+            margin-bottom: 12px;
         }
         .hero-title {
-            font-size: 22px;
+            font-size: 18px;
             opacity: 0.85;
-            letter-spacing: 1px;
         }
 
-        /* ============================================ */
-        /* STATISTICS CARDS */
-        /* ============================================ */
+        /* Stats */
         .stats-row {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin: 45px 0;
+            gap: 45px;
+            margin: 35px 0;
             flex-wrap: wrap;
         }
         .stat-card {
             text-align: center;
-            padding: 18px 35px;
+            padding: 15px 28px;
             background: rgba(124,58,237,0.07);
-            border-radius: 32px;
-            backdrop-filter: blur(6px);
-            min-width: 140px;
+            border-radius: 28px;
+            min-width: 120px;
             transition: 0.3s;
-            border: 1px solid rgba(124,58,237,0.1);
         }
         .stat-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             background: rgba(124,58,237,0.12);
-            border-color: rgba(124,58,237,0.3);
         }
         .stat-number {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 800;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -400,326 +332,276 @@
             color: transparent;
         }
         .stat-label {
-            font-size: 15px;
+            font-size: 14px;
             opacity: 0.7;
-            margin-top: 6px;
+            margin-top: 5px;
         }
 
-        /* ============================================ */
-        /* CONTACT BAR */
-        /* ============================================ */
+        /* Contact Bar */
         .contact-bar {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
-            padding: 28px 40px;
+            gap: 22px;
+            padding: 22px 35px;
             border-bottom: 1px solid rgba(124,58,237,0.12);
         }
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             color: inherit;
             opacity: 0.8;
             transition: 0.3s;
-            padding: 8px 20px;
-            border-radius: 60px;
-            font-size: 15px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
         }
         .contact-item:hover {
             opacity: 1;
             color: var(--primary);
             background: rgba(124,58,237,0.1);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
-        /* ============================================ */
-        /* CONTENT SECTIONS */
-        /* ============================================ */
+        /* Content */
         .content {
-            padding: 60px;
+            padding: 45px;
         }
         .section {
-            margin-bottom: 70px;
+            margin-bottom: 55px;
         }
         .section-title {
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 700;
-            margin-bottom: 35px;
-            border-left: 6px solid var(--primary);
-            padding-left: 24px;
+            margin-bottom: 28px;
+            border-left: 5px solid var(--primary);
+            padding-left: 20px;
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 15px;
         }
         .section-title i {
-            font-size: 36px;
+            font-size: 30px;
             color: var(--primary);
         }
         .about-text {
-            line-height: 2;
+            line-height: 1.9;
             opacity: 0.85;
             text-align: justify;
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        /* ============================================ */
-        /* CARDS GRID */
-        /* ============================================ */
-        .exp-grid, .cert-grid, .project-grid, .contact-grid {
+        /* Cards */
+        .exp-grid, .cert-grid, .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 28px;
         }
-        .exp-card, .cert-card, .project-card, .contact-card {
-            padding: 32px;
-            border-radius: 32px;
+        .exp-card, .cert-card, .contact-card {
+            padding: 28px;
+            border-radius: 28px;
             border: 1px solid rgba(124,58,237,0.12);
             transition: 0.35s;
             cursor: pointer;
         }
-        .exp-card:hover, .cert-card:hover, .project-card:hover, .contact-card:hover {
-            transform: translateY(-10px);
+        .exp-card:hover, .cert-card:hover, .contact-card:hover {
+            transform: translateY(-8px);
             border-color: var(--primary);
-            box-shadow: var(--shadow-2xl);
+            box-shadow: var(--shadow-xl);
         }
         .exp-date {
             font-size: 13px;
             color: var(--primary);
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             display: inline-block;
             background: rgba(124,58,237,0.12);
-            padding: 6px 16px;
-            border-radius: 28px;
+            padding: 5px 14px;
+            border-radius: 24px;
         }
         .exp-title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         .exp-company {
-            font-size: 15px;
+            font-size: 14px;
             opacity: 0.7;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         .exp-list {
-            padding-left: 24px;
-            font-size: 15px;
+            padding-left: 22px;
+            font-size: 14px;
             opacity: 0.8;
         }
         .exp-list li {
-            margin-bottom: 12px;
-            line-height: 1.65;
+            margin-bottom: 10px;
+            line-height: 1.6;
         }
 
-        /* ============================================ */
-        /* SKILLS TAGS */
-        /* ============================================ */
+        /* Skills */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 14px;
         }
         .skill-tag {
             background: rgba(124,58,237,0.1);
-            padding: 12px 28px;
-            border-radius: 60px;
-            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
             font-weight: 500;
             transition: 0.3s;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            border: 1px solid transparent;
-        }
-        .skill-tag i {
-            font-size: 16px;
+            gap: 10px;
         }
         .skill-tag:hover {
             background: var(--primary);
-            transform: scale(1.06);
+            transform: scale(1.05);
             color: white;
-            box-shadow: var(--shadow-neon);
         }
 
-        /* ============================================ */
-        /* LANGUAGES CARDS */
-        /* ============================================ */
+        /* Languages */
         .lang-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 25px;
         }
         .lang-card {
             background: rgba(124,58,237,0.07);
-            padding: 28px 40px;
-            border-radius: 28px;
+            padding: 25px 35px;
+            border-radius: 24px;
             text-align: center;
             flex: 1;
-            min-width: 180px;
+            min-width: 170px;
             transition: 0.3s;
-            border: 1px solid rgba(124,58,237,0.1);
         }
         .lang-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             background: rgba(124,58,237,0.14);
-            border-color: rgba(124,58,237,0.3);
         }
         .lang-name {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
+            gap: 12px;
         }
         .lang-level {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--primary);
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
-        /* ============================================ */
-        /* CV BUTTONS */
-        /* ============================================ */
+        /* CV Buttons */
         .cv-group {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 20px;
         }
         .cv-btn {
             display: inline-flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             background: var(--gradient-primary);
             color: white;
-            padding: 16px 38px;
-            border-radius: 60px;
+            padding: 14px 32px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             transition: 0.3s;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
         }
         .cv-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-            filter: brightness(1.08);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
-        /* ============================================ */
-        /* SOCIAL MEDIA SECTION */
-        /* ============================================ */
+        /* Social */
         .social-row {
             display: flex;
             justify-content: center;
-            gap: 35px;
-            margin-top: 45px;
+            gap: 28px;
+            margin-top: 35px;
             flex-wrap: wrap;
         }
         .social-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             color: inherit;
             transition: 0.3s;
         }
         .social-icon {
-            width: 75px;
-            height: 75px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: rgba(124,58,237,0.1);
+            background: rgba(124,58,237,0.12);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            transition: 0.35s;
-            border: 1px solid rgba(124,58,237,0.15);
+            font-size: 26px;
+            transition: 0.3s;
         }
         .social-item:hover .social-icon {
             background: var(--primary);
-            transform: translateY(-8px) scale(1.12);
+            transform: translateY(-6px) scale(1.1);
             box-shadow: var(--shadow-neon);
         }
         .social-item:hover {
             color: var(--primary);
         }
         .social-username {
-            font-size: 13px;
+            font-size: 12px;
             opacity: 0.7;
         }
 
-        /* ============================================ */
-        /* FOOTER */
-        /* ============================================ */
         .footer {
             text-align: center;
-            padding: 40px;
+            padding: 35px;
             border-top: 1px solid rgba(124,58,237,0.12);
-            font-size: 15px;
+            font-size: 14px;
             opacity: 0.6;
         }
 
-        /* ============================================ */
-        /* RESPONSIVE DESIGN */
-        /* ============================================ */
-        @media (max-width: 1100px) {
-            .main-wrapper {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                position: static;
-            }
-            .nav-menu {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                border-radius: 60px;
-            }
-            .nav-btn {
-                width: auto;
-                justify-content: center;
-                padding: 14px 24px;
-            }
-            .hero-name { font-size: 48px; }
-            .content { padding: 35px; }
-            .section-title { font-size: 32px; }
-            .stats-row { gap: 20px; }
-        }
-        @media (max-width: 650px) {
-            .hero-name { font-size: 36px; }
-            .container { padding: 20px 15px; }
-            .stats-row { gap: 12px; }
-            .stat-card { padding: 12px 18px; min-width: 90px; }
-            .stat-number { font-size: 32px; }
-            .content { padding: 25px; }
+        @media (max-width: 1000px) {
+            .main-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; position: static; }
+            .nav-menu { flex-direction: row; flex-wrap: wrap; justify-content: center; border-radius: 60px; }
+            .nav-btn { width: auto; justify-content: center; padding: 12px 20px; }
+            .hero-name { font-size: 42px; }
+            .content { padding: 30px; }
             .section-title { font-size: 26px; }
+        }
+        @media (max-width: 600px) {
+            .hero-name { font-size: 32px; }
+            .stats-row { gap: 15px; }
+            .stat-card { padding: 10px 18px; min-width: 90px; }
+            .stat-number { font-size: 32px; }
             .exp-grid, .cert-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body class="dark">
 
-<!-- ANIMATED BACKGROUND -->
 <div class="animated-bg">
     <div class="gradient-sphere sphere1"></div>
     <div class="gradient-sphere sphere2"></div>
     <div class="gradient-sphere sphere3"></div>
     <div class="gradient-sphere sphere4"></div>
-    <div class="gradient-sphere sphere5"></div>
 </div>
 <div class="grid-overlay"></div>
-<div class="noise"></div>
 
 <div class="container">
-    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="uz"><i class="fas fa-flag"></i> O'ZBEK</button>
@@ -732,9 +614,7 @@
         </div>
     </div>
 
-    <!-- MAIN LAYOUT -->
     <div class="main-wrapper">
-        <!-- SIDEBAR MENU -->
         <div class="sidebar">
             <div class="nav-menu">
                 <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> <span class="nav-text">BOSH SAHIFA</span></button>
@@ -745,52 +625,51 @@
             </div>
         </div>
 
-        <!-- MAIN CONTENT -->
         <div class="main-content">
             <!-- ==================== HOME PAGE ==================== -->
             <div id="home" class="page active-page">
                 <div class="glass-card">
                     <div class="header">
-                        <img src="avatar.jpg" alt="Eldorbek Shavkatov" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Eldorbek+Shavkatov&background=7c3aed&color=fff&size=180'">
+                        <img src="avatar.jpg" alt="Eldorbek Shavkatov" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Eldorbek+Shavkatov&background=7c3aed&color=fff&size=160'">
                         <h1 class="hero-name">Eldorbek Shavkatov</h1>
                         <p class="hero-title">📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🔐 Cybersecurity</p>
                         <div class="stats-row">
-                            <div class="stat-card"><div class="stat-number">3+</div><div class="stat-label">Yil tajriba</div></div>
-                            <div class="stat-card"><div class="stat-number">15+</div><div class="stat-label">Loyihalar</div></div>
-                            <div class="stat-card"><div class="stat-number">7</div><div class="stat-label">Sertifikatlar</div></div>
-                            <div class="stat-card"><div class="stat-number">22+</div><div class="stat-label">Texnologiyalar</div></div>
+                            <div class="stat-card"><div class="stat-number">3+</div><div class="stat-label stat-exp">Yil tajriba</div></div>
+                            <div class="stat-card"><div class="stat-number">5+</div><div class="stat-label stat-proj">Loyihalar</div></div>
+                            <div class="stat-card"><div class="stat-number">3</div><div class="stat-label stat-cert">Sertifikatlar</div></div>
+                            <div class="stat-card"><div class="stat-number">15+</div><div class="stat-label stat-tech">Texnologiyalar</div></div>
                         </div>
                     </div>
                     <div class="contact-bar">
                         <a href="mailto:eldorbekshavkatoff@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> <span class="contact-email">eldorbekshavkatoff@gmail.com</span></a>
-                        <a href="tel:+998333331228" class="contact-item"><i class="fas fa-phone-alt"></i> <span class="contact-phone">+998 33 333 1228</span></a>
+                        <a href="tel:+998333331228" class="contact-item"><i class="fas fa-phone"></i> <span class="contact-phone">(+998) 333331228</span></a>
                         <span class="contact-item"><i class="fas fa-map-marker-alt"></i> <span class="contact-location">Samarqand, O'zbekiston</span></span>
-                        <span class="contact-item"><i class="fas fa-calendar-alt"></i> <span>28-dekabr, 2003</span></span>
-                        <span class="contact-item"><i class="fas fa-passport"></i> <span>O'zbekiston fuqarosi</span></span>
+                        <span class="contact-item"><i class="fas fa-calendar-alt"></i> <span class="contact-birth">28/12/2003</span></span>
+                        <span class="contact-item"><i class="fas fa-passport"></i> <span class="contact-nationality">O'zbek</span></span>
                     </div>
                     <div class="content">
-                        <!-- ABOUT -->
+                        <!-- ABOUT ME -->
                         <div class="section">
-                            <div class="section-title"><i class="fas fa-user-astronaut"></i> <span class="about-title">Men haqimda</span></div>
-                            <p class="about-text">Toshkent Axborot Texnologiyalari Universiteti (TUIT) Axborot xavfsizligi fakultetini tamomlagan. Data Analytics, Investment Analytics, Business Analytics va Project Management sohalarida chuqur bilim va amaliy ko'nikmalarga ega mutaxassis. 3+ yillik professional tajriba davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi, ma'lumotlarni vizualizatsiya qilish bo'yicha katta malakaga ega bo'lgan. Hozirda Davlat statistika qo'mitasi institutida investitsion analitik sifatida faoliyat yuritadi. BMT tomonidan moliyalashtirilgan loyihalarning moliyaviy va iqtisodiy tahlili, Power BI va Python yordamida ma'lumotlarni vizualizatsiya qilish, moliyaviy modellar va prognozlar ishlab chiqish, rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar tayyorlash bilan shug'ullanadi. Maqsadi — ma'lumotlar asosida strategik qarorlar qabul qilishga yordam berish va tashkilotlarga raqamli transformatsiya yo'lida ko'mak ko'rsatish.</p>
+                            <div class="section-title"><i class="fas fa-user"></i> <span class="about-title">Men haqimda</span></div>
+                            <p class="about-text">Toshkent Axborot Texnologiyalari Universitetining Axborot xavfsizligi fakultetini tamomlagan. Data/Investment/Business Analytics va Project Management sohalarida kuchli bilim va amaliy ko'nikmalarga ega mutaxassis. 3 yildan ortiq ish tajribasi davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi bo'yicha malakalarini oshirgan. Analitik materiallar tayyorlash, hujjatlar bilan ishlash, moliyaviy modellar yaratish va investorlar uchun taqdimotlar tayyorlash bo'yicha yaxshi ko'nikmalarga ega.</p>
                         </div>
                         <!-- EDUCATION -->
                         <div class="section">
                             <div class="section-title"><i class="fas fa-graduation-cap"></i> <span class="edu-title">Ta'lim</span></div>
                             <div class="exp-card">
-                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="edu-date">2021 — 2025</span></div>
-                                <div class="exp-title"><span class="edu-name">Toshkent Axborot Texnologiyalari Universiteti (TUIT)</span></div>
-                                <div class="exp-company"><i class="fas fa-shield-alt"></i> <span class="edu-field">Axborot xavfsizligi fakulteti | Kiberxavfsizlik</span></div>
-                                <div><i class="fas fa-diploma"></i> <span class="edu-degree">Bakalavr darajasi (imtiyozli diplom)</span></div>
-                                <div style="margin-top: 14px; font-size: 14px; opacity: 0.7;"><i class="fas fa-chart-line"></i> <span class="edu-special">Yo'nalish: Investitsiya va biznes analitikasi</span></div>
+                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="edu-date">06/09/2021 - 01/06/2025</span></div>
+                                <div class="exp-title"><span class="edu-name">Kiberxavfsizlik bo'yicha bakalavr darajasi</span></div>
+                                <div class="exp-company"><span class="edu-univ">Toshkent Axborot Texnologiyalari Universiteti (TUIT)</span></div>
+                                <div><span class="edu-address">Manzil: 100084 Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108</span></div>
+                                <div style="margin-top: 8px; font-size: 13px; opacity: 0.7;"><span class="edu-web">Veb-sayt: www.tuit.uz</span></div>
                             </div>
                         </div>
                         <!-- CV DOWNLOAD -->
                         <div class="section">
                             <div class="section-title"><i class="fas fa-file-pdf"></i> <span class="cv-title">Rezyume yuklab olish</span></div>
                             <div class="cv-group">
-                                <a href="files/cv-uzbek.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-uz">O'zbekcha rezyume</span></a>
-                                <a href="files/cv-russian.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-ru">Русское резюме</span></a>
+                                <a href="files/cv-uzbek.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-uz">O'zbekcha Rezyume</span></a>
+                                <a href="files/cv-russian.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-ru">Русское Резюме</span></a>
                                 <a href="files/cv-english.pdf" class="cv-btn" download><i class="fas fa-download"></i> <span class="cv-en">English CV (Europass)</span></a>
                             </div>
                         </div>
@@ -804,181 +683,155 @@
             <!-- ==================== EXPERIENCE PAGE ==================== -->
             <div id="experience" class="page">
                 <div class="glass-card">
-                    <div class="header"><h1 class="hero-name" style="font-size:48px;">💼 <span class="exp-page-title">Ish tajribasi</span></h1></div>
+                    <div class="header"><h1 class="hero-name" style="font-size:44px;">💼 <span class="exp-page-title">Ish tajribasi</span></h1></div>
                     <div class="content">
                         <div class="exp-grid">
                             <div class="exp-card">
-                                <div class="exp-date"><i class="far fa-calendar-alt"></i> 2025 — Hozirgi vaqt</div>
-                                <div class="exp-title">Investitsion analitik</div>
-                                <div class="exp-company">Davlat statistika qo'mitasi instituti | Toshkent</div>
+                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="exp1-date">01/09/2025 - Hozirgi vaqt</span></div>
+                                <div class="exp-title"><span class="exp1-title">Investitsion analitik</span></div>
+                                <div class="exp-company"><span class="exp1-company">Davlat statistika qo'mitasi huzuridagi Kadrlar malakasini oshirish va statistik tadqiqotlar instituti - Toshkent, O'zbekiston</span></div>
                                 <ul class="exp-list">
-                                    <li><i class="fas fa-chart-line"></i> BMT loyihalarining moliyaviy va iqtisodiy tahlili</li>
-                                    <li><i class="fas fa-chart-pie"></i> Power BI va Python yordamida vizualizatsiya</li>
-                                    <li><i class="fas fa-chart-simple"></i> Moliyaviy modellar va prognozlar</li>
-                                    <li><i class="fas fa-file-alt"></i> Rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar</li>
-                                    <li><i class="fas fa-tasks"></i> Loyiha ijrosini monitoring qilish va baholash</li>
-                                    <li><i class="fas fa-clock"></i> Budjet va muddatlarni nazorat qilish</li>
+                                    <li><span class="exp1-1">BMT tomonidan moliyalashtirilgan investitsion loyihalarning moliyaviy va iqtisodiy tahlilini o'tkazish</span></li>
+                                    <li><span class="exp1-2">Moliyaviy modellar, biznes-keslar va loyihalarni baholash hujjatlarini ishlab chiqish</span></li>
+                                    <li><span class="exp1-3">Investitsion loyihalarning ijrosini monitoring qilish va baholash, byudjet va muddatlarni nazorat qilish</span></li>
+                                    <li><span class="exp1-4">Rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar va taqdimotlar tayyorlash</span></li>
                                 </ul>
                             </div>
                             <div class="exp-card">
-                                <div class="exp-date"><i class="far fa-calendar-alt"></i> 2025 Yanvar — Iyun</div>
-                                <div class="exp-title">Investitsion analitik (stajyor)</div>
-                                <div class="exp-company">"Kiberxavfsizlik markazi" DXK | Toshkent</div>
+                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="exp2-date">31/01/2025 - 01/06/2025</span></div>
+                                <div class="exp-title"><span class="exp2-title">Investitsion analitik (stajyor)</span></div>
+                                <div class="exp-company"><span class="exp2-company">"Kiberxavfsizlik markazi" Davlat unitar korxonasi - Toshkent, O'zbekiston</span></div>
                                 <ul class="exp-list">
-                                    <li><i class="fas fa-shield-alt"></i> Kiberxavfsizlik ma'lumotlarini tahlil qilish va vizualizatsiya</li>
-                                    <li><i class="fas fa-database"></i> SQL va Python yordamida ma'lumotlar bazalarini tahlil</li>
-                                    <li><i class="fas fa-exclamation-triangle"></i> Anomaliyalarni aniqlash va trendlarni o'rganish</li>
-                                    <li><i class="fas fa-chart-bar"></i> Analitik hisobotlar va dashboardlar tayyorlash</li>
-                                    <li><i class="fas fa-lock"></i> Xavfsizlik choralarini joriy etish</li>
-                                    <li><i class="fas fa-network-wired"></i> Tarmoq infratuzilmasini monitoring qilish</li>
+                                    <li><span class="exp2-1">Yirik kompaniyalar va tashkilotlar uchun kiberxavfsizlik himoyasini ta'minlash va xavfsizlik choralarini joriy etish</span></li>
+                                    <li><span class="exp2-2">Zaifliklarni aniqlash va bartaraf etish uchun tarmoq infratuzilmasini konfiguratsiya qilish, monitoring va tahlil qilish</span></li>
+                                    <li><span class="exp2-3">Kiberxavfsizlik hodisalari va tahdidlarini aniqlash, tahlil qilish va ularga javob berish</span></li>
+                                    <li><span class="exp2-4">Kiberxavfsizlik holati bo'yicha analitik hisobotlar tayyorlash va ularni rahbariyatga taqdim etish</span></li>
                                 </ul>
                             </div>
                             <div class="exp-card">
-                                <div class="exp-date"><i class="far fa-calendar-alt"></i> 2022 Fevral — 2024 May</div>
-                                <div class="exp-title">Menejer yordamchisi / Junior Data Analyst</div>
-                                <div class="exp-company">"SEMURG INSURANCE" AJ | Toshkent</div>
+                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="exp3-date">01/02/2022 - 31/05/2024</span></div>
+                                <div class="exp-title"><span class="exp3-title">Menejer yordamchisi</span></div>
+                                <div class="exp-company"><span class="exp3-company">"SEMURG INSURANCE" AJ - Toshkent, O'zbekiston</span></div>
                                 <ul class="exp-list">
-                                    <li><i class="fas fa-database"></i> Sug'urta ma'lumotlarini to'plash va tozalash</li>
-                                    <li><i class="fas fa-chart-line"></i> Excel va SQL yordamida mijozlar tahlili</li>
-                                    <li><i class="fas fa-chart-pie"></i> Risk profiling va statistik hisobotlar tayyorlash</li>
-                                    <li><i class="fas fa-tachometer-alt"></i> Dashboardlar va KPI monitoringi</li>
-                                    <li><i class="fas fa-file-invoice"></i> Moliyaviy ma'lumotlar tahlili va hisobotlar</li>
-                                    <li><i class="fas fa-users"></i> Mijozlar segmentatsiyasi</li>
+                                    <li><span class="exp3-1">Kompaniyaning ichki ma'lumotlar bazalari bilan ishlash, moliyaviy va sug'urta ma'lumotlarini to'plash va tartibga solish</span></li>
+                                    <li><span class="exp3-2">Sug'urta shartnomalari va boshqa moliyaviy hujjatlarni tahlil qilish va qayta ishlash</span></li>
+                                    <li><span class="exp3-3">Moliyaviy ma'lumotlarni to'plash va chuqur tahlil qilish, rahbariyat uchun muntazam hisobotlar tayyorlash</span></li>
+                                    <li><span class="exp3-4">Kompaniyaning ichki aktivlari va faoliyatini monitoring qilish va tahlil qilish</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="exp-footer"><i class="fas fa-chart-line"></i> Data-driven qarorlar qabul qilish | 3+ yillik professional tajriba</p></div>
+                    <div class="footer"><p class="exp-footer"><i class="fas fa-chart-line"></i> 3+ yillik professional tajriba | Data-driven qarorlar</p></div>
                 </div>
             </div>
 
             <!-- ==================== SKILLS PAGE ==================== -->
             <div id="skills" class="page">
                 <div class="glass-card">
-                    <div class="header"><h1 class="hero-name" style="font-size:48px;">⚙️ <span class="skills-page-title">Ko'nikmalar</span></h1></div>
+                    <div class="header"><h1 class="hero-name" style="font-size:44px;">⚙️ <span class="skills-page-title">Ko'nikmalar</span></h1></div>
                     <div class="content">
                         <div class="section">
-                            <div class="section-title"><i class="fas fa-chart-line"></i> <span class="skills-analytics-title">Analitik vositalar</span></div>
+                            <div class="section-title"><i class="fas fa-tasks"></i> <span class="skills-pm-title">Project Management</span></div>
                             <div class="skills-grid">
-                                <span class="skill-tag"><i class="fab fa-python"></i> Python (Pandas, NumPy, Matplotlib)</span>
-                                <span class="skill-tag"><i class="fas fa-database"></i> SQL (PostgreSQL, MySQL, SQLite)</span>
-                                <span class="skill-tag"><i class="fas fa-chart-pie"></i> Power BI (Advanced)</span>
-                                <span class="skill-tag"><i class="fas fa-chart-bar"></i> Tableau Public</span>
-                                <span class="skill-tag"><i class="fas fa-file-excel"></i> Excel Advanced (VBA, Pivot, Power Query)</span>
-                                <span class="skill-tag"><i class="fab fa-google"></i> Google Analytics</span>
-                                <span class="skill-tag"><i class="fab fa-trello"></i> Trello</span>
-                                <span class="skill-tag"><i class="fas fa-tasks"></i> Notion</span>
-                                <span class="skill-tag"><i class="fab fa-jira"></i> Jira</span>
-                                <span class="skill-tag"><i class="fas fa-code"></i> 1C:8.3 (qisman)</span>
-                                <span class="skill-tag"><i class="fas fa-exchange-alt"></i> didox.uz</span>
-                                <span class="skill-tag"><i class="fas fa-file-invoice-dollar"></i> My.Soliq</span>
-                                <span class="skill-tag"><i class="fas fa-chart-line"></i> SPSS</span>
-                                <span class="skill-tag"><i class="fas fa-project-diagram"></i> Microsoft Project</span>
+                                <span class="skill-tag">Trello</span>
+                                <span class="skill-tag">Notion</span>
+                                <span class="skill-tag">Microsoft Project</span>
+                                <span class="skill-tag">Jira</span>
                             </div>
                         </div>
                         <div class="section">
-                            <div class="section-title"><i class="fas fa-chart-pie"></i> <span class="skills-viz-title">Vizualizatsiya va Dashboard</span></div>
+                            <div class="section-title"><i class="fas fa-chart-line"></i> <span class="skills-analytics-title">Analitika</span></div>
                             <div class="skills-grid">
-                                <span class="skill-tag"><i class="fas fa-chart-line"></i> Matplotlib</span>
-                                <span class="skill-tag"><i class="fas fa-chart-area"></i> Seaborn</span>
-                                <span class="skill-tag"><i class="fas fa-chart-scatter"></i> Plotly</span>
-                                <span class="skill-tag"><i class="fas fa-tachometer-alt"></i> Power BI Dashboards</span>
-                                <span class="skill-tag"><i class="fas fa-chart-simple"></i> Tableau Public</span>
-                                <span class="skill-tag"><i class="fas fa-chart-gantt"></i> Looker Studio</span>
-                                <span class="skill-tag"><i class="fas fa-chart-line"></i> Grafana</span>
+                                <span class="skill-tag">Power BI</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">didox.uz</span>
+                                <span class="skill-tag">My.Soliq</span>
+                                <span class="skill-tag">1C:8.3 (qisman)</span>
                             </div>
                         </div>
                         <div class="section">
-                            <div class="section-title"><i class="fas fa-microchip"></i> <span class="skills-ml-title">Machine Learning</span></div>
+                            <div class="section-title"><i class="fas fa-file-alt"></i> <span class="skills-office-title">Microsoft Office</span></div>
                             <div class="skills-grid">
-                                <span class="skill-tag"><i class="fab fa-python"></i> Scikit-learn</span>
-                                <span class="skill-tag"><i class="fas fa-brain"></i> TensorFlow (asoslar)</span>
-                                <span class="skill-tag"><i class="fas fa-chart-line"></i> RFM tahlili</span>
-                                <span class="skill-tag"><i class="fas fa-chart-line"></i> Churn Prediction</span>
-                                <span class="skill-tag"><i class="fas fa-chart-pie"></i> Risk Modelling</span>
-                                <span class="skill-tag"><i class="fas fa-chart-scatter"></i> Regression Analysis</span>
-                                <span class="skill-tag"><i class="fas fa-tree"></i> Decision Trees</span>
-                                <span class="skill-tag"><i class="fas fa-chart-line"></i> Time Series Analysis</span>
+                                <span class="skill-tag">Word (Advanced)</span>
+                                <span class="skill-tag">Excel (Advanced)</span>
+                                <span class="skill-tag">PowerPoint (Advanced)</span>
+                                <span class="skill-tag">Access (Advanced)</span>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><i class="fas fa-palette"></i> <span class="skills-graphics-title">Grafika</span></div>
+                            <div class="skills-grid">
+                                <span class="skill-tag">Adobe Photoshop</span>
+                                <span class="skill-tag">Paint</span>
                             </div>
                         </div>
                         <div class="section">
                             <div class="section-title"><i class="fas fa-language"></i> <span class="skills-lang-title">Tillar</span></div>
                             <div class="lang-grid">
-                                <div class="lang-card"><div class="lang-name"><i class="fas fa-flag"></i> 🇺🇿 O'zbek tili</div><div class="lang-level">Ona tili (C2) | Mukammal</div></div>
-                                <div class="lang-card"><div class="lang-name"><i class="fab fa-google"></i> 🇬🇧 English</div><div class="lang-level">B2 (Upper-Intermediate) — IELTS 6.5 | Reading, Writing, Speaking</div></div>
-                                <div class="lang-card"><div class="lang-name"><i class="fab fa-google"></i> 🇷🇺 Русский</div><div class="lang-level">B1-B2 (Intermediate) | Разговорный, Деловая переписка</div></div>
+                                <div class="lang-card"><div class="lang-name"><i class="fas fa-flag"></i> 🇺🇿 <span class="lang-uz-name">O'zbek tili</span></div><div class="lang-level"><span class="lang-uz-level">Ona tili</span></div></div>
+                                <div class="lang-card"><div class="lang-name"><i class="fab fa-google"></i> 🇬🇧 <span class="lang-en-name">Ingliz tili</span></div><div class="lang-level"><span class="lang-en-level">B2 - Mustaqil foydalanuvchi (Listening B2, Reading B2, Writing B2, Speaking B2)</span></div></div>
+                                <div class="lang-card"><div class="lang-name"><i class="fab fa-google"></i> 🇷🇺 <span class="lang-ru-name">Rus tili</span></div><div class="lang-level"><span class="lang-ru-level">B1-B2 - Mustaqil foydalanuvchi (Listening B2, Reading B2, Writing B1, Speaking B2)</span></div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="skills-footer"><i class="fas fa-database"></i> Ma'lumotlar bilan ishlash bo'yicha mutaxassis | Doimiy rivojlanish va o'rganish</p></div>
+                    <div class="footer"><p class="skills-footer"><i class="fas fa-database"></i> Ma'lumotlar bilan ishlash bo'yicha mutaxassis</p></div>
                 </div>
             </div>
 
             <!-- ==================== CERTIFICATES PAGE ==================== -->
             <div id="certificates" class="page">
                 <div class="glass-card">
-                    <div class="header"><h1 class="hero-name" style="font-size:48px;">📜 <span class="cert-page-title">Sertifikatlar</span></h1></div>
+                    <div class="header"><h1 class="hero-name" style="font-size:44px;">📜 <span class="cert-page-title">Sertifikatlar</span></h1></div>
                     <div class="content">
                         <div class="cert-grid">
                             <div class="cert-card">
-                                <div class="exp-date"><i class="fas fa-certificate"></i> 2025 | Cisco Networking Academy</div>
-                                <div class="exp-title">📘 Data Analytics Essentials</div>
-                                <div class="exp-company">Cisco Networking Academy</div>
-                                <p class="cert-desc" style="margin: 18px 0; font-size: 15px; opacity: 0.75;"><i class="fas fa-info-circle"></i> Ma'lumotlarni tozalash, tahlil qilish va vizualizatsiya qilish bo'yicha asosiy kurs. SQL, Tableau va Excel vositalari bilan ishlash. Ma'lumotlarga asoslangan qaror qabul qilish strategiyalari. 40+ soatlik intensiv dastur.</p>
-                                <div class="cert-skills" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">SQL</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Tableau</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Excel Advanced</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Data Cleaning</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Data Visualization</span>
-                                </div>
-                                <a href="certificates/DataAnalytics_Cisco1.pdf" class="cv-btn" style="display:inline-block; padding: 12px 28px;" download><i class="fas fa-download"></i> <span class="download-text">Sertifikatni yuklab olish</span></a>
+                                <div class="exp-date"><i class="fas fa-certificate"></i> <span class="cert1-date">15/09/2025 | Armenian Code Academy</span></div>
+                                <div class="exp-title"><span class="cert1-title">Data Analytics Navigator</span></div>
+                                <div class="exp-company"><span class="cert1-mode">O'qish usuli: Onlayn | Uzbekistan</span></div>
+                                <p class="cert-desc" style="margin: 15px 0; font-size: 14px; opacity: 0.75;"><i class="fas fa-info-circle"></i> <span class="cert1-desc">Ushbu sertifikat Data Analytics Navigator dasturini muvaffaqiyatli tamomlaganligini tasdiqlaydi. Dastur ma'lumotlar tahlili asoslari, biznes intelligensiya vositalari va real biznes muammolari uchun amaliy analitik ko'nikmalarni o'z ichiga oladi.</span></p>
+                                <a href="certificates/DataAnalytics_Navigator.pdf" class="cv-btn" style="display:inline-block; padding: 10px 24px;" download><i class="fas fa-download"></i> <span class="cert1-download">Sertifikatni yuklab olish</span></a>
                             </div>
                             <div class="cert-card">
-                                <div class="exp-date"><i class="fas fa-certificate"></i> 2025 | Cisco Networking Academy</div>
-                                <div class="exp-title">📊 Data Analytics Advanced</div>
-                                <div class="exp-company">Cisco Networking Academy</div>
-                                <p class="cert-desc" style="margin: 18px 0; font-size: 15px; opacity: 0.75;"><i class="fas fa-info-circle"></i> Murakkab ma'lumotlar tahlili, machine learning asoslari, Python va Power BI yordamida ilg'or vizualizatsiya usullari. Predictive analytics va trend forecasting. 50+ soatlik ilg'or daraja kursi.</p>
-                                <div class="cert-skills" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Python</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Power BI</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">ML Basics</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Forecasting</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Predictive Analytics</span>
-                                </div>
-                                <a href="certificates/DataAnalytics_Cisco2.pdf" class="cv-btn" style="display:inline-block; padding: 12px 28px;" download><i class="fas fa-download"></i> <span class="download-text">Sertifikatni yuklab olish</span></a>
+                                <div class="exp-date"><i class="fas fa-certificate"></i> <span class="cert2-date">12/09/2025 | Cisco Networking Academy</span></div>
+                                <div class="exp-title"><span class="cert2-title">Data Analytics Essentials</span></div>
+                                <div class="exp-company"><span class="cert2-mode">O'qish usuli: Onlayn</span></div>
+                                <p class="cert-desc" style="margin: 15px 0; font-size: 14px; opacity: 0.75;"><i class="fas fa-info-circle"></i> <span class="cert2-desc">Ushbu sertifikat ma'lumotlar to'plash, tozalash, tahlil qilish va vizualizatsiya qilish kabi asosiy ma'lumotlar tahlili tushunchalarini qamrab oladi. Sanoat standartidagi vositalar va texnikalar bilan ishlash bo'yicha bilimlarni tasdiqlaydi.</span></p>
+                                <a href="certificates/DataAnalytics_Essentials.pdf" class="cv-btn" style="display:inline-block; padding: 10px 24px;" download><i class="fas fa-download"></i> <span class="cert2-download">Sertifikatni yuklab olish</span></a>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><i class="fas fa-users"></i> <span class="conf-title">Konferensiyalar va seminarlar</span></div>
+                            <div class="cert-card">
+                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="conf1-date">21/09/2024 | Toshkent</span></div>
+                                <div class="exp-title"><span class="conf1-title">Konvolyutsion neyron tarmoqlar: konvolyutsiyalar, tarmoq tuzilishi</span></div>
+                                <p class="conf-desc" style="margin-top: 8px; font-size: 14px; opacity: 0.75;"><span class="conf1-desc">Neyron tarmoqlar va ularning kelajagi mavzusi Janubiy Koreyalik IT mutaxassislari ishtirokidagi forumda muhokama qilindi.</span></p>
                             </div>
                             <div class="cert-card">
-                                <div class="exp-date"><i class="fas fa-certificate"></i> 2025 | Armenian Code Academy</div>
-                                <div class="exp-title">🎯 Data Analytics Navigator</div>
-                                <div class="exp-company">Armenian Code Academy</div>
-                                <p class="cert-desc" style="margin: 18px 0; font-size: 15px; opacity: 0.75;"><i class="fas fa-info-circle"></i> Biznes muammolarini data yechimlar bilan hal qilish, dashboard yaratish va ma'lumotlar asosida qaror qabul qilish strategiyalari. Real loyihalar bilan ishlash. 60+ soatlik amaliy kurs.</p>
-                                <div class="cert-skills" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Business Analytics</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Dashboard Design</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Data Storytelling</span>
-                                    <span style="background: rgba(124,58,237,0.15); padding: 5px 14px; border-radius: 24px; font-size: 12px;">Problem Solving</span>
-                                </div>
-                                <a href="certificates/DataAnalytics_ShavkatovEldorbek.pdf" class="cv-btn" style="display:inline-block; padding: 12px 28px;" download><i class="fas fa-download"></i> <span class="download-text">Sertifikatni yuklab olish</span></a>
+                                <div class="exp-date"><i class="far fa-calendar-alt"></i> <span class="conf2-date">06/07/2023 - 07/07/2023 | Toshkent</span></div>
+                                <div class="exp-title"><span class="conf2-title">Digital Leadership Forum</span></div>
+                                <p class="conf-desc" style="margin-top: 8px; font-size: 14px; opacity: 0.75;"><span class="conf2-desc">GovTech, EdTech, IT & BPO Outsourcing va Venture kabi mavzularda 20 dan ortiq xalqaro ekspertlar ishtirokida sessiyalar tashkil etildi.</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="cert-footer"><i class="fas fa-certificate"></i> 7+ rasmiy sertifikat | Data Analytics | Vizualizatsiya | SQL | Python | Machine Learning</p></div>
+                    <div class="footer"><p class="cert-footer"><i class="fas fa-certificate"></i> Professional sertifikatlar va doimiy o'rganish</p></div>
                 </div>
             </div>
 
             <!-- ==================== CONTACT PAGE ==================== -->
             <div id="contact" class="page">
                 <div class="glass-card">
-                    <div class="header"><h1 class="hero-name" style="font-size:48px;">📬 <span class="contact-page-title">Bog'lanish</span></h1></div>
+                    <div class="header"><h1 class="hero-name" style="font-size:44px;">📬 <span class="contact-page-title">Bog'lanish</span></h1></div>
                     <div class="content">
                         <div class="contact-grid">
-                            <div class="contact-card"><i class="fas fa-envelope" style="font-size:36px; color:#7c3aed;"></i><div><strong class="contact-email-label">Email</strong><br>eldorbekshavkatoff@gmail.com</div></div>
-                            <div class="contact-card"><i class="fas fa-phone-alt" style="font-size:36px; color:#7c3aed;"></i><div><strong class="contact-phone-label">Telefon</strong><br>+998 33 333 1228</div></div>
-                            <div class="contact-card"><i class="fas fa-map-marker-alt" style="font-size:36px; color:#7c3aed;"></i><div><strong class="contact-location-label">Manzil</strong><br>Samarqand, O'zbekiston</div></div>
-                            <div class="contact-card"><i class="fas fa-calendar-alt" style="font-size:36px; color:#7c3aed;"></i><div><strong>Tug'ilgan sana</strong><br>28-dekabr, 2003</div></div>
-                            <div class="contact-card"><i class="fas fa-passport" style="font-size:36px; color:#7c3aed;"></i><div><strong>Fuqarolik</strong><br>O'zbekiston Respublikasi</div></div>
-                            <div class="contact-card"><i class="fas fa-globe" style="font-size:36px; color:#7c3aed;"></i><div><strong>Veb-sayt</strong><br>eldorbek-shavkatov.github.io/portfolio</div></div>
+                            <div class="contact-card"><i class="fas fa-envelope" style="font-size:32px; color:#7c3aed;"></i><div><strong class="contact-email-label">Email</strong><br>eldorbekshavkatoff@gmail.com</div></div>
+                            <div class="contact-card"><i class="fas fa-phone" style="font-size:32px; color:#7c3aed;"></i><div><strong class="contact-phone-label">Telefon</strong><br>(+998) 333331228</div></div>
+                            <div class="contact-card"><i class="fab fa-telegram" style="font-size:32px; color:#7c3aed;"></i><div><strong>Telegram</strong><br>@eldorbek_shavkatov</div></div>
+                            <div class="contact-card"><i class="fab fa-linkedin" style="font-size:32px; color:#7c3aed;"></i><div><strong>LinkedIn</strong><br>eldorbek-shavkatov</div></div>
+                            <div class="contact-card"><i class="fab fa-instagram" style="font-size:32px; color:#7c3aed;"></i><div><strong>Instagram</strong><br>eldorbek_shavkatov</div></div>
+                            <div class="contact-card"><i class="fab fa-facebook" style="font-size:32px; color:#7c3aed;"></i><div><strong>Facebook</strong><br>eldorbek_shavkatov</div></div>
+                            <div class="contact-card"><i class="fas fa-globe" style="font-size:32px; color:#7c3aed;"></i><div><strong>Veb-sayt</strong><br>https://eldorbek-shavkatov.github.io/portfolio/</div></div>
+                            <div class="contact-card"><i class="fas fa-home" style="font-size:32px; color:#7c3aed;"></i><div><strong class="contact-address-label">Manzil</strong><br>Oromgoh ko'chasi 26-uy, 140600 Samarqand, O'zbekiston</div></div>
                         </div>
                         <div class="section">
                             <div class="section-title"><i class="fas fa-share-alt"></i> <span class="social-title">Ijtimoiy tarmoqlar</span></div>
@@ -986,14 +839,12 @@
                                 <a href="https://t.me/eldorbek_shavkatov" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-telegram"></i></div><span class="social-username">@eldorbek_shavkatov</span></a>
                                 <a href="https://github.com/eldorbek-shavkatov" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-github"></i></div><span class="social-username">eldorbek-shavkatov</span></a>
                                 <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-linkedin-in"></i></div><span class="social-username">eldorbek-shavkatov</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-instagram"></i></div><span class="social-username">@eldorbek_shavkatov</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-facebook-f"></i></div><span class="social-username">eldorbek.shavkatov</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-twitter"></i></div><span class="social-username">@eldorbek_sh</span></a>
-                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-youtube"></i></div><span class="social-username">Eldorbek Analytics</span></a>
+                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-instagram"></i></div><span class="social-username">eldorbek_shavkatov</span></a>
+                                <a href="#" target="_blank" class="social-item"><div class="social-icon"><i class="fab fa-facebook-f"></i></div><span class="social-username">eldorbek_shavkatov</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="footer"><p class="contact-footer"><i class="fas fa-clock"></i> 24/7 bog'lanish mumkin | Data Analytics bo'yicha hamkorlik</p></div>
+                    <div class="footer"><p class="contact-footer"><i class="fas fa-clock"></i> Hamkorlik uchun mavjud | Data Analytics & Investment Analysis</p></div>
                 </div>
             </div>
         </div>
@@ -1040,7 +891,7 @@
     // ============================================ //
     const avatar = document.querySelector('.avatar');
     if(avatar && avatar.complete && avatar.naturalWidth === 0) {
-        avatar.src = 'https://ui-avatars.com/api/?name=Eldorbek+Shavkatov&background=7c3aed&color=fff&size=180';
+        avatar.src = 'https://ui-avatars.com/api/?name=Eldorbek+Shavkatov&background=7c3aed&color=fff&size=160';
     }
 
     // ============================================ //
@@ -1049,134 +900,122 @@
     const translations = {
         uz: {
             nav: ["BOSH SAHIFA", "TAJRIBA", "KO'NIKMALAR", "SERTIFIKATLAR", "KONTAKT"],
-            hero_title: "📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🔐 Cybersecurity",
-            stat: ["Yil tajriba", "Loyihalar", "Sertifikatlar", "Texnologiyalar"],
-            contact_email: "eldorbekshavkatoff@gmail.com",
-            contact_phone: "+998 33 333 1228",
-            contact_location: "Samarqand, O'zbekiston",
+            stat_exp: "Yil tajriba", stat_proj: "Loyihalar", stat_cert: "Sertifikatlar", stat_tech: "Texnologiyalar",
+            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_location: "Samarqand, O'zbekiston", contact_birth: "28/12/2003", contact_nationality: "O'zbek",
             about_title: "Men haqimda",
-            about_text: "Toshkent Axborot Texnologiyalari Universiteti (TUIT) Axborot xavfsizligi fakultetini tamomlagan. Data Analytics, Investment Analytics, Business Analytics va Project Management sohalarida chuqur bilim va amaliy ko'nikmalarga ega mutaxassis. 3+ yillik professional tajriba davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi, ma'lumotlarni vizualizatsiya qilish bo'yicha katta malakaga ega bo'lgan. Hozirda Davlat statistika qo'mitasi institutida investitsion analitik sifatida faoliyat yuritadi.",
-            edu_title: "Ta'lim",
-            edu_date: "2021 — 2025",
-            edu_name: "Toshkent Axborot Texnologiyalari Universiteti (TUIT)",
-            edu_field: "Axborot xavfsizligi fakulteti | Kiberxavfsizlik",
-            edu_degree: "Bakalavr darajasi (imtiyozli diplom)",
-            edu_special: "Yo'nalish: Investitsiya va biznes analitikasi",
-            cv_title: "Rezyume yuklab olish",
-            cv_uz: "O'zbekcha rezyume",
-            cv_ru: "Русское резюме",
-            cv_en: "English CV (Europass)",
-            exp_title: "Ish tajribasi",
-            exp_footer: "Data-driven qarorlar qabul qilish | 3+ yillik professional tajriba",
-            skills_title: "Ko'nikmalar",
-            skills_analytics: "Analitik vositalar",
-            skills_viz: "Vizualizatsiya va Dashboard",
-            skills_ml: "Machine Learning",
-            skills_lang: "Tillar",
-            skills_footer: "Ma'lumotlar bilan ishlash bo'yicha mutaxassis | Doimiy rivojlanish",
-            lang_uz: "O'zbek tili",
-            lang_uz_level: "Ona tili (C2)",
-            lang_en: "Ingliz tili",
-            lang_en_level: "B2 (Upper-Intermediate) — IELTS 6.5",
-            lang_ru: "Rus tili",
-            lang_ru_level: "B1-B2 (Intermediate)",
-            cert_title: "Sertifikatlar",
-            cert_download: "Sertifikatni yuklab olish",
-            cert_footer: "7+ rasmiy sertifikat | Data Analytics | Vizualizatsiya | SQL | Python",
-            contact_title: "Bog'lanish",
-            contact_email_label: "Email",
-            contact_phone_label: "Telefon",
-            contact_location_label: "Manzil",
-            social_title: "Ijtimoiy tarmoqlar",
-            contact_footer: "24/7 bog'lanish mumkin | Data Analytics bo'yicha hamkorlik",
+            about_text: "Toshkent Axborot Texnologiyalari Universitetining Axborot xavfsizligi fakultetini tamomlagan. Data/Investment/Business Analytics va Project Management sohalarida kuchli bilim va amaliy ko'nikmalarga ega mutaxassis. 3 yildan ortiq ish tajribasi davomida moliyaviy va iqtisodiy tahlil, shartnoma va loyiha boshqaruvi bo'yicha malakalarini oshirgan. Analitik materiallar tayyorlash, hujjatlar bilan ishlash, moliyaviy modellar yaratish va investorlar uchun taqdimotlar tayyorlash bo'yicha yaxshi ko'nikmalarga ega.",
+            edu_title: "Ta'lim", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Kiberxavfsizlik bo'yicha bakalavr darajasi", edu_univ: "Toshkent Axborot Texnologiyalari Universiteti (TUIT)", edu_address: "Manzil: 100084 Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108", edu_web: "Veb-sayt: www.tuit.uz",
+            cv_title: "Rezyume yuklab olish", cv_uz: "O'zbekcha Rezyume", cv_ru: "Русское Резюме", cv_en: "English CV (Europass)",
+            exp_page_title: "Ish tajribasi",
+            exp1_date: "01/09/2025 - Hozirgi vaqt", exp1_title: "Investitsion analitik", exp1_company: "Davlat statistika qo'mitasi huzuridagi Kadrlar malakasini oshirish va statistik tadqiqotlar instituti - Toshkent, O'zbekiston",
+            exp1_1: "BMT tomonidan moliyalashtirilgan investitsion loyihalarning moliyaviy va iqtisodiy tahlilini o'tkazish",
+            exp1_2: "Moliyaviy modellar, biznes-keslar va loyihalarni baholash hujjatlarini ishlab chiqish",
+            exp1_3: "Investitsion loyihalarning ijrosini monitoring qilish va baholash, byudjet va muddatlarni nazorat qilish",
+            exp1_4: "Rahbariyat va xalqaro hamkorlar uchun analitik hisobotlar va taqdimotlar tayyorlash",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investitsion analitik (stajyor)", exp2_company: "Kiberxavfsizlik markazi Davlat unitar korxonasi - Toshkent, O'zbekiston",
+            exp2_1: "Yirik kompaniyalar va tashkilotlar uchun kiberxavfsizlik himoyasini ta'minlash va xavfsizlik choralarini joriy etish",
+            exp2_2: "Zaifliklarni aniqlash va bartaraf etish uchun tarmoq infratuzilmasini konfiguratsiya qilish, monitoring va tahlil qilish",
+            exp2_3: "Kiberxavfsizlik hodisalari va tahdidlarini aniqlash, tahlil qilish va ularga javob berish",
+            exp2_4: "Kiberxavfsizlik holati bo'yicha analitik hisobotlar tayyorlash va ularni rahbariyatga taqdim etish",
+            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Menejer yordamchisi", exp3_company: "SEMURG INSURANCE AJ - Toshkent, O'zbekiston",
+            exp3_1: "Kompaniyaning ichki ma'lumotlar bazalari bilan ishlash, moliyaviy va sug'urta ma'lumotlarini to'plash va tartibga solish",
+            exp3_2: "Sug'urta shartnomalari va boshqa moliyaviy hujjatlarni tahlil qilish va qayta ishlash",
+            exp3_3: "Moliyaviy ma'lumotlarni to'plash va chuqur tahlil qilish, rahbariyat uchun muntazam hisobotlar tayyorlash",
+            exp3_4: "Kompaniyaning ichki aktivlari va faoliyatini monitoring qilish va tahlil qilish",
+            exp_footer: "3+ yillik professional tajriba | Data-driven qarorlar",
+            skills_page_title: "Ko'nikmalar", skills_pm_title: "Project Management", skills_analytics_title: "Analitika", skills_office_title: "Microsoft Office", skills_graphics_title: "Grafika", skills_lang_title: "Tillar",
+            lang_uz_name: "O'zbek tili", lang_uz_level: "Ona tili",
+            lang_en_name: "Ingliz tili", lang_en_level: "B2 - Mustaqil foydalanuvchi (Listening B2, Reading B2, Writing B2, Speaking B2)",
+            lang_ru_name: "Rus tili", lang_ru_level: "B1-B2 - Mustaqil foydalanuvchi (Listening B2, Reading B2, Writing B1, Speaking B2)",
+            skills_footer: "Ma'lumotlar bilan ishlash bo'yicha mutaxassis",
+            cert_page_title: "Sertifikatlar",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "O'qish usuli: Onlayn | Uzbekistan", cert1_desc: "Ushbu sertifikat Data Analytics Navigator dasturini muvaffaqiyatli tamomlaganligini tasdiqlaydi. Dastur ma'lumotlar tahlili asoslari, biznes intelligensiya vositalari va real biznes muammolari uchun amaliy analitik ko'nikmalarni o'z ichiga oladi.", cert1_download: "Sertifikatni yuklab olish",
+            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "O'qish usuli: Onlayn", cert2_desc: "Ushbu sertifikat ma'lumotlar to'plash, tozalash, tahlil qilish va vizualizatsiya qilish kabi asosiy ma'lumotlar tahlili tushunchalarini qamrab oladi. Sanoat standartidagi vositalar va texnikalar bilan ishlash bo'yicha bilimlarni tasdiqlaydi.", cert2_download: "Sertifikatni yuklab olish",
+            conf_title: "Konferensiyalar va seminarlar",
+            conf1_date: "21/09/2024 | Toshkent", conf1_title: "Konvolyutsion neyron tarmoqlar: konvolyutsiyalar, tarmoq tuzilishi", conf1_desc: "Neyron tarmoqlar va ularning kelajagi mavzusi Janubiy Koreyalik IT mutaxassislari ishtirokidagi forumda muhokama qilindi.",
+            conf2_date: "06/07/2023 - 07/07/2023 | Toshkent", conf2_title: "Digital Leadership Forum", conf2_desc: "GovTech, EdTech, IT & BPO Outsourcing va Venture kabi mavzularda 20 dan ortiq xalqaro ekspertlar ishtirokida sessiyalar tashkil etildi.",
+            cert_footer: "Professional sertifikatlar va doimiy o'rganish",
+            contact_page_title: "Bog'lanish", contact_email_label: "Email", contact_phone_label: "Telefon", contact_address_label: "Manzil", social_title: "Ijtimoiy tarmoqlar", contact_footer: "Hamkorlik uchun mavjud | Data Analytics & Investment Analysis",
             footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
         },
         ru: {
             nav: ["ГЛАВНАЯ", "ОПЫТ", "НАВЫКИ", "СЕРТИФИКАТЫ", "КОНТАКТЫ"],
-            hero_title: "📊 Аналитика данных | 💼 Инвестиционный аналитик | 📈 Бизнес-аналитик | 🔐 Кибербезопасность",
-            stat: ["Лет опыта", "Проекты", "Сертификаты", "Технологии"],
-            contact_email: "eldorbekshavkatoff@gmail.com",
-            contact_phone: "+998 33 333 1228",
-            contact_location: "Самарканд, Узбекистан",
+            stat_exp: "Лет опыта", stat_proj: "Проекты", stat_cert: "Сертификаты", stat_tech: "Технологии",
+            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_location: "Самарканд, Узбекистан", contact_birth: "28/12/2003", contact_nationality: "Узбек",
             about_title: "Обо мне",
-            about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий (ТУИТ). Специалист с глубокими знаниями и практическими навыками в области Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами, визуализации данных.",
-            edu_title: "Образование",
-            edu_date: "2021 — 2025",
-            edu_name: "Ташкентский университет информационных технологий (ТУИТ)",
-            edu_field: "Факультет информационной безопасности | Кибербезопасность",
-            edu_degree: "Степень бакалавра (с отличием)",
-            edu_special: "Специализация: Инвестиционная и бизнес-аналитика",
-            cv_title: "Скачать резюме",
-            cv_uz: "Резюме на узбекском",
-            cv_ru: "Резюме на русском",
-            cv_en: "Резюме на английском (Europass)",
-            exp_title: "Опыт работы",
-            exp_footer: "Принятие решений на основе данных | 3+ года профессионального опыта",
-            skills_title: "Навыки",
-            skills_analytics: "Аналитические инструменты",
-            skills_viz: "Визуализация и Дашборды",
-            skills_ml: "Машинное обучение",
-            skills_lang: "Языки",
-            skills_footer: "Специалист по работе с данными | Постоянное развитие",
-            lang_uz: "Узбекский",
-            lang_uz_level: "Родной (C2)",
-            lang_en: "Английский",
-            lang_en_level: "B2 (Выше среднего) — IELTS 6.5",
-            lang_ru: "Русский",
-            lang_ru_level: "B1-B2 (Средний)",
-            cert_title: "Сертификаты",
-            cert_download: "Скачать сертификат",
-            cert_footer: "7+ официальных сертификатов | Аналитика данных | Визуализация | SQL | Python",
-            contact_title: "Контакты",
-            contact_email_label: "Email",
-            contact_phone_label: "Телефон",
-            contact_location_label: "Адрес",
-            social_title: "Социальные сети",
-            contact_footer: "Связь 24/7 | Сотрудничество по аналитике данных",
+            about_text: "Выпускник факультета информационной безопасности Ташкентского университета информационных технологий. Специалист с глубокими знаниями и практическими навыками в областях Data/Investment/Business Analytics и Project Management. За более чем 3 года опыта работы улучшил навыки финансово-экономического анализа, управления контрактами и проектами. Приобрел хорошие навыки подготовки аналитических материалов, работы с документами, создания финансовых моделей и подготовки презентаций для инвесторов.",
+            edu_title: "Образование", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Степень бакалавра в области кибербезопасности", edu_univ: "Ташкентский университет информационных технологий (ТУИТ)", edu_address: "Адрес: 100084 Ташкент, Юнусабадский район, проспект Амира Темура 108", edu_web: "Веб-сайт: www.tuit.uz",
+            cv_title: "Скачать резюме", cv_uz: "Резюме на узбекском", cv_ru: "Русское резюме", cv_en: "Английское резюме (Europass)",
+            exp_page_title: "Опыт работы",
+            exp1_date: "01/09/2025 - Настоящее время", exp1_title: "Инвестиционный аналитик", exp1_company: "Институт повышения квалификации и статистических исследований при Государственном комитете по статистике - Ташкент, Узбекистан",
+            exp1_1: "Проведение финансово-экономического анализа инвестиционных проектов, финансируемых ООН",
+            exp1_2: "Разработка финансовых моделей, бизнес-кейсов и документов по оценке проектов",
+            exp1_3: "Мониторинг и оценка реализации инвестиционных проектов, включая контроль бюджета и сроков",
+            exp1_4: "Подготовка аналитических отчетов и презентаций для руководства и международных партнеров",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Инвестиционный аналитик (стажёр)", exp2_company: "Государственное унитарное предприятие Центр кибербезопасности - Ташкент, Узбекистан",
+            exp2_1: "Обеспечение кибербезопасности и внедрение мер безопасности для крупных компаний и организаций",
+            exp2_2: "Настройка, мониторинг и анализ сетевой инфраструктуры для выявления и устранения уязвимостей",
+            exp2_3: "Обнаружение, анализ и реагирование на инциденты и угрозы кибербезопасности",
+            exp2_4: "Подготовка аналитических отчетов о состоянии кибербезопасности и представление их руководству",
+            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Помощник менеджера", exp3_company: "АО SEMURG INSURANCE - Ташкент, Узбекистан",
+            exp3_1: "Работа с внутренними базами данных компании, сбор и организация финансовых и страховых данных",
+            exp3_2: "Анализ и обработка страховых договоров и других финансовых документов",
+            exp3_3: "Сбор и углубленный анализ финансовых данных, подготовка регулярных отчетов для руководства",
+            exp3_4: "Мониторинг и анализ внутренних активов и деятельности компании",
+            exp_footer: "3+ года профессионального опыта | Решения на основе данных",
+            skills_page_title: "Навыки", skills_pm_title: "Управление проектами", skills_analytics_title: "Аналитика", skills_office_title: "Microsoft Office", skills_graphics_title: "Графика", skills_lang_title: "Языки",
+            lang_uz_name: "Узбекский язык", lang_uz_level: "Родной",
+            lang_en_name: "Английский язык", lang_en_level: "B2 - Независимый пользователь (Аудирование B2, Чтение B2, Письмо B2, Говорение B2)",
+            lang_ru_name: "Русский язык", lang_ru_level: "B1-B2 - Независимый пользователь (Аудирование B2, Чтение B2, Письмо B1, Говорение B2)",
+            skills_footer: "Специалист по работе с данными",
+            cert_page_title: "Сертификаты",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Формат обучения: Онлайн | Узбекистан", cert1_desc: "Этот сертификат подтверждает успешное завершение программы Data Analytics Navigator, охватывающей основы анализа данных, инструменты бизнес-аналитики и практические аналитические навыки для решения реальных бизнес-задач.", cert1_download: "Скачать сертификат",
+            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "Формат обучения: Онлайн", cert2_desc: "Этот сертификат охватывает основные концепции анализа данных, включая сбор, очистку, анализ и визуализацию данных, и подтверждает знания по работе с инструментами и техниками отраслевого стандарта.", cert2_download: "Скачать сертификат",
+            conf_title: "Конференции и семинары",
+            conf1_date: "21/09/2024 | Ташкент", conf1_title: "Сверточные нейронные сети: свертки, структура сети", conf1_desc: "Тема нейронных сетей и их будущего обсуждалась на форуме с участием южнокорейских IT-специалистов.",
+            conf2_date: "06/07/2023 - 07/07/2023 | Ташкент", conf2_title: "Digital Leadership Forum", conf2_desc: "Сессии по таким темам, как GovTech, EdTech, IT & BPO аутсорсинг и Venture, были организованы с участием более 20 международных экспертов.",
+            cert_footer: "Профессиональные сертификаты и непрерывное обучение",
+            contact_page_title: "Контакты", contact_email_label: "Email", contact_phone_label: "Телефон", contact_address_label: "Адрес", social_title: "Социальные сети", contact_footer: "Доступен для сотрудничества | Аналитика данных и инвестиционный анализ",
             footer_text: "© 2025 Эльдорбек Шавкатов | Портфолио аналитики данных"
         },
         en: {
             nav: ["HOME", "EXPERIENCE", "SKILLS", "CERTIFICATES", "CONTACT"],
-            hero_title: "📊 Data Analytics | 💼 Investment Analyst | 📈 Business Analyst | 🔐 Cybersecurity",
-            stat: ["Years exp.", "Projects", "Certificates", "Technologies"],
-            contact_email: "eldorbekshavkatoff@gmail.com",
-            contact_phone: "+998 33 333 1228",
-            contact_location: "Samarkand, Uzbekistan",
+            stat_exp: "Years exp.", stat_proj: "Projects", stat_cert: "Certificates", stat_tech: "Technologies",
+            contact_email: "eldorbekshavkatoff@gmail.com", contact_phone: "(+998) 333331228", contact_location: "Samarkand, Uzbekistan", contact_birth: "28/12/2003", contact_nationality: "Uzbek",
             about_title: "About Me",
-            about_text: "Graduate of the Faculty of Information Security at Tashkent University of Information Technologies (TUIT). Specialist with strong knowledge and practical skills in Data/Investment/Business Analytics and Project Management. Over 3+ years of experience, improved skills in financial and economic analysis, contract and project management, data visualization.",
-            edu_title: "Education",
-            edu_date: "2021 — 2025",
-            edu_name: "Tashkent University of Information Technologies (TUIT)",
-            edu_field: "Faculty of Information Security | Cybersecurity",
-            edu_degree: "Bachelor's Degree (with honors)",
-            edu_special: "Specialization: Investment and Business Analytics",
-            cv_title: "Download CV",
-            cv_uz: "Uzbek CV",
-            cv_ru: "Russian CV",
-            cv_en: "English CV (Europass)",
-            exp_title: "Work Experience",
-            exp_footer: "Data-driven decision making | 3+ years professional experience",
-            skills_title: "Skills",
-            skills_analytics: "Analytics Tools",
-            skills_viz: "Visualization & Dashboards",
-            skills_ml: "Machine Learning",
-            skills_lang: "Languages",
-            skills_footer: "Data specialist | Continuous development",
-            lang_uz: "Uzbek",
-            lang_uz_level: "Native (C2)",
-            lang_en: "English",
-            lang_en_level: "B2 (Upper-Intermediate) — IELTS 6.5",
-            lang_ru: "Russian",
-            lang_ru_level: "B1-B2 (Intermediate)",
-            cert_title: "Certificates",
-            cert_download: "Download Certificate",
-            cert_footer: "7+ official certificates | Data Analytics | Visualization | SQL | Python",
-            contact_title: "Contact",
-            contact_email_label: "Email",
-            contact_phone_label: "Phone",
-            contact_location_label: "Location",
-            social_title: "Social Media",
-            contact_footer: "24/7 available | Data Analytics collaboration",
+            about_text: "I graduated from the Faculty of Information Security at Tashkent University of Information Technologies. I am a specialist with strong knowledge and practical skills in the fields of Data/Investment/Business Analytics and Project Management. During my more than 3 years of work experience, I have improved my skills in financial and economic analysis, contract and project management. I have acquired good skills in preparing analytical materials, working with documents, creating financial models, and preparing presentations for investors.",
+            edu_title: "Education", edu_date: "06/09/2021 - 01/06/2025", edu_name: "Bachelor's Degree in Cybersecurity", edu_univ: "Tashkent University of Information Technologies (TUIT)", edu_address: "Address: 108 Amir Temur Avenue, Yunusabad District, 100084 Tashkent", edu_web: "Website: www.tuit.uz",
+            cv_title: "Download CV", cv_uz: "Uzbek CV", cv_ru: "Russian CV", cv_en: "English CV (Europass)",
+            exp_page_title: "Work Experience",
+            exp1_date: "01/09/2025 - Current", exp1_title: "Investment Analyst", exp1_company: "Institute for Staff Advanced Training and Statistical Research of National Statistics Committee - Tashkent, Uzbekistan",
+            exp1_1: "Conducting financial and economic analysis of UN-funded investment projects",
+            exp1_2: "Developing financial models, business cases, and project appraisal documents",
+            exp1_3: "Monitoring and evaluating the implementation of investment projects, including budget and timeline control",
+            exp1_4: "Preparing analytical reports and presentations for management and international partners",
+            exp2_date: "31/01/2025 - 01/06/2025", exp2_title: "Investment Analyst (Intern)", exp2_company: "Cyber Security Center State Unitary Enterprise - Tashkent, Uzbekistan",
+            exp2_1: "Providing cybersecurity protection and implementing security measures for large companies and organizations",
+            exp2_2: "Configuring, monitoring, and analyzing network infrastructure to identify and mitigate vulnerabilities",
+            exp2_3: "Detecting, analyzing, and responding to cybersecurity incidents and threats",
+            exp2_4: "Preparing analytical reports on cybersecurity status and presenting them to management",
+            exp3_date: "01/02/2022 - 31/05/2024", exp3_title: "Assistant Manager", exp3_company: "SEMURG INSURANCE JSC - Tashkent, Uzbekistan",
+            exp3_1: "Working with the company's internal databases, collecting and organizing financial and insurance data",
+            exp3_2: "Analyzing and processing insurance contracts and other financial documents",
+            exp3_3: "Gathering and conducting in-depth analysis of financial data, and preparing regular reports for management",
+            exp3_4: "Monitoring and analyzing the company's internal assets and performance",
+            exp_footer: "3+ years professional experience | Data-driven decisions",
+            skills_page_title: "Skills", skills_pm_title: "Project Management", skills_analytics_title: "Analytics", skills_office_title: "Microsoft Office", skills_graphics_title: "Graphics", skills_lang_title: "Languages",
+            lang_uz_name: "Uzbek", lang_uz_level: "Mother tongue",
+            lang_en_name: "English", lang_en_level: "B2 - Independent User (Listening B2, Reading B2, Writing B2, Speaking B2)",
+            lang_ru_name: "Russian", lang_ru_level: "B1-B2 - Independent User (Listening B2, Reading B2, Writing B1, Speaking B2)",
+            skills_footer: "Data specialist",
+            cert_page_title: "Certifications",
+            cert1_date: "15/09/2025 | Armenian Code Academy", cert1_title: "Data Analytics Navigator", cert1_mode: "Mode of learning: Online | Uzbekistan", cert1_desc: "This certificate validates completion of the Data Analytics Navigator program, covering data analysis fundamentals, business intelligence tools, and practical analytics skills for real-world business problems.", cert1_download: "Download Certificate",
+            cert2_date: "12/09/2025 | Cisco Networking Academy", cert2_title: "Data Analytics Essentials", cert2_mode: "Mode of learning: Online", cert2_desc: "This certification covers essential data analytics concepts including data collection, cleaning, analysis, and visualization using industry-standard tools and techniques.", cert2_download: "Download Certificate",
+            conf_title: "Conferences and Seminars",
+            conf1_date: "21/09/2024 | Tashkent", conf1_title: "Convolutional neural networks: convolutions, network structure", conf1_desc: "The topic of neural networks and their future was discussed at a forum attended by South Korean IT specialists.",
+            conf2_date: "06/07/2023 - 07/07/2023 | Tashkent", conf2_title: "Digital Leadership Forum", conf2_desc: "Sessions on topics such as GovTech, EdTech, IT & BPO Outsourcing, and Venture were organized with the participation of more than 20 international experts.",
+            cert_footer: "Professional certifications & continuous learning",
+            contact_page_title: "Contact", contact_email_label: "Email", contact_phone_label: "Phone", contact_address_label: "Address", social_title: "Social Media", contact_footer: "Available for collaboration | Data Analytics & Investment Analysis",
             footer_text: "© 2025 Eldorbek Shavkatov | Data Analytics Portfolio"
         }
     };
@@ -1185,20 +1024,21 @@
         const t = translations[lang];
         if(!t) return;
         
-        // Navigatsiya
+        // Navigation
         document.querySelectorAll('.nav-text').forEach((el, i) => { if(t.nav[i]) el.textContent = t.nav[i]; });
         
-        // Hero title
-        document.querySelector('.hero-title').textContent = t.hero_title;
-        
-        // Stat labels
-        const statLabels = document.querySelectorAll('.stat-label');
-        t.stat.forEach((label, i) => { if(statLabels[i]) statLabels[i].textContent = label; });
+        // Stats
+        document.querySelector('.stat-exp').textContent = t.stat_exp;
+        document.querySelector('.stat-proj').textContent = t.stat_proj;
+        document.querySelector('.stat-cert').textContent = t.stat_cert;
+        document.querySelector('.stat-tech').textContent = t.stat_tech;
         
         // Contact bar
         document.querySelector('.contact-email').textContent = t.contact_email;
         document.querySelector('.contact-phone').textContent = t.contact_phone;
         document.querySelector('.contact-location').textContent = t.contact_location;
+        document.querySelector('.contact-birth').textContent = t.contact_birth;
+        document.querySelector('.contact-nationality').textContent = t.contact_nationality;
         
         // About
         document.querySelector('.about-title').textContent = t.about_title;
@@ -1208,9 +1048,9 @@
         document.querySelector('.edu-title').textContent = t.edu_title;
         document.querySelector('.edu-date').textContent = t.edu_date;
         document.querySelector('.edu-name').textContent = t.edu_name;
-        document.querySelector('.edu-field').textContent = t.edu_field;
-        document.querySelector('.edu-degree').textContent = t.edu_degree;
-        document.querySelector('.edu-special').textContent = t.edu_special;
+        document.querySelector('.edu-univ').textContent = t.edu_univ;
+        document.querySelector('.edu-address').textContent = t.edu_address;
+        document.querySelector('.edu-web').textContent = t.edu_web;
         
         // CV
         document.querySelector('.cv-title').textContent = t.cv_title;
@@ -1218,38 +1058,74 @@
         document.querySelector('.cv-ru').textContent = t.cv_ru;
         document.querySelector('.cv-en').textContent = t.cv_en;
         
-        // Experience
-        document.querySelector('.exp-page-title').textContent = t.exp_title;
+        // Experience page
+        document.querySelector('.exp-page-title').textContent = t.exp_page_title;
+        document.querySelectorAll('.exp1-date').forEach(el => el.textContent = t.exp1_date);
+        document.querySelectorAll('.exp1-title').forEach(el => el.textContent = t.exp1_title);
+        document.querySelectorAll('.exp1-company').forEach(el => el.textContent = t.exp1_company);
+        document.querySelectorAll('.exp1-1').forEach(el => el.textContent = t.exp1_1);
+        document.querySelectorAll('.exp1-2').forEach(el => el.textContent = t.exp1_2);
+        document.querySelectorAll('.exp1-3').forEach(el => el.textContent = t.exp1_3);
+        document.querySelectorAll('.exp1-4').forEach(el => el.textContent = t.exp1_4);
+        document.querySelectorAll('.exp2-date').forEach(el => el.textContent = t.exp2_date);
+        document.querySelectorAll('.exp2-title').forEach(el => el.textContent = t.exp2_title);
+        document.querySelectorAll('.exp2-company').forEach(el => el.textContent = t.exp2_company);
+        document.querySelectorAll('.exp2-1').forEach(el => el.textContent = t.exp2_1);
+        document.querySelectorAll('.exp2-2').forEach(el => el.textContent = t.exp2_2);
+        document.querySelectorAll('.exp2-3').forEach(el => el.textContent = t.exp2_3);
+        document.querySelectorAll('.exp2-4').forEach(el => el.textContent = t.exp2_4);
+        document.querySelectorAll('.exp3-date').forEach(el => el.textContent = t.exp3_date);
+        document.querySelectorAll('.exp3-title').forEach(el => el.textContent = t.exp3_title);
+        document.querySelectorAll('.exp3-company').forEach(el => el.textContent = t.exp3_company);
+        document.querySelectorAll('.exp3-1').forEach(el => el.textContent = t.exp3_1);
+        document.querySelectorAll('.exp3-2').forEach(el => el.textContent = t.exp3_2);
+        document.querySelectorAll('.exp3-3').forEach(el => el.textContent = t.exp3_3);
+        document.querySelectorAll('.exp3-4').forEach(el => el.textContent = t.exp3_4);
         document.querySelector('.exp-footer').innerHTML = '<i class="fas fa-chart-line"></i> ' + t.exp_footer;
         
-        // Skills
-        document.querySelector('.skills-page-title').textContent = t.skills_title;
-        document.querySelector('.skills-analytics-title').textContent = t.skills_analytics;
-        document.querySelector('.skills-viz-title').textContent = t.skills_viz;
-        document.querySelector('.skills-ml-title').textContent = t.skills_ml;
-        document.querySelector('.skills-lang-title').textContent = t.skills_lang;
+        // Skills page
+        document.querySelector('.skills-page-title').textContent = t.skills_page_title;
+        document.querySelector('.skills-pm-title').textContent = t.skills_pm_title;
+        document.querySelector('.skills-analytics-title').textContent = t.skills_analytics_title;
+        document.querySelector('.skills-office-title').textContent = t.skills_office_title;
+        document.querySelector('.skills-graphics-title').textContent = t.skills_graphics_title;
+        document.querySelector('.skills-lang-title').textContent = t.skills_lang_title;
         document.querySelector('.skills-footer').innerHTML = '<i class="fas fa-database"></i> ' + t.skills_footer;
         
-        // Languages
-        const langNames = document.querySelectorAll('#skills .lang-name');
-        const langLevels = document.querySelectorAll('#skills .lang-level');
-        if(langNames[0]) langNames[0].innerHTML = '<i class="fas fa-flag"></i> 🇺🇿 ' + t.lang_uz;
-        if(langNames[1]) langNames[1].innerHTML = '<i class="fab fa-google"></i> 🇬🇧 ' + t.lang_en;
-        if(langNames[2]) langNames[2].innerHTML = '<i class="fab fa-google"></i> 🇷🇺 ' + t.lang_ru;
-        if(langLevels[0]) langLevels[0].textContent = t.lang_uz_level;
-        if(langLevels[1]) langLevels[1].textContent = t.lang_en_level;
-        if(langLevels[2]) langLevels[2].textContent = t.lang_ru_level;
+        // Languages in skills
+        document.querySelector('.lang-uz-name').textContent = t.lang_uz_name;
+        document.querySelector('.lang-uz-level').textContent = t.lang_uz_level;
+        document.querySelector('.lang-en-name').textContent = t.lang_en_name;
+        document.querySelector('.lang-en-level').textContent = t.lang_en_level;
+        document.querySelector('.lang-ru-name').textContent = t.lang_ru_name;
+        document.querySelector('.lang-ru-level').textContent = t.lang_ru_level;
         
-        // Certificates
-        document.querySelector('.cert-page-title').textContent = t.cert_title;
-        document.querySelectorAll('.download-text').forEach(el => el.textContent = t.cert_download);
+        // Certificates page
+        document.querySelector('.cert-page-title').textContent = t.cert_page_title;
+        document.querySelectorAll('.cert1-date').forEach(el => el.textContent = t.cert1_date);
+        document.querySelectorAll('.cert1-title').forEach(el => el.textContent = t.cert1_title);
+        document.querySelectorAll('.cert1-mode').forEach(el => el.textContent = t.cert1_mode);
+        document.querySelectorAll('.cert1-desc').forEach(el => el.textContent = t.cert1_desc);
+        document.querySelectorAll('.cert1-download').forEach(el => el.textContent = t.cert1_download);
+        document.querySelectorAll('.cert2-date').forEach(el => el.textContent = t.cert2_date);
+        document.querySelectorAll('.cert2-title').forEach(el => el.textContent = t.cert2_title);
+        document.querySelectorAll('.cert2-mode').forEach(el => el.textContent = t.cert2_mode);
+        document.querySelectorAll('.cert2-desc').forEach(el => el.textContent = t.cert2_desc);
+        document.querySelectorAll('.cert2-download').forEach(el => el.textContent = t.cert2_download);
+        document.querySelector('.conf-title').textContent = t.conf_title;
+        document.querySelectorAll('.conf1-date').forEach(el => el.textContent = t.conf1_date);
+        document.querySelectorAll('.conf1-title').forEach(el => el.textContent = t.conf1_title);
+        document.querySelectorAll('.conf1-desc').forEach(el => el.textContent = t.conf1_desc);
+        document.querySelectorAll('.conf2-date').forEach(el => el.textContent = t.conf2_date);
+        document.querySelectorAll('.conf2-title').forEach(el => el.textContent = t.conf2_title);
+        document.querySelectorAll('.conf2-desc').forEach(el => el.textContent = t.conf2_desc);
         document.querySelector('.cert-footer').innerHTML = '<i class="fas fa-certificate"></i> ' + t.cert_footer;
         
-        // Contact
-        document.querySelector('.contact-page-title').textContent = t.contact_title;
+        // Contact page
+        document.querySelector('.contact-page-title').textContent = t.contact_page_title;
         document.querySelector('.contact-email-label').textContent = t.contact_email_label;
         document.querySelector('.contact-phone-label').textContent = t.contact_phone_label;
-        document.querySelector('.contact-location-label').textContent = t.contact_location_label;
+        document.querySelector('.contact-address-label').textContent = t.contact_address_label;
         document.querySelector('.social-title').innerHTML = '<i class="fas fa-share-alt"></i> ' + t.social_title;
         document.querySelector('.contact-footer').innerHTML = '<i class="fas fa-clock"></i> ' + t.contact_footer;
         
